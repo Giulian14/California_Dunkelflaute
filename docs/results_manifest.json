@@ -1,0 +1,66 @@
+[
+  {
+    "path": "results/figures/california_era5_grid_mask.png",
+    "bytes": 281603,
+    "sha256": "f33be189212827e3147e781ca420f57725e2539fdc10849f9a5544f03a38d8a1",
+    "dimensions": [
+      2060,
+      2370
+    ]
+  },
+  {
+    "path": "results/figures/era5_bounding_box_january_2020.png",
+    "bytes": 620163,
+    "sha256": "b0ae4a8f4da2fc6a674411a49f9035ebd532fa32cd1f0bd574cf96942b749cad",
+    "dimensions": [
+      3570,
+      2370
+    ]
+  },
+  {
+    "path": "results/figures/era5_california_january_2020.png",
+    "bytes": 627647,
+    "sha256": "b25523d4a4afc3d07f02d46bce2cb12d6f8fdfaac0c54cc2fc5f945fb54aed09",
+    "dimensions": [
+      3570,
+      2370
+    ]
+  },
+  {
+    "path": "results/figures/illustrative_wind_cf_2020_01.png",
+    "bytes": 157560,
+    "sha256": "cf42627d0032e4ab6bfefabb45cfaa6fa66bd3805e682a9f6c4a4c4bb6893cfc",
+    "dimensions": [
+      3570,
+      1170
+    ]
+  },
+  {
+    "path": "results/figures/solar_resource_proxy_2020_01.png",
+    "bytes": 235758,
+    "sha256": "f7221d6bfe6c89d3d7a2ccbd6eaa4867a72ae65643602b6b70b84b28cd0c2b51",
+    "dimensions": [
+      3570,
+      1170
+    ]
+  },
+  {
+    "path": "results/figures/trial_low_resource_duration_histogram_2020_01.png",
+    "bytes": 107982,
+    "sha256": "369631028ccb6b3d9b5b3a1d24a834fb0fb0c06d1a8968d3f2a86e18f7e06b8a",
+    "dimensions": [
+      2370,
+      1211
+    ]
+  },
+  {
+    "path": "results/tables/trial_duration_sensitivity_2020_01.csv",
+    "bytes": 107,
+    "sha256": "24c4c0f531e5cb51cd7a3001c5b48da4427c09f98819dd60c36def051a3db076"
+  },
+  {
+    "path": "results/tables/trial_low_resource_periods_2020_01.csv",
+    "bytes": 1763,
+    "sha256": "37b297156b50a74999e22e85531b1d75b9b96e8668943fbf8cd632154367fd2a"
+  }
+]

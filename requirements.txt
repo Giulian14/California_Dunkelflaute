@@ -1,0 +1,9 @@
+# Reported from the author's Spyder console using Python 3.11.11.
+# Direct dependencies only; this is not a complete environment lockfile.
+numpy==2.4.6
+pandas==3.1.1
+xarray==2026.9.0
+netCDF4==1.7.4
+matplotlib==3.11.2
+shapely==2.2.0
+cdsapi==0.7.7

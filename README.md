@@ -14,7 +14,7 @@ The pilot workflow has been run successfully on the author's Mac using Python 3.
 
 **The eight uploaded Python scripts are now in `scripts/`, preserved unchanged from the author's archive.** The exact California boundary file is included in `data/boundaries/`, with [source and checksum documentation](docs/boundary_provenance.md). The [six pilot figures and two result tables](results/README.md) are also included, with file checksums and review notes. The reported Python 3.11.11 package versions are recorded in [`requirements.txt`](requirements.txt), with [environment setup and verification notes](docs/environment.md). This is a direct-dependency snapshot, not a complete environment lockfile.
 
-All eight scripts passed syntax checks. Synthetic-data checks passed for hourly alignment, empty detections, a 30-hour internal period, start/end boundary flags, an all-low window, and rejection of missing timestamps. These checks do not reproduce the ERA5 results: the actual NetCDF files were not supplied for the repository review.
+All eight scripts passed syntax checks. Synthetic-data checks passed for hourly alignment, empty detections, a 30-hour internal period, start/end boundary flags, an all-low window, and rejection of missing timestamps. The [saved processed CSVs](data/processed/README.md) are now included. Rerunning alignment and detection from those inputs reproduced both final result tables exactly, including 545 low-resource hours, 31 periods, and 30 fully observed periods. This verifies the saved-series-to-results stage; the underlying ERA5-to-resource models have not been rerun here because their raw NetCDF inputs were not supplied.
 
 ## Data
 
@@ -66,6 +66,17 @@ One period touches the start of the available intervals. Its observed 17-hour du
 **These results do not establish California's Dunkelflaute frequency or the absence of longer events outside the observed window.**
 
 ## Local workflow
+
+To reproduce the event tables directly from the included processed series, run from the repository root:
+
+```bash
+python scripts/05b_align_hourly_resources.py
+python scripts/06_detect_trial_periods.py
+```
+
+These two steps do not require raw ERA5 files or API credentials. See the [processed-data notes](data/processed/README.md) for units, verification scope, and the legacy sensitivity diagnostic.
+
+For the full workflow using existing raw ERA5 inputs:
 
 Skip `01_download_era5.py` when using the existing data. It is retained as the original request record, contains a Mac-specific output path, and starts a CDS request when executed or imported. It does not extract the ZIP response. The analysis scripts use paths relative to the project directory.
 

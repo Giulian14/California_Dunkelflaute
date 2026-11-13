@@ -12,7 +12,9 @@ The intended study period is **2005–2024**. Current work is a **January 2020 p
 
 The pilot workflow has been run successfully on the author's Mac using Python 3.11, Anaconda, and Spyder. It opens existing ERA5 files, builds a California mask, calculates weather averages, estimates preliminary resource indicators, and detects trial low-resource periods.
 
-**This repository is being assembled. The tested local scripts, boundary file, environment specification, and results have not yet been uploaded.** The workflow below describes those local files.
+**The eight uploaded Python scripts are now in `scripts/`, preserved unchanged from the author's archive.** The boundary file, environment specification, and results have not yet been uploaded.
+
+All eight scripts passed syntax checks. Synthetic-data checks passed for hourly alignment, empty detections, a 30-hour internal period, start/end boundary flags, an all-low window, and rejection of missing timestamps. These checks do not reproduce the ERA5 results: the actual NetCDF files were not supplied for the repository review.
 
 ## Data
 
@@ -65,7 +67,9 @@ One period touches the start of the available intervals. Its observed 17-hour du
 
 ## Local workflow
 
-Run scripts in this order once the files are available locally:
+Skip `01_download_era5.py` when using the existing data. It is retained as the original request record, contains a Mac-specific output path, and starts a CDS request when executed or imported. It does not extract the ZIP response. The analysis scripts use paths relative to the project directory.
+
+Run scripts in this order once the input files are available locally:
 
 ```text
 scripts/02_inspect_era5.py
@@ -83,7 +87,7 @@ The local workflow produces maps, time series, and a duration histogram.
 
 ## Remaining work
 
-- Upload tested scripts, the boundary GeoJSON, selected results, and reproducibility documentation.
+- Upload the boundary GeoJSON, selected results, and additional reproducibility documentation.
 - Provide an environment specification and document boundary acquisition.
 - Replace or assess the illustrative turbine curve and implement a defensible photovoltaic model.
 - Assess land filtering and capacity-location weighting.

@@ -12,7 +12,7 @@ The author reported this snapshot from the active Spyder IPython console after s
 
 The earlier handoff listed Python 3.11.18. The latest console report is 3.11.11; this document records the observed value without assuming the cause of the difference.
 
-The requirements file pins seven direct dependencies. It does not lock transitive dependencies, compiled-library builds, or the operating system. The author's original environment was not exported or independently reconstructed during repository review. Package pin syntax was validated; availability and installation of these exact versions in a new environment have not been checked here.
+The requirements file pins seven direct dependencies. It does not lock transitive dependencies, compiled-library builds, or the operating system. A separate clean Python 3.11.11 environment was created on Linux x86_64, all seven pinned package versions installed successfully, and `pip check` passed. The complete January analysis was then rerun from the supplied ERA5 files. See the [full verification](full_workflow_verification.md) and [resolved Linux package snapshot](validated_linux_packages.txt). This reproduces the direct runtime versions and analysis, not the author's complete macOS/Conda installation.
 
 ## Existing working environment
 
@@ -22,7 +22,7 @@ Spyder and its kernel are development tools, separate from the scientific runtim
 
 ## Recreate in a separate environment
 
-The following is a proposed clean-install procedure, not a command already validated in this review. Run from the repository root with Conda available:
+The following Conda-based procedure creates a separate environment. The successful automated verification used a Python 3.11.11 virtual environment on Linux rather than these Conda commands. Run from the repository root with Conda available:
 
 ```bash
 conda create --name California_Dunkelflaute_Reproduce --override-channels -c conda-forge python=3.11.11 pip
@@ -41,4 +41,4 @@ The analysis requires the two existing ERA5 NetCDF files in `data/raw/`. The bou
 python -c "import numpy, pandas, xarray, netCDF4, matplotlib, shapely, cdsapi; print('Scientific libraries loaded successfully.')"
 ```
 
-Then run the scripts in the README's order. The January reference checks are 695 selected grid centers, 743 aligned hourly intervals, and 31 observed trial low-resource periods including one start-boundary period. The full ERA5 workflow has been reported working by the author, but has not been rerun in the review workspace because the NetCDF inputs were not supplied.
+Then run the scripts in the README's order. The January reference checks are 695 selected grid centers, 743 aligned hourly intervals, and 31 observed trial low-resource periods including one start-boundary period. The full ERA5 workflow has now also completed successfully in the clean Linux environment. Both final result tables match exactly; small wind capacity-factor differences are documented in the full verification report. This confirms computational reproducibility of the preliminary workflow, not validation of its physical assumptions.

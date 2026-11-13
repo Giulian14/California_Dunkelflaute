@@ -40,3 +40,5 @@ On the documented 0.25-degree grid (latitude 42 to 32 degrees, longitude -125 to
 The file was also checked for a single California feature, the expected GEOID, closed polygon rings, and valid longitude/latitude coordinate ranges.
 
 This is a grid-center administrative mask, not fractional grid-cell coverage or a land-only mask. It includes state waters and does not encode wind-farm or photovoltaic deployment locations.
+
+The subsequent [full-workflow verification](full_workflow_verification.md) rebuilt the mask with the actual supplied ERA5 coordinate grid using the unchanged Shapely script. Its 695 selected centers, coordinates, and values exactly matched the uploaded mask.

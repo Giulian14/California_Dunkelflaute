@@ -1,0 +1,210 @@
+{
+  "status": "passed",
+  "scope": "All seven January 2020 analysis scripts rerun from supplied raw ERA5 inputs and committed Census boundary; no CDS download",
+  "python": "3.11.11",
+  "platform": {
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "direct_package_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "xarray": "2026.9.0",
+    "netCDF4": "1.7.4",
+    "matplotlib": "3.11.2",
+    "shapely": "2.2.0",
+    "cdsapi": "0.7.7"
+  },
+  "pip_check": "No broken requirements found.",
+  "scripts": [
+    {
+      "script": "02_inspect_era5.py",
+      "exit_code": 0
+    },
+    {
+      "script": "02b_build_california_mask.py",
+      "exit_code": 0
+    },
+    {
+      "script": "03_california_averages.py",
+      "exit_code": 0
+    },
+    {
+      "script": "04_wind_capacity_factor.py",
+      "exit_code": 0
+    },
+    {
+      "script": "05_solar_resource_proxy.py",
+      "exit_code": 0
+    },
+    {
+      "script": "05b_align_hourly_resources.py",
+      "exit_code": 0
+    },
+    {
+      "script": "06_detect_trial_periods.py",
+      "exit_code": 0
+    }
+  ],
+  "raw_input_files": [
+    {
+      "filename": "data_stream-oper_stepType-instant.nc",
+      "bytes": 9063819,
+      "sha256": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+      "dimensions": {
+        "valid_time": 744,
+        "latitude": 41,
+        "longitude": 45
+      },
+      "variable_stats": {
+        "u100": {
+          "units": "m s**-1",
+          "min": -12.973129272460938,
+          "max": 16.958938598632812,
+          "missing_or_nonfinite": 0
+        },
+        "v100": {
+          "units": "m s**-1",
+          "min": -20.012283325195312,
+          "max": 26.65478515625,
+          "missing_or_nonfinite": 0
+        },
+        "t2m": {
+          "units": "K",
+          "min": 253.79116821289062,
+          "max": 300.77392578125,
+          "missing_or_nonfinite": 0
+        }
+      }
+    },
+    {
+      "filename": "data_stream-oper_stepType-accum.nc",
+      "bytes": 1208012,
+      "sha256": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822",
+      "dimensions": {
+        "valid_time": 744,
+        "latitude": 41,
+        "longitude": 45
+      },
+      "variable_stats": {
+        "ssrd": {
+          "units": "J m**-2",
+          "min": 0.0,
+          "max": 2584000.0,
+          "missing_or_nonfinite": 0
+        }
+      }
+    }
+  ],
+  "mask": {
+    "selected_grid_centers": 695,
+    "total_grid_centers": 1845,
+    "exact_values_and_coordinates_match_uploaded_mask": true
+  },
+  "output_comparisons": [
+    {
+      "path": "data/processed/california_hourly_weather_2020_01.csv",
+      "rows": 744,
+      "column_checks": {
+        "wind_speed": {
+          "max_absolute_difference": 1.7763568394002505e-15,
+          "rtol": 1e-12,
+          "atol": 1e-12,
+          "passed": true
+        },
+        "temperature_c": {
+          "max_absolute_difference": 3.552713678800501e-15,
+          "rtol": 1e-12,
+          "atol": 1e-12,
+          "passed": true
+        },
+        "irradiance": {
+          "max_absolute_difference": 1.1368683772161603e-13,
+          "rtol": 1e-12,
+          "atol": 1e-12,
+          "passed": true
+        }
+      }
+    },
+    {
+      "path": "data/processed/illustrative_wind_cf_2020_01.csv",
+      "rows": 744,
+      "column_checks": {
+        "wind_capacity_factor": {
+          "max_absolute_difference": 1.725143555786346e-09,
+          "rtol": 1.1920928955078125e-07,
+          "atol": 1e-12,
+          "passed": true
+        }
+      }
+    },
+    {
+      "path": "data/processed/solar_resource_proxy_2020_01.csv",
+      "rows": 744,
+      "column_checks": {
+        "solar_resource_proxy": {
+          "max_absolute_difference": 1.1102230246251565e-16,
+          "rtol": 1e-12,
+          "atol": 1e-12,
+          "passed": true
+        }
+      }
+    },
+    {
+      "path": "data/processed/preliminary_hourly_resources_2020_01.csv",
+      "rows": 743,
+      "column_checks": {
+        "wind_cf_hourly_approx": {
+          "max_absolute_difference": 1.3656100139591842e-09,
+          "rtol": 1.1920928955078125e-07,
+          "atol": 1e-12,
+          "passed": true
+        },
+        "solar_resource_proxy": {
+          "max_absolute_difference": 1.1102230246251565e-16,
+          "rtol": 1e-12,
+          "atol": 1e-12,
+          "passed": true
+        }
+      }
+    },
+    {
+      "path": "results/tables/trial_low_resource_periods_2020_01.csv",
+      "rows": 31,
+      "exact_table_match": true
+    },
+    {
+      "path": "results/tables/trial_duration_sensitivity_2020_01.csv",
+      "rows": 5,
+      "exact_table_match": true
+    }
+  ],
+  "figures_generated": [
+    "california_era5_grid_mask.png",
+    "era5_bounding_box_january_2020.png",
+    "era5_california_january_2020.png",
+    "illustrative_wind_cf_2020_01.png",
+    "solar_resource_proxy_2020_01.png",
+    "trial_low_resource_duration_histogram_2020_01.png"
+  ],
+  "figure_comparison_scope": "Generated and PNG integrity verified; original PNG artifacts retained; no pixel-equivalence claim",
+  "summary": {
+    "aligned_hourly_intervals": 743,
+    "low_resource_hours": 545,
+    "observed_periods": 31,
+    "fully_observed_periods": 30,
+    "longest_observed_period_hours": 19,
+    "observed_periods_at_least_24_hours": 0,
+    "changed_hourly_threshold_classifications": 0
+  },
+  "minimum_absolute_threshold_margins": {
+    "wind_cf_hourly_approx": 0.000300891781220447,
+    "solar_resource_proxy": 0.00035157365532803575
+  },
+  "limitations": [
+    "Linux reproduction of a macOS workflow; direct scientific runtime versions and Python patch version matched, but OS and transitive builds may differ.",
+    "Small wind CF differences are within float32 relative precision; original artifacts were retained.",
+    "Reproducing the preliminary model does not validate its physical realism or trial event definition.",
+    "Boundary-touching first period has unknown full duration."
+  ]
+}

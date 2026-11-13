@@ -12,7 +12,7 @@ The intended study period is **2005–2024**. Current work is a **January 2020 p
 
 The pilot workflow has been run successfully on the author's Mac using Python 3.11, Anaconda, and Spyder. It opens existing ERA5 files, builds a California mask, calculates weather averages, estimates preliminary resource indicators, and detects trial low-resource periods.
 
-**The eight uploaded Python scripts are now in `scripts/`, preserved unchanged from the author's archive.** The boundary file, environment specification, and results have not yet been uploaded.
+**The eight uploaded Python scripts are now in `scripts/`, preserved unchanged from the author's archive.** The exact California boundary file is included in `data/boundaries/`, with [source and checksum documentation](docs/boundary_provenance.md). The environment specification and results have not yet been uploaded.
 
 All eight scripts passed syntax checks. Synthetic-data checks passed for hourly alignment, empty detections, a 30-hour internal period, start/end boundary flags, an all-low window, and rejection of missing timestamps. These checks do not reproduce the ERA5 results: the actual NetCDF files were not supplied for the repository review.
 
@@ -87,8 +87,8 @@ The local workflow produces maps, time series, and a duration histogram.
 
 ## Remaining work
 
-- Upload the boundary GeoJSON, selected results, and additional reproducibility documentation.
-- Provide an environment specification and document boundary acquisition.
+- Upload selected results and additional reproducibility documentation.
+- Provide an environment specification.
 - Replace or assess the illustrative turbine curve and implement a defensible photovoltaic model.
 - Assess land filtering and capacity-location weighting.
 - Establish a final event definition that accounts for ordinary nighttime conditions, seasonality, and model uncertainty.

@@ -1,0 +1,20 @@
+# Large data and archives
+/data/raw/*
+!/data/raw/.gitkeep
+*.nc
+*.grib
+*.grib2
+*.zip
+
+# Credentials and environment secrets
+.cdsapirc
+.env
+.env.*
+!.env.example
+
+# Python, Spyder, notebooks, and macOS
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.spyproject/
+.DS_Store

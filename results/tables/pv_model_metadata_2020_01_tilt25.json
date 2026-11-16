@@ -1,0 +1,56 @@
+{
+  "model": "Fixed-tilt, Erbs + isotropic POA + Ross + PVWatts DC/AC",
+  "status": "Representative scenario, not calibrated to the California fleet",
+  "config": {
+    "tilt_deg": 25.0,
+    "azimuth_deg": 180.0,
+    "albedo": 0.2,
+    "noct_c": 45.0,
+    "gamma_pdc_per_c": -0.004,
+    "dc_ac_ratio": 1.2,
+    "other_loss_fraction": 0.14,
+    "inverter_efficiency": 0.96
+  },
+  "summary": {
+    "hourly_intervals": 743,
+    "selected_grid_centers": 695,
+    "mean_pv_ac_capacity_factor": 0.15854084766926943,
+    "minimum_pv_ac_capacity_factor": 0.0,
+    "maximum_pv_ac_capacity_factor": 0.7736994240835825,
+    "mean_ghi_reference_proxy": 0.11629688217532279,
+    "missing_values": 0,
+    "midpoint_below_horizon_positive_ghi_cell_intervals": 19278,
+    "midpoint_below_horizon_share_of_weighted_ghi_energy": 0.0006782870729660261
+  },
+  "capacity_factor_denominator": "Rated inverter AC power; 1 W per modeled system",
+  "time_convention": "Preceding-hour means, indexed by UTC interval end",
+  "solar_geometry": "Interval midpoint; true solar zenith; sea-level pressure/altitude",
+  "temperature_timing": "Mean of bracketing t2m snapshots; first interval excluded",
+  "first_interval_end_utc": "2020-01-01 01:00:00+00:00",
+  "last_interval_end_utc": "2020-01-31 23:00:00+00:00",
+  "spatial_weights": "Cos(latitude), equal AC capacity per unit area in administrative mask",
+  "low_sun_rule": "At midpoint zenith >= 87 degrees, use DNI=0 and DHI=GHI",
+  "tiny_negative_accumulations_clipped": 0,
+  "inputs": [
+    {
+      "path": "data/raw/data_stream-oper_stepType-instant.nc",
+      "sha256": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115"
+    },
+    {
+      "path": "data/raw/data_stream-oper_stepType-accum.nc",
+      "sha256": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822"
+    },
+    {
+      "path": "data/processed/california_mask.nc",
+      "sha256": "c129c6b24b4df4a55a66d86c17f5e8ba1aa43b71bca457ab30329e96199339f7"
+    }
+  ],
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "xarray": "2026.9.0",
+    "netCDF4": "1.7.4",
+    "pvlib": "0.16.1"
+  }
+}

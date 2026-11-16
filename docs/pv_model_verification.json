@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "python": "3.11.11",
+  "platform": "Linux x86_64",
+  "pvlib": "0.16.1",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests_run": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "dependency_check": "pip check: No broken requirements found.",
+  "integration": {
+    "scenarios_completed": 3,
+    "tilts_deg": [
+      25,
+      35,
+      45
+    ],
+    "selected_grid_centers": 695,
+    "intervals_per_scenario": 743,
+    "nonfinite_outputs": 0,
+    "all_ac_cf_within_0_and_1": true,
+    "zero_irradiance_has_zero_output": true,
+    "timestamps_match_original_aligned_series": true,
+    "ghi_reference_matches_original_proxy_within_float32_relative_precision": true
+  },
+  "baseline_summary": {
+    "hourly_intervals": 743,
+    "selected_grid_centers": 695,
+    "mean_pv_ac_capacity_factor": 0.16947789500291754,
+    "minimum_pv_ac_capacity_factor": 0.0,
+    "maximum_pv_ac_capacity_factor": 0.8212023730698697,
+    "mean_ghi_reference_proxy": 0.11629688217532279,
+    "missing_values": 0,
+    "midpoint_below_horizon_positive_ghi_cell_intervals": 19278,
+    "midpoint_below_horizon_share_of_weighted_ghi_energy": 0.0006782870729660261
+  },
+  "inputs": [
+    {
+      "path": "data/raw/data_stream-oper_stepType-instant.nc",
+      "sha256": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115"
+    },
+    {
+      "path": "data/raw/data_stream-oper_stepType-accum.nc",
+      "sha256": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822"
+    },
+    {
+      "path": "data/processed/california_mask.nc",
+      "sha256": "c129c6b24b4df4a55a66d86c17f5e8ba1aa43b71bca457ab30329e96199339f7"
+    }
+  ],
+  "code_sha256": {
+    "scripts/pv_model.py": "8bf389d465c215e1554b383785443246cbe674acae9595f86279ebf28470765f",
+    "scripts/07_pv_capacity_factor.py": "6f41e274b862372222cf010242c11fc928ccdaae67e16801654a95f185469f51",
+    "tests/test_pv_model.py": "66afe6fe9f61ed0976f817fb68ddedb440938bb94fffdec1e4d35a9926303ece"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01.csv",
+      "sha256": "8f19bbf9038b4d2fda9f1e66dd6ddc3a34684b5e674f1c5da36476aa1e1fe047",
+      "bytes": 58018
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01_tilt25.csv",
+      "sha256": "2221886e441389f59d2625fa36739db4c191ff5bfb7fe3b7dc54b835294f0a51",
+      "bytes": 58084
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01_tilt45.csv",
+      "sha256": "619c012b866f2857429106addd8c32f462bea0ffa758e393a35a7ba20d69056d",
+      "bytes": 58008
+    },
+    {
+      "path": "results/figures/pv_ac_capacity_factor_2020_01.png",
+      "sha256": "0c38fe5b14b48913a39a12871c7cc9028ea7350e1322fd1a47370567daff46da",
+      "bytes": 360422
+    },
+    {
+      "path": "results/figures/pv_ac_capacity_factor_2020_01_tilt25.png",
+      "sha256": "59cdc3331a2ac2b99312e1b5eeb0abb48f8ccb60aa78d412a32546f5de9fa255",
+      "bytes": 369303
+    },
+    {
+      "path": "results/figures/pv_ac_capacity_factor_2020_01_tilt45.png",
+      "sha256": "ad3af780e6562a829478905ada0419c8d0443555ff259f5a45b9e74b7efcdd37",
+      "bytes": 361117
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01.json",
+      "sha256": "ec9d4265674f80c9a4ce7ee549b0f29a93a93e08347927630f9be6e873186db3",
+      "bytes": 2141
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01_tilt25.json",
+      "sha256": "34138ecaa5320915ea826d976e638d2092e69696d5c89c64e05cb8d63188ebe8",
+      "bytes": 2141
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01_tilt45.json",
+      "sha256": "3b659958dced1dcfc83315f9a2f3cea353a644efae179007e951521cf9412a97",
+      "bytes": 2141
+    },
+    {
+      "path": "results/tables/pv_model_summary_2020_01.csv",
+      "sha256": "3ec07b29bb9c6afa6b999e92d50fe6adae166c8af4ae478d8fa87e902571acb2",
+      "bytes": 370
+    },
+    {
+      "path": "results/tables/pv_model_summary_2020_01_tilt25.csv",
+      "sha256": "557358d5bf7624931342237dd88ef16dbe6abc4c2c0fc7769016d57850f6e617",
+      "bytes": 370
+    },
+    {
+      "path": "results/tables/pv_model_summary_2020_01_tilt45.csv",
+      "sha256": "43aa7a5d11e0e7f1fb2b17e51064770405307828bed57f64cd5b19af1f589b75",
+      "bytes": 370
+    },
+    {
+      "path": "results/tables/pv_tilt_sensitivity_2020_01.csv",
+      "sha256": "40a87642e937650aa499fe6809eee2f881509ac30f2eb7cb9909b5024c08cfdb",
+      "bytes": 226
+    }
+  ],
+  "limitations": [
+    "Representative fixed-tilt scenario; not validated against observed PV generation.",
+    "Original wind model, administrative mask, and proxy-based event catalogues are preserved.",
+    "New PV CF uses an AC rated-power denominator; original GHI proxy does not.",
+    "Midpoint/hour-average approximations and inferred irradiance components remain model uncertainties."
+  ]
+}

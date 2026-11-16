@@ -1,6 +1,6 @@
 # Saved January 2020 processed data
 
-The five CSV files here are preserved unchanged from the author's uploaded `processed.zip`. They were generated locally from the ERA5 single-levels data and California administrative mask described in the [project README](../../README.md). All times are UTC, stored as timezone-naive strings.
+The five original pilot CSV files are preserved unchanged from the author's uploaded `processed.zip`. They were generated locally from the ERA5 single-levels data and California administrative mask described in the [project README](../../README.md). All times are UTC, stored as timezone-naive strings.
 
 ## Files and units
 
@@ -36,3 +36,9 @@ Repository review reran both scripts using these supplied CSVs. The alignment ma
 Those initial checks covered the saved-series-to-results stage. Subsequently, the [full workflow was reproduced from the raw ERA5 inputs](../../docs/full_workflow_verification.md) in a clean Python 3.11.11 environment with the seven pinned package versions. The mask matches exactly, processed series agree within the documented numerical tolerances, and both final event tables match exactly. Original uploaded CSVs are retained here. Successful reproduction does not validate the physical assumptions of the preliminary resource models.
 
 The uploaded `california_mask.nc` is excluded from Git by the project's NetCDF rule. Recreate it with `02b_build_california_mask.py` using the committed boundary and existing ERA5 coordinate grid. The analysis does not treat the first truncated low-resource period's observed duration as its full duration.
+
+## Modeled PV extension
+
+`pv_ac_capacity_factor_2020_01.csv` contains 743 complete hourly intervals from the 35° south-facing baseline. The `tilt25` and `tilt45` variants are separate scenarios. Columns are `interval_end_utc` (explicit UTC offset), `pv_ac_capacity_factor` (rated AC denominator), `ghi_reference_proxy` (dimensionless irradiance reference), `poa_global_w_m2` (W/m²), and `cell_temperature_c` (°C). All numeric columns are area-weighted across the same 695 centers.
+
+These new files use a temperature-dependent fixed-tilt PV model, not a replacement of the original proxy CSVs in place. Do not smooth the PV series again when aligning it to the preceding-hour wind approximation. See [the PV method](../../docs/pv_model.md) for assumptions, verification, and the future event-analysis step.

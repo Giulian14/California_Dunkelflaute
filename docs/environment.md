@@ -42,3 +42,15 @@ python -c "import numpy, pandas, xarray, netCDF4, matplotlib, shapely, cdsapi; p
 ```
 
 Then run the scripts in the README's order. The January reference checks are 695 selected grid centers, 743 aligned hourly intervals, and 31 observed trial low-resource periods including one start-boundary period. The full ERA5 workflow has now also completed successfully in the clean Linux environment. Both final result tables match exactly; small wind capacity-factor differences are documented in the full verification report. This confirms computational reproducibility of the preliminary workflow, not validation of its physical assumptions.
+
+## Optional PV generation extension
+
+The original seven-package `requirements.txt` snapshot is preserved. `requirements-pv.txt` includes it and adds **pvlib 0.16.1**. A separate clean Python 3.11.11 Linux environment installed this extension, passed `pip check`, passed all 10 PV tests, and completed the January baseline and 25°/45° tilt scenarios. Resolved versions are recorded in [the PV Linux package snapshot](validated_pv_linux_packages.txt).
+
+```bash
+python -m pip install -r requirements-pv.txt
+python -m unittest discover -s tests -v
+python scripts/07_pv_capacity_factor.py --headless
+```
+
+These commands are intended for an environment with the model dependencies available; the assistant has not installed the extension on the author's Mac. Keep Spyder's application and kernel version requirements separate from the scientific runtime.

@@ -1,6 +1,6 @@
 # January 2020 pilot outputs
 
-These six PNG figures and two CSV tables are preserved unchanged from the author's uploaded `results.zip`. They describe preliminary resource models, not a completed 2005–2024 Dunkelflaute analysis.
+The six original PNG figures and two original CSV tables are preserved unchanged from the author's uploaded `results.zip`. They describe preliminary resource models, not a completed 2005–2024 Dunkelflaute analysis.
 
 ## Figures
 
@@ -27,3 +27,9 @@ The trial condition is illustrative wind capacity factor < 0.20 AND solar resour
 During repository review, all PNG files passed image-integrity checks and were visually inspected. CSV durations were checked against their timestamps, periods were checked for ordering and overlap, and sensitivity counts were recomputed from the catalogue. After the processed CSVs were supplied, alignment and detection were rerun using those actual saved values. Both regenerated result tables matched these tables exactly. This verifies the saved-series-to-results stage, in addition to internal consistency. After the raw ERA5 inputs were supplied, the [full workflow was independently reproduced](../docs/full_workflow_verification.md) in a clean Python 3.11.11 environment with the pinned direct dependencies. Both final result tables still match exactly. All six figures regenerated successfully; original uploaded images are retained here without a claim of pixel-equivalent rendering across operating systems. See the [processed-data verification notes](../data/processed/README.md).
 
 Original-file byte sizes, image dimensions, and SHA-256 checksums are recorded in [the results manifest](../docs/results_manifest.json).
+
+## PV model extension
+
+The additional `pv_ac_capacity_factor_2020_01.png` figure compares modeled fixed-tilt AC CF with the GHI reference. Separate `tilt25` and `tilt45` plots show sensitivity scenarios. These curves have different physical denominators; their separation is not an accuracy score.
+
+`pv_model_metadata_*.json` files record assumptions, input hashes, timestamp conventions, runtime versions, and low-sun diagnostics. `pv_model_summary_*.csv` files contain scenario summaries. [The tilt sensitivity table](tables/pv_tilt_sensitivity_2020_01.csv) collates the three summaries. See [the model documentation](../docs/pv_model.md) and [verification record](../docs/pv_model_verification.json). Original proxy-based event catalogues are unchanged.

@@ -65,6 +65,22 @@ One period touches the start of the available intervals. Its observed 17-hour du
 
 **These results do not establish California's Dunkelflaute frequency or the absence of longer events outside the observed window.**
 
+## PV generation extension
+
+A separate [fixed-tilt PV model](docs/pv_model.md) now estimates AC capacity factor using pvlib, panel orientation, temperature, system losses, and inverter clipping. It was tested on the existing January ERA5 inputs across all 695 selected cells and 743 complete intervals, with 10 automated tests passing.
+
+The representative 35° south-facing scenario averages **0.169478 AC capacity factor** over those intervals. Tilt scenarios at 25° and 45° average 0.158541 and 0.176466. These are modeled system scenarios, not validated California fleet output. The original GHI proxy and event tables remain unchanged; the PV-based event comparison is the next analysis step.
+
+Install the optional extension dependencies and run from the repository root:
+
+```bash
+python -m pip install -r requirements-pv.txt
+python -m unittest discover -s tests -v
+python scripts/07_pv_capacity_factor.py --headless
+```
+
+The model requires the existing raw inputs and mask. [Model assumptions and results](docs/pv_model.md), [PV figure](results/figures/pv_ac_capacity_factor_2020_01.png), and [tilt sensitivity table](results/tables/pv_tilt_sensitivity_2020_01.csv) are included. Raw NetCDF files remain excluded.
+
 ## Local workflow
 
 To reproduce the event tables directly from the included processed series, run from the repository root:
@@ -98,7 +114,8 @@ The local workflow produces maps, time series, and a duration histogram.
 
 ## Remaining work
 
-- Replace or assess the illustrative turbine curve and implement a defensible photovoltaic model.
+- Assess the illustrative turbine curve and validate the new PV model against observations and additional parameter sensitivities.
+- Apply modeled PV output to the reference event definition and the proposed 48-hour combined-energy comparison.
 - Assess land filtering and capacity-location weighting.
 - Establish a final event definition that accounts for ordinary nighttime conditions, seasonality, and model uncertainty.
 - Extend the validated workflow to 2005–2024.

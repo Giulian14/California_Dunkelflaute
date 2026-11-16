@@ -69,7 +69,7 @@ One period touches the start of the available intervals. Its observed 17-hour du
 
 A separate [fixed-tilt PV model](docs/pv_model.md) now estimates AC capacity factor using pvlib, panel orientation, temperature, system losses, and inverter clipping. It was tested on the existing January ERA5 inputs across all 695 selected cells and 743 complete intervals, with 10 automated tests passing.
 
-The representative 35° south-facing scenario averages **0.169478 AC capacity factor** over those intervals. Tilt scenarios at 25° and 45° average 0.158541 and 0.176466. These are modeled system scenarios, not validated California fleet output. The original GHI proxy and event tables remain unchanged; the PV-based event comparison is the next analysis step.
+The representative 35° south-facing scenario averages **0.169478 AC capacity factor** over those intervals. Tilt scenarios at 25° and 45° average 0.158541 and 0.176466. These are modeled system scenarios, not validated California fleet output. The original GHI proxy and event tables remain unchanged. A separate [event-definition comparison](docs/event_comparison.md) now uses modeled PV, including 27 rolling-window sensitivity cases.
 
 Install the optional extension dependencies and run from the repository root:
 
@@ -80,6 +80,18 @@ python scripts/07_pv_capacity_factor.py --headless
 ```
 
 The model requires the existing raw inputs and mask. [Model assumptions and results](docs/pv_model.md), [PV figure](results/figures/pv_ac_capacity_factor_2020_01.png), and [tilt sensitivity table](results/tables/pv_tilt_sensitivity_2020_01.csv) are included. Raw NetCDF files remain excluded.
+
+## Event-definition comparison using modeled PV
+
+The new [comparison](docs/event_comparison.md) uses the included processed series and PV metadata. The 35° PV baseline has **502 simultaneous low hours**, versus 545 with the old irradiance proxy; neither has an observed 24-hour uninterrupted event. For a hypothetical **50/50 rated-capacity mix**, the minimum 48-hour combined CF is **7.12%**, above the 6% comparison threshold, giving zero qualifying windows.
+
+Results depend on the portfolio and definition: at 75% wind rated capacity and a 6% threshold, qualifying windows merge into one **199-hour union period**. This does not mean generation is below 6% in every hour, or that every possible 48-hour mean within the union is below 6%. The comparison includes tilt, mix, and threshold sensitivity and conservatively flags uncertain edge context.
+
+```bash
+python scripts/08_compare_event_definitions.py --headless
+```
+
+This step needs no raw ERA5 data or additional downloads. All **22 tests** passed, and independent direct-slice/support checks agreed for all 27 rolling-window cases. See the [comparison figure](results/figures/wind_pv_event_comparison_2020_01.png), [sensitivity table](results/tables/wind_pv_48h_sensitivity_2020_01.csv), and [method and limits](docs/event_comparison.md). This remains a January scenario study, not a multi-year climatology or actual fleet adequacy assessment.
 
 ## Local workflow
 
@@ -115,7 +127,7 @@ The local workflow produces maps, time series, and a duration histogram.
 ## Remaining work
 
 - Assess the illustrative turbine curve and validate the new PV model against observations and additional parameter sensitivities.
-- Apply modeled PV output to the reference event definition and the proposed 48-hour combined-energy comparison.
+- Extend and verify event extraction across contiguous months and years, with adequate boundary context.
 - Assess land filtering and capacity-location weighting.
 - Establish a final event definition that accounts for ordinary nighttime conditions, seasonality, and model uncertainty.
 - Extend the validated workflow to 2005–2024.

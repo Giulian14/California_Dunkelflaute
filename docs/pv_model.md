@@ -105,4 +105,4 @@ Ten automated tests passed, covering: dark-input zero output; rejection of missi
 
 The model omits tracking, actual installation locations, terrain and row shading, spectral and explicit angle-of-incidence corrections, measured module-height wind, snow, and time-varying albedo or losses. It infers irradiance components from GHI and uses hour-average/midpoint approximations. The administrative mask and uniform deployment assumptions remain important limitations.
 
-Next, use the modeled PV series in a separately labeled wind/PV analysis. Keep the original proxy-based event tables as pilot results. No new PV-based event catalogue or 48-hour combined metric is produced by this extension yet.
+The separate [event comparison](event_comparison.md), implemented in `08_compare_event_definitions.py`, now uses this PV output for the hourly reference and a 48-hour combined-energy analysis. The original proxy-based event tables remain pilot results. Script 07 generates PV estimates; script 08 applies the separate event definitions.

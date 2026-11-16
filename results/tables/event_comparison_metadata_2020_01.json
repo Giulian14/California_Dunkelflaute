@@ -1,0 +1,68 @@
+{
+  "status": "January scenario comparison; not a long-term climatology or actual fleet adequacy study",
+  "reference": {
+    "threshold_each_cf": 0.2,
+    "minimum_hours": 24
+  },
+  "combined": {
+    "window_hours": 48,
+    "wind_rated_capacity_shares": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "thresholds": [
+      0.05,
+      0.06,
+      0.1
+    ],
+    "baseline_wind_share": 0.5,
+    "baseline_threshold": 0.06
+  },
+  "duration_rule": "Union of all complete qualifying window supports; merge overlap and adjacency",
+  "edge_context_rule": "Conservatively flag events within 48 hours of either data boundary",
+  "time_rule": "UTC interval ends; only wind snapshots averaged; PV not smoothed again",
+  "first_interval_start_utc": "2020-01-01 00:00:00+00:00",
+  "last_interval_end_utc": "2020-01-31 23:00:00+00:00",
+  "expected_unavailable_initial_rolling_means": 47,
+  "inputs": [
+    {
+      "path": "data/processed/illustrative_wind_cf_2020_01.csv",
+      "sha256": "1c764a9f7e004fd400b9b81373d7336904c4923c35fecdc28a0b34121087705a"
+    },
+    {
+      "path": "data/processed/solar_resource_proxy_2020_01.csv",
+      "sha256": "5afbc127641bc8104321435f9624f921766e4f12895256b4690c5a2328bc846b"
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01_tilt25.csv",
+      "sha256": "2221886e441389f59d2625fa36739db4c191ff5bfb7fe3b7dc54b835294f0a51"
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01_tilt25.json",
+      "sha256": "34138ecaa5320915ea826d976e638d2092e69696d5c89c64e05cb8d63188ebe8"
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01.csv",
+      "sha256": "8f19bbf9038b4d2fda9f1e66dd6ddc3a34684b5e674f1c5da36476aa1e1fe047"
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01.json",
+      "sha256": "ec9d4265674f80c9a4ce7ee549b0f29a93a93e08347927630f9be6e873186db3"
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01_tilt45.csv",
+      "sha256": "619c012b866f2857429106addd8c32f462bea0ffa758e393a35a7ba20d69056d"
+    },
+    {
+      "path": "results/tables/pv_model_metadata_2020_01_tilt45.json",
+      "sha256": "3b659958dced1dcfc83315f9a2f3cea353a644efae179007e951521cf9412a97"
+    }
+  ],
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "matplotlib": "3.11.2"
+  }
+}

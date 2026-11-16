@@ -33,3 +33,9 @@ Original-file byte sizes, image dimensions, and SHA-256 checksums are recorded i
 The additional `pv_ac_capacity_factor_2020_01.png` figure compares modeled fixed-tilt AC CF with the GHI reference. Separate `tilt25` and `tilt45` plots show sensitivity scenarios. These curves have different physical denominators; their separation is not an accuracy score.
 
 `pv_model_metadata_*.json` files record assumptions, input hashes, timestamp conventions, runtime versions, and low-sun diagnostics. `pv_model_summary_*.csv` files contain scenario summaries. [The tilt sensitivity table](tables/pv_tilt_sensitivity_2020_01.csv) collates the three summaries. See [the model documentation](../docs/pv_model.md) and [verification record](../docs/pv_model_verification.json). Original proxy-based event catalogues are unchanged.
+
+## Modeled-PV event-definition comparison
+
+[The comparison figure](figures/wind_pv_event_comparison_2020_01.png) shows individual CFs, 48-hour combined means for three capacity mixes, and sensitivity of merged events/covered hours. The hourly reference catalogues are in `pv_reference_*.csv`; window-based results are in `wind_pv_48h_*.csv`. Their distinct meanings, edge-context flags, input provenance, and verification are documented in [the comparison report](../docs/event_comparison.md).
+
+The 35° PV baseline gives zero observed 24-hour uninterrupted events and zero low 48-hour windows for a 50/50 rated-capacity mix at threshold 0.06. Other hypothetical mixes/thresholds produce periods, including one 199-hour union period for 75% wind at 0.06. Original pilot and PV artifacts are preserved.

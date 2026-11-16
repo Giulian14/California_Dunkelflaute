@@ -1,0 +1,5 @@
+solar_scenario,threshold_each_technology,minimum_event_hours,input_intervals,simultaneous_low_hours,observed_low_periods,longest_observed_period_hours,events_at_least_24_hours,complete_events_at_least_24_hours,boundary_touching_low_periods
+original_proxy,0.2,24,743,545,31,19,0,0,1
+tilt25,0.2,24,743,504,31,19,0,0,1
+baseline,0.2,24,743,502,31,19,0,0,1
+tilt45,0.2,24,743,501,31,19,0,0,1

@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "matplotlib": "3.11.2"
+  },
+  "unit_tests": {
+    "total": 22,
+    "event_tests": 12,
+    "pv_tests": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_checks": {
+    "comparison_cases": 27,
+    "direct_slice_rolling_means_match": true,
+    "explicit_window_support_unions_match": true,
+    "merged_event_counts_durations_and_qualifying_window_counts_match": true,
+    "boundary_context_flags_match": true,
+    "reference_cases": 4,
+    "reference_hourly_counts_match": true,
+    "expected_initial_unavailable_rolling_means": 47,
+    "complete_48h_windows": 696,
+    "smallest_absolute_rolling_mean_threshold_margin": 5.623799386594852e-06,
+    "covered_hours_monotonic_with_threshold": true
+  },
+  "baseline": {
+    "pv_tilt_deg": 35,
+    "hourly_simultaneous_low_hours": 502,
+    "hourly_events_at_least_24h": 0,
+    "wind_rated_capacity_share": 0.5,
+    "combined_threshold": 0.06,
+    "minimum_48h_combined_cf": 0.07120720244682058,
+    "combined_48h_events": 0
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/wind_pv_event_inputs_2020_01.csv",
+      "sha256": "688c102ceeb1bff4603ad705306b8f392078ac039ee36642ad2e1abe04ca37a9",
+      "bytes": 92834
+    },
+    {
+      "path": "results/figures/wind_pv_event_comparison_2020_01.png",
+      "sha256": "00f1bc21323fe458d0351a8c2fa078aff55dc6faf7ac9a36d22de40cbd5b45f4",
+      "bytes": 533433
+    },
+    {
+      "path": "results/tables/event_comparison_metadata_2020_01.json",
+      "sha256": "16c4165df175d4a4c80bce0bf2cd3564081701baaa557957925a1a24007ef96d",
+      "bytes": 2324
+    },
+    {
+      "path": "results/tables/pv_reference_duration_sensitivity_2020_01.csv",
+      "sha256": "42f43c1478bac9170841a4842b9d544f9a53330c17e984d221cc12b84e4d9c49",
+      "bytes": 420
+    },
+    {
+      "path": "results/tables/pv_reference_periods_2020_01.csv",
+      "sha256": "402debae54eb25657e336f6404a5c5fb6320146ab544d3f69c514cec425e121f",
+      "bytes": 11497
+    },
+    {
+      "path": "results/tables/pv_reference_summary_2020_01.csv",
+      "sha256": "8fd79e5102ae868b87d9abcc7ca689d3cb13f02fed4c363f16f0738a445a61c4",
+      "bytes": 386
+    },
+    {
+      "path": "results/tables/wind_pv_48h_events_2020_01.csv",
+      "sha256": "118750a6659f6edc7fa92186b336ab93eee5a2c92227b9e6af964e94614f27e3",
+      "bytes": 1826
+    },
+    {
+      "path": "results/tables/wind_pv_48h_sensitivity_2020_01.csv",
+      "sha256": "2d46b0645e9d1b8c1679c884a682438f421d8dff5a55bc73594be5875c2ae2cb",
+      "bytes": 1971
+    }
+  ],
+  "code_sha256": {
+    "scripts/energy_events.py": "ec91509bdf978f2046502cb3c27a47d854efbade21bf5cb7c1cdfedfe362a310",
+    "scripts/08_compare_event_definitions.py": "67fce926c1525ace3425832e4065d44f9ce9ac5384afb91226a16f4076c2ccbd",
+    "tests/test_energy_events.py": "126eb4f02494b2dfdb05500425192e561c709bcf8ad170d0ac3892e45e2a0dcb"
+  }
+}

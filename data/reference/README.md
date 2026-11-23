@@ -17,3 +17,7 @@ The EIA snapshot describes end-of-2020 status and is held fixed as a location ex
 ## Annual-capacity consistency refinement
 
 `jan2020_wind_annual_turbine_audit.csv` joins all 123 original generators to annual wind records, retaining capacity-consistency/whole-plant flags, source sheet/row and reported predominant equipment. `jan2020_wind_capacity_consistent_plants.csv` defines the more conservative 103-plant, 119-generator, 5,842.1 MW subset. Three whole plants are excluded for capacity disagreement; no reporting-consolidation alias is inferred. This refines, rather than overwrites, the previous monthly-snapshot cohort. See [latest interpretation](../../docs/wind_site_diagnostics.md).
+
+## Terrain and curve-provenance references
+
+[Terrain metadata, manifest and Copernicus license](terrain/README.md) support 103 USGS point comparisons with ERA5 static fields. [Candidate turbine specifications](curve_coverage/README.md) retain two theoretical source YAML files and their BSD notice; no manufacturer curve has been substituted. Raw terrain chunks, raw API responses and full archives remain outside Git. See [audit and limits](../../docs/wind_terrain_and_curve_audit.md).

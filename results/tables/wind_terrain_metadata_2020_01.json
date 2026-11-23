@@ -1,0 +1,39 @@
+{
+  "status": "Terrain context and approximate point/grid differences; not wind bias attribution or calibration",
+  "python": "3.11.11",
+  "retrieved_on": "2026-11-23",
+  "summary": {
+    "plants": 103,
+    "unique_weather_centers": 24,
+    "valid_USGS_points": 103,
+    "point_status_counts": {
+      "valid": 103
+    },
+    "median_point_minus_grid_height_m": -35.8059136703132,
+    "median_absolute_point_grid_height_difference_m": 205.23466005278578,
+    "minimum_point_minus_grid_height_m": -936.0631323204144,
+    "maximum_point_minus_grid_height_m": 517.299598020139,
+    "minimum_orography_std_m": 49.3214111328125,
+    "maximum_orography_std_m": 403.478515625
+  },
+  "geopotential_height_conversion": "ERA5 z / 9.80665 m s-2; geopotential height, not exact geometric/orthometric datum conversion",
+  "point_reference": "USGS EPQS interpolated 3DEP DEM at EIA plant coordinates; request EPSG:4326 and Meters; raster/acquisition fields retained",
+  "vertical_and_spatial_limits": "Point DEM elevations and grid-scale geopotential heights have different support and vertical definitions; EIA plant points are not surveyed turbine locations.",
+  "statistical_limits": "Plants share ERA5 cells; no independent-sample p-value, fitted terrain correction or causal attribution.",
+  "wind_validation": "No independent hub-height wind observations acquired; no wind, PV or event model changed.",
+  "attribution": "Contains modified Copernicus Climate Change Service information (2026). Neither the European Commission nor ECMWF is responsible for any use of the Copernicus information or data. USGS 3DEP/EPQS.",
+  "source_manifest_sha256": "b919dd406342cd8a2d777da96f4cc4653f4e7c569510e984b8261273015e4e68",
+  "input_sha256": {
+    "data/reference/jan2020_wind_capacity_consistent_plants.csv": "0a5972fb7276331ada2f51cf3c8607d67681fca8a68b8e215b180c25f16d34ef",
+    "results/tables/wind_site_coordinate_audit_2020_01.csv": "7c347785013b4b3f12a745f65fa6b0cffa1ae3cff6ddef4b25bd766fcefe9c68",
+    "results/tables/wind_site_iec2_diagnostics_2020_01.csv": "3bc17631b47b550f9826766a47276bdc462bc471199b2d9ad216a7b0c7b1d887",
+    "results/tables/wind_site_diagnostic_metadata_2020_01.json": "4f4c6c37d9048c37e96da6b34df624065f2a732e454af3f12b1f5f244f4835be"
+  },
+  "artifacts_sha256": {
+    "results/tables/wind_terrain_site_audit_2020_01.csv": "cf570aa15e73ddfc72753104ea8b915120fb18cd84268d44e3916edd99f6fe61",
+    "data/reference/terrain/source_manifest.json": "b919dd406342cd8a2d777da96f4cc4653f4e7c569510e984b8261273015e4e68",
+    "data/reference/terrain/LICENSE_COPERNICUS.txt": "ffe05f9653f14ffd23322bf1ebecfd6dd519ba59726280b34593fcf69ccab60e",
+    "data/reference/terrain/static_field_metadata.json": "e975301721f44fa9b425c4701244365138ba46dfd0f371f71b286fcb62a947b9",
+    "results/figures/wind_terrain_comparison_2020_01.png": "4c163b3c0bda4fea6c899b7f50dc322f897333097fc303b67f36fb7f1023796e"
+  }
+}

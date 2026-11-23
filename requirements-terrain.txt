@@ -1,0 +1,3 @@
+-r requirements-wind.txt
+# Decode the specific single-chunk Zarr v2 static-field snapshots.
+numcodecs==0.16.6

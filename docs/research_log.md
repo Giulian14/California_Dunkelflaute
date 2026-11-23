@@ -178,6 +178,34 @@ Added [site helper](../scripts/wind_sites.py), [driver](../scripts/15_diagnose_w
 
 The readiness record lists remaining wind physics/asset-lineage validation, plant-matched PV amplitudes, contrasting-season/held-out-year checks, fixed-versus-evolving fleet choice, full input/time-support QC, chunk equivalence across months/years/leap days, event-definition sensitivity and temperature-reference design. A proposed UTC 2005–2024 core has **175,320 complete hourly intervals**, requiring appropriate endpoint samples and external window/event context. No 20-year processing was started.
 
+## November 23 terrain-reference and curve-provenance audit
+
+### Purpose and source decisions
+
+Continue checking wind-model assumptions before expansion. Manufacturer V90 PDF links hosted by Maine, Taiwan's NDC and the Dutch environmental-assessment archive returned HTTP 403. Their search snippets/tables were not treated as verified curve data. Audited the existing turbine archive instead, retaining its immutable commit and original spec/blob hashes, and pursued accessible terrain references without changing resource models.
+
+Retrieved public WeatherBench 2 ERA5 metadata and five static-field/coordinate chunks at the exact 0.25° grid (geopotential, orography standard deviation, land–sea fraction, latitude, longitude). Compressed chunk transfer totaled **4,826,687 bytes**, not a global dynamic weather download. Queried USGS EPQS for **103** selected plant coordinates in metres/EPSG:4326, retaining raw responses, raster IDs, reported resolutions and acquisition dates. All 103 responses were valid. Source URLs, object generations, checksums and retrieval date are in the committed terrain manifest; raw binary chunks and API responses remain outside Git.
+
+Created a separate clean Python **3.11.11** environment with the existing wind requirements plus **numcodecs 0.16.6** for Blosc decoding. Saved the resolved 34-package snapshot; `uv pip check` passed. The uv-created environment has no pip module, so package consistency was checked with uv. Earlier environments and all prior scientific outputs were preserved. Updated current full-suite instructions to use the extension requirements; historical PV checks can still be run separately.
+
+### Terrain calculations and findings
+
+Validated single-chunk Zarr layout/byte counts, source units and exact grid-center identity, including negative-to-positive longitude conversion. Converted geopotential to geopotential height with **g=9.80665 m/s²**. Compared that grid reference to DEM point elevations, explicitly retaining different spatial support, vertical definitions and plant-centroid versus turbine-location limitations.
+
+The 103 plants share **24 weather centers**. Signed point-minus-grid height has median **−35.81 m**, median absolute difference **205.23 m**, and range **−936.06 to +517.30 m**. Sampled orography standard deviation ranges **49.32–403.48 m**. Voyager Wind II and Tule Wind have point/grid differences of **+148.70 m** and **+283.82 m**, but Shiloh I and Shiloh 2 show large wind residuals with differences of only **+3.14 m** and **+18.43 m**. Thus elevation offset alone does not explain the shortfall. No wind-height shift, speed scaling, regression fit, independent-sample p-value or causal terrain attribution was made. Independent hub-height wind data remain unavailable in this stage.
+
+### Turbine-curve provenance findings
+
+The 119-generator subset has **49 manufacturer/model groups**. Conservative same-name candidates in the pinned archive cover only Vestas V47-660 and V27-225, **248.4 MW / 4.2519%** of capacity; whole plants covered by those candidates total **226.9 MW**. Both archived specs label curves theoretical and have empty primary-reference lists. They are not manufacturer-validated January curves. V27 is archived as Distributed; similar ratings/rotors do not justify mapping DOE GE research references to commercial GE models. No candidate does not imply a curve is unavailable elsewhere. No new power curve or resource/event output was substituted.
+
+### Automation, verification and records
+
+Added [terrain preparation](../scripts/16_audit_wind_terrain.py), [manifest replay](../scripts/16a_fetch_terrain_references.py), [curve audit](../scripts/17_audit_curve_coverage.py) and scientific helpers/tests. Replayed the recorded manifest with **110 files verified from cache and zero downloads**. Changed bytes are rejected rather than silently overwriting a source version. All **72 tests** passed. Independent grid-index formulas/direct DEM values reproduced all 103 point/grid comparisons and summaries; independent literal-label accounting reproduced all 49 model groups and candidate capacities. Source/output checksums and the [verification record](terrain_curve_verification.json) are retained; the figure was visually reviewed and its colorbar placement corrected before publication.
+
+Saved [method and limits](wind_terrain_and_curve_audit.md), [site table](../results/tables/wind_terrain_site_audit_2020_01.csv), [figure](../results/figures/wind_terrain_comparison_2020_01.png), [curve-coverage table](../results/tables/turbine_curve_candidate_coverage_2020_01.csv), original candidate specs/BSD notice and the Copernicus license. Outputs carry the required C3S attribution and EC/ECMWF responsibility statement; USGS is credited for the DEM reference.
+
+The [readiness record](expansion_readiness.md) now distinguishes acquired terrain context from still-open independent wind, turbine provenance, PV-amplitude, held-out-period and temporal-continuity checks. No 2005–2024 climatology or calibrated wind-model claim was produced.
+
 ## How to use this record for the paper
 
 Use the linked source and algorithm records to write a reproducible methods narrative. Summarize the original proxy as a pilot, then explain the selected final physical models and event definitions. Keep alternative scenarios in a sensitivity subsection. Put environment troubleshooting and detailed execution history in a reproducibility appendix rather than presenting each interactive-console action as a scientific method.

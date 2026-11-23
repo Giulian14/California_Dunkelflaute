@@ -57,7 +57,7 @@ The original `requirements.txt` is preserved. The extension adds a separate depe
 
 ```bash
 python -m pip install -r requirements-pv.txt
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -p 'test_pv_model.py' -v
 python scripts/07_pv_capacity_factor.py --headless
 ```
 

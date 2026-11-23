@@ -77,7 +77,7 @@ Install the optional extension dependencies and run from the repository root:
 
 ```bash
 python -m pip install -r requirements-pv.txt
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -p 'test_pv_model.py' -v
 python scripts/07_pv_capacity_factor.py --headless
 ```
 
@@ -134,6 +134,21 @@ python scripts/13_bound_matched_wind_generation.py --headless
 The [site audit](docs/wind_site_diagnostics.md) excludes whole plants with monthly/annual capacity disagreement, leaving **103 plants / 119 generators / 5,842.1 MW**. Observed nominal monthly CF is **16.92%**; IEC II bounds are **9.85%–11.06% nearest-center** and **8.68%–9.89% bilinear-vector** sampling. Source coordinates agree within four metres, but neither interpolation resolves the energy shortfall. Annual reported hub heights and predominant equipment remain descriptive; terrain and actual January turbine identities need further validation.
 
 The [expansion-readiness record](docs/expansion_readiness.md) lists the remaining physical, PV, temporal-boundary, fleet-definition and event-analysis checks before 2005–2024 production processing. All **63 tests** passed, with independent checks of the subset, eight sampling/curve series and 206 IEC II plant/sampling cases. Earlier numerical artifacts are preserved and their qualifications are explicit.
+
+## Terrain and curve-provenance audit
+
+The [latest audit](docs/wind_terrain_and_curve_audit.md) compares public ERA5 terrain fields with **103 USGS DEM point elevations**. Median absolute point/grid height difference is **205 m** across **24 shared weather centers**. This adds terrain context, but some high wind residuals occur where elevations closely agree; no terrain-based wind correction is justified.
+
+The pinned turbine archive has exact-name candidates for only **248.4 MW / 4.25%** of the subset, and those two specifications are theoretical without linked primary references. Manufacturer-specific curve validation and independent hub-height wind information remain open. All **72 tests** passed, including independent terrain/candidate checks and replay of **110 cached source files with zero downloads**. The [research log](docs/research_log.md) and [readiness record](docs/expansion_readiness.md) track the remaining work.
+
+The current complete suite requires the terrain extension; this includes all earlier runtime dependencies:
+
+```bash
+python -m pip install -r requirements-terrain.txt
+python -m unittest discover -s tests -v
+```
+
+Terrain outputs contain modified Copernicus Climate Change Service information (2026). Neither the European Commission nor ECMWF is responsible for any use of the Copernicus information or data. USGS 3DEP/EPQS supplies the DEM point reference; source licenses and attribution are retained.
 
 ## Local workflow
 

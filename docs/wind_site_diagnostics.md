@@ -49,9 +49,12 @@ Use the existing wind environment, original January wind NetCDF and previously d
 
 ```bash
 python scripts/15_diagnose_wind_sites.py --eia860-archive /path/to/eia8602020.zip --headless
+python -m pip install -r requirements-terrain.txt
 python -m unittest discover -s tests -v
 ```
 
 An optional `--wind-data` path reuses raw inputs outside the repository. This script downloads nothing and installs no packages. All **63 tests** passed. Independent annual-record joins reproduced the three excluded plants and 119-generator subset; manual four-corner u/v interpolation and independent curve calculations checked all eight time series and all 206 IEC II plant/sampling cases. New nearest-sampling bounds agree with aggregation of the earlier per-plant bounds for the same subset. Source and output hashes are retained in [verification](wind_site_verification.json).
 
 The [expansion-readiness record](expansion_readiness.md) separates verified pilot mechanics from the unresolved scientific checks needed for 2005–2024.
+
+For the current complete suite, `requirements-terrain.txt` supplies all earlier runtime dependencies plus the optional terrain decoder; historical test counts above describe the saved stage.

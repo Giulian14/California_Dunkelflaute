@@ -1,0 +1,60 @@
+{
+  "status": "Candidate availability in one pinned archive; no manufacturer-specific curve substituted",
+  "source_repository": "https://github.com/NatLabRockies/turbine-models",
+  "source_commit": "e9e4ccc6a87f50c0c65d236154a2897e752c47c9",
+  "archive_tree_sha": "e9e4ccc6a87f50c0c65d236154a2897e752c47c9",
+  "archive_tree_response_sha256": "a7c61b59a86b00d6c1fc4d721397cb9c72eb054dc4b8b840bc422d15cfec5773",
+  "source_specs": [
+    {
+      "path": "data/reference/curve_coverage/VestasV47_660kW_47.yaml",
+      "sha256": "4c807ad09fe2538a66ba7a8ed779781b076e4d9478b5c41e088d9b07a26b2733",
+      "upstream_blob_sha": "5713046d61e8b03a16c09454743aad42721e9c88",
+      "power_curve_type": "theoretical",
+      "linked_primary_references": 0
+    },
+    {
+      "path": "data/reference/curve_coverage/VestasV27_225kW_27.yaml",
+      "sha256": "7cf802d67cf029364dca0ecb411e189140137fc2e64030895ed3e4d649f0055b",
+      "upstream_blob_sha": "3340300bfd9176355067b77e20e053595279b06f",
+      "power_curve_type": "theoretical",
+      "linked_primary_references": 0
+    }
+  ],
+  "subset_generators": 119,
+  "reported_model_groups": 49,
+  "subset_capacity_mw": 5842.1,
+  "same_name_candidate_capacity_mw": 248.4,
+  "candidate_capacity_share": 0.04251895722428579,
+  "whole_plant_candidate_capacity_mw": 226.9,
+  "manufacturer_provenance_confirmed_capacity_mw_in_this_audit": 0,
+  "limitations": [
+    "Same-name candidates are theoretical and have no linked primary references in the pinned specs.",
+    "Similar rating or rotor diameter is not sufficient to map a DOE research model to GE commercial equipment.",
+    "No candidate does not mean a documented curve is unavailable elsewhere.",
+    "Annual predominant model labels do not prove January per-turbine identity."
+  ],
+  "inaccessible_sources": [
+    {
+      "url": "https://www.maine.gov/dacf/lupc/projects/windpower/redington/Documents/Section01_Development_Description/Development_Electric/E_Pro_Reports/Appendix%20A%20V90%20General%20Spec%20950010R1.pdf",
+      "status": "HTTP 403; no PDF data used"
+    },
+    {
+      "url": "https://report.ndc.gov.tw/ReportFront/PageSystem/reportFileDownload/C09503816/002",
+      "status": "HTTP 403; no PDF data used"
+    },
+    {
+      "url": "https://www.commissiemer.nl/docs/mer/p29/p2959/2959-022generalspecification.pdf",
+      "status": "HTTP 403; no PDF data used"
+    }
+  ],
+  "input_sha256": {
+    "data/reference/jan2020_wind_annual_turbine_audit.csv": "ab49a23f72cd046f5ada0bd7b0ff3c34037e5d73fa05e6e270771cc240e32144"
+  },
+  "artifacts_sha256": {
+    "results/tables/turbine_curve_candidate_generators_2020_01.csv": "6ea81614c0969b17080483e67a9132332c569a7d4722b9700871a9cce2ccf19c",
+    "results/tables/turbine_curve_candidate_coverage_2020_01.csv": "4eba23be216c0b4a1b40bd54a7008a6445f6c5e8474bdfcf29a4ae9881e82432",
+    "data/reference/curve_coverage/LICENSE_BSD.txt": "c855db7975f89527d2a8069aa0a8dcbfc7941a11928eb5a2f0ada395f15fe4d7",
+    "data/reference/curve_coverage/VestasV47_660kW_47.yaml": "4c807ad09fe2538a66ba7a8ed779781b076e4d9478b5c41e088d9b07a26b2733",
+    "data/reference/curve_coverage/VestasV27_225kW_27.yaml": "7cf802d67cf029364dca0ecb411e189140137fc2e64030895ed3e4d649f0055b"
+  }
+}

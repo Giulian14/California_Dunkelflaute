@@ -86,6 +86,7 @@ The full suite, including PV tests, requires the optional PV dependencies:
 
 ```bash
 python -m pip install -r requirements-pv.txt
+python -m pip install -r requirements-terrain.txt
 python -m unittest discover -s tests -v
 ```
 
@@ -104,3 +105,5 @@ These checks establish implementation consistency. The illustrative wind curve, 
 ## Subsequent wind-model sensitivity
 
 This comparison holds the original cubic wind curve and uniform wind-area weighting fixed. The later [wind assessment](wind_assessment.md) changes the curve and wind geography in a separate factorial experiment. Its results should not be substituted into this report without changing the scenario label. The original 199-hour result remains a conditional finding for its original wind/PV assumptions.
+
+For the current complete suite, `requirements-terrain.txt` supplies all earlier runtime dependencies plus the optional terrain decoder; historical test counts above describe the saved stage.

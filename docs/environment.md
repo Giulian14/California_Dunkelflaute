@@ -49,7 +49,7 @@ The original seven-package `requirements.txt` snapshot is preserved. `requiremen
 
 ```bash
 python -m pip install -r requirements-pv.txt
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -p 'test_pv_model.py' -v
 python scripts/07_pv_capacity_factor.py --headless
 ```
 
@@ -76,3 +76,7 @@ Scripts 12–14 and `january_wind.py` reuse the existing wind environment and in
 ## Wind-site sampling follow-up
 
 The turbine audit and nearest/bilinear diagnostics reuse the existing wind environment, including xarray's SciPy-backed interpolation; no new packages were installed. All **63 tests** pass (56 earlier + seven site/capacity tests). `15_diagnose_wind_sites.py` requires the already downloaded official annual EIA-860 archive and original wind NetCDF, with explicit optional file locations. It makes no network request and preserves prior scenario artifacts.
+
+## Terrain decoding and current complete suite
+
+A separate Python 3.11.11 Linux environment installed `requirements-terrain.txt`, adding **numcodecs 0.16.6** to the existing wind dependency set. [Resolved versions](validated_terrain_linux_packages.txt) are saved. `uv pip check` verified all 34 installed packages are compatible; this uv-created environment does not seed the pip module. All **72 tests** passed (63 earlier + six terrain and three curve-candidate tests). No changes were made to earlier environments or the author's Mac. The current full-suite command needs `requirements-terrain.txt`; PV-only verification can still use its original requirements and `-p 'test_pv_model.py'`. The public-data replay helper verified all 110 cached source files in offline mode without downloading again.

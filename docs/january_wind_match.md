@@ -78,6 +78,7 @@ Use the existing `requirements-wind.txt` environment. The matched-cohort CSVs ar
 
 ```bash
 python scripts/13_bound_matched_wind_generation.py --headless
+python -m pip install -r requirements-terrain.txt
 python -m unittest discover -s tests -v
 ```
 
@@ -91,3 +92,5 @@ python scripts/14_audit_generation_sources.py --eia930-response /path/to/eia930_
 Use the actual source retrieval date. The optional `--wind-data` and `--mask` arguments allow reuse of existing raw files in other locations. All **56 tests** passed: the previous 42 plus 14 cohort, bounding and API-integrity checks. Independent original-workbook and array calculations verified the cohort, capacity/generation accounting, retirement dates, four power series, all 424 plant/curve bounds, 1,488 API values and saved metrics/hashes. See [verification evidence](january_wind_verification.json).
 
 Next investigate wind representation at the highest-capacity sites and actual turbine/hub specifications before selecting or calibrating a model. Missing boundary weather can narrow these intervals but cannot close the observed shortfall under the current reference assumptions. Keep the source-population discrepancy open until asset-level reporting differences can be established.
+
+For the current complete suite, `requirements-terrain.txt` supplies all earlier runtime dependencies plus the optional terrain decoder; historical test counts above describe the saved stage.

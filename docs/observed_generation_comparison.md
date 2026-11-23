@@ -59,7 +59,7 @@ See [all metrics](../results/tables/observed_shape_metrics_2020_01.csv), [paired
 The comparison uses committed CSVs and makes no network request:
 
 ```bash
-python -m pip install -r requirements-wind.txt
+python -m pip install -r requirements-terrain.txt
 python scripts/11_compare_observed_shapes.py --headless
 python -m unittest discover -s tests -v
 ```
@@ -79,3 +79,5 @@ Reconcile the EIA and CAISO source populations, reconstruct a January-specific o
 ## Follow-up: plant-matched energy assessment
 
 The [January inventory/energy diagnostic](january_wind_match.md) now matches whole plants and bounds missing model hours. It finds an energy shortfall despite the shape agreement reported here; this report's correlations must not be interpreted as amplitude validation. The follow-up also clarifies EIA frequency: Schedule 3D requires wind/solar annual respondents to provide monthly operations. An A flag alone implies neither annual-only observations nor allocated monthly estimates. The additional EIA-930 audit preserves rather than clips signed net-solar values and leaves the operational-versus-plant population difference unresolved.
+
+The current complete test suite includes optional terrain decoding and therefore uses `requirements-terrain.txt`, which includes the earlier wind/PV dependencies. Historical runtime/version and test-count records above are retained.

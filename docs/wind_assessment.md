@@ -79,7 +79,7 @@ python scripts/09_assess_wind_model.py --headless
 To reproduce workbook extraction, download the official archive separately, then run:
 
 ```bash
-python -m pip install -r requirements-wind.txt
+python -m pip install -r requirements-terrain.txt
 python scripts/00_prepare_eia_wind_inventory.py --archive /path/to/eia8602020.zip --retrieved-on YYYY-MM-DD
 python -m unittest discover -s tests -v
 ```
@@ -99,3 +99,5 @@ The dated [research log](research_log.md) records this stage and the earlier ste
 ## Subsequent production comparison
 
 The [first observed-generation benchmark](observed_generation_comparison.md) compares the temporal shapes of all eight preserved scenarios with CAISO production. Capacity-location weights improve January shape agreement, but populations and capacity denominators remain unmatched. The benchmark does not supersede this assessment's amplitude limitations or establish a final best curve.
+
+The current complete test suite includes optional terrain decoding and therefore uses `requirements-terrain.txt`, which includes the earlier wind/PV dependencies. Historical runtime/version and test-count records above are retained.

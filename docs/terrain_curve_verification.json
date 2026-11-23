@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-23",
+  "python": "3.11.11",
+  "runtime": "Separate clean terrain environment, requirements-terrain.txt; prior environments unchanged",
+  "unit_tests": {
+    "total": 72,
+    "new_terrain_tests": 6,
+    "new_curve_candidate_tests": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  "package_consistency": "uv pip check: all 34 installed packages compatible",
+  "resolved_environment_sha256": "ddc62dac121b1e5f3ebb67f2a13143fccd773edd22708de3bd3c88d14330e74e",
+  "independent_checks": {
+    "status": "passed",
+    "independent_static_grid_indices": 103,
+    "independent_USGS_point_values": 103,
+    "source_grid_spacing_deg": 0.25,
+    "distinct_weather_centers": 24,
+    "independent_geopotential_height_conversion": "passed",
+    "median_absolute_height_difference_m": 205.23466005278578,
+    "independent_model_groups": 49,
+    "same_name_candidate_capacity_mw": 248.4,
+    "whole_plant_candidate_capacity_mw": 226.9,
+    "offline_source_replay": {
+      "verified_files": 110,
+      "cached": 110,
+      "downloaded": 0,
+      "offline": true
+    },
+    "metadata_artifact_hashes": "passed"
+  },
+  "independent_method": "Decode raw chunks directly and use uniform-grid index formulas rather than the project selector; compare raw USGS values/point requests/raster fields; recompute height differences and summaries; independently account for 49 manufacturer/model labels and whole-plant candidate flags; verify source and output hashes.",
+  "code_sha256": {
+    "scripts/terrain_reference.py": "f9b0949282b560f9c7397fd4771cc215f0f8482270f9180465161055f1fbad98",
+    "scripts/model_curve_coverage.py": "fe8750a8ef60d34b9b842ea25bac2edf71a0d84833f8a4e0262ea4f804f30980",
+    "scripts/16_audit_wind_terrain.py": "582d276d70159fa7d5f426b567d75ac8c7c566fb323a5fa169d5486321ccf9b2",
+    "scripts/16a_fetch_terrain_references.py": "94a3d3603cb423cafcf1252dc8fb77240eb5160138336dfd980f5c9b4e6d2120",
+    "scripts/17_audit_curve_coverage.py": "f3ca35485158f84ef0ee0d8addf9f8258abfd144703d891485e2d329406cf75f",
+    "tests/test_terrain_reference.py": "cf0dec78170dbcaeb15d9a4700d677d827d55fb7d64c7f635befbd288a8d25fa",
+    "tests/test_curve_coverage.py": "abb474835a4c6b74e7ee64ed7c8d2c30ef63c4d441655b186751b3b39043ba05"
+  },
+  "artifacts": [
+    {
+      "path": "data/reference/curve_coverage/LICENSE_BSD.txt",
+      "bytes": 1544,
+      "sha256": "c855db7975f89527d2a8069aa0a8dcbfc7941a11928eb5a2f0ada395f15fe4d7"
+    },
+    {
+      "path": "data/reference/curve_coverage/VestasV27_225kW_27.yaml",
+      "bytes": 569,
+      "sha256": "7cf802d67cf029364dca0ecb411e189140137fc2e64030895ed3e4d649f0055b"
+    },
+    {
+      "path": "data/reference/curve_coverage/VestasV47_660kW_47.yaml",
+      "bytes": 587,
+      "sha256": "4c807ad09fe2538a66ba7a8ed779781b076e4d9478b5c41e088d9b07a26b2733"
+    },
+    {
+      "path": "data/reference/terrain/LICENSE_COPERNICUS.txt",
+      "bytes": 8435,
+      "sha256": "ffe05f9653f14ffd23322bf1ebecfd6dd519ba59726280b34593fcf69ccab60e"
+    },
+    {
+      "path": "data/reference/terrain/source_manifest.json",
+      "bytes": 34406,
+      "sha256": "b919dd406342cd8a2d777da96f4cc4653f4e7c569510e984b8261273015e4e68"
+    },
+    {
+      "path": "data/reference/terrain/static_field_metadata.json",
+      "bytes": 2721,
+      "sha256": "e975301721f44fa9b425c4701244365138ba46dfd0f371f71b286fcb62a947b9"
+    },
+    {
+      "path": "results/figures/wind_terrain_comparison_2020_01.png",
+      "bytes": 249606,
+      "sha256": "4c163b3c0bda4fea6c899b7f50dc322f897333097fc303b67f36fb7f1023796e"
+    },
+    {
+      "path": "results/tables/turbine_curve_candidate_coverage_2020_01.csv",
+      "bytes": 5570,
+      "sha256": "4eba23be216c0b4a1b40bd54a7008a6445f6c5e8474bdfcf29a4ae9881e82432"
+    },
+    {
+      "path": "results/tables/turbine_curve_candidate_generators_2020_01.csv",
+      "bytes": 19829,
+      "sha256": "6ea81614c0969b17080483e67a9132332c569a7d4722b9700871a9cce2ccf19c"
+    },
+    {
+      "path": "results/tables/turbine_curve_coverage_metadata_2020_01.json",
+      "bytes": 3209,
+      "sha256": "0752db7c604a4b16c0959be36a6c6c901ad423da17e3d5beb9278e99182a6470"
+    },
+    {
+      "path": "results/tables/wind_terrain_metadata_2020_01.json",
+      "bytes": 2903,
+      "sha256": "9fef4b8cc232eaf05c30500bd29b8c47c7caf7dcadc66eeae60a6115cd4c744b"
+    },
+    {
+      "path": "results/tables/wind_terrain_site_audit_2020_01.csv",
+      "bytes": 32674,
+      "sha256": "cf570aa15e73ddfc72753104ea8b915120fb18cd84268d44e3916edd99f6fe61"
+    }
+  ],
+  "interpretation_limits": [
+    "Independent DEM context is not an independent hub-height wind reference.",
+    "Point and grid elevations differ in spatial support and vertical definitions; no automatic wind/height correction.",
+    "103 points share 24 weather centers; no independent-sample significance claim or fitted attribution.",
+    "Two same-name archive references cover 4.2519% of capacity; both theoretical with no linked primary references; no manufacturer curve substituted.",
+    "Manufacturer archive PDFs returned HTTP 403; no inaccessible table/snippet used as numerical input.",
+    "No existing wind/PV/event predictions or 2005\u20132024 results modified or produced."
+  ],
+  "visual_review": "Two-panel figure inspected; external colorbar, readable labels and source attribution present."
+}

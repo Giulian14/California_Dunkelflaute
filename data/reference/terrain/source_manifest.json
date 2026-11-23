@@ -1,0 +1,772 @@
+{
+  "retrieved_on": "2026-11-23",
+  "weatherbench_zarr_base": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr",
+  "zmetadata_sha256": "887b39278f6d29b63c7083f563010f8bba915d1c522038779b4a06fab9b6b962",
+  "chunks": [
+    {
+      "relative_path": "latitude/0",
+      "url": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr/latitude/0",
+      "bytes": 844,
+      "sha256": "ad2559188f8603a7a136eb4b81c1e96a4a78549a184b6e09def2a60a78631c25",
+      "google_generation": "1705393150429646",
+      "etag": "\"257e9f46cc602109e9bf8b5cf23b7a7c\""
+    },
+    {
+      "relative_path": "longitude/0",
+      "url": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr/longitude/0",
+      "bytes": 1587,
+      "sha256": "7942ebac63ba4e69e05575019aaebe2b2ebb927b316590cac1dcfc7eb08f09ee",
+      "google_generation": "1705393150379198",
+      "etag": "\"901e23559c0d9ea8de7e60ac380c7924\""
+    },
+    {
+      "relative_path": "geopotential_at_surface/0.0",
+      "url": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr/geopotential_at_surface/0.0",
+      "bytes": 2765168,
+      "sha256": "73c7d49a37213914fc780fc9357654482131006fa47084119978a543282592c5",
+      "google_generation": "1705393150689469",
+      "etag": "\"dfa059e9649067ecc589dbd11c090f90\""
+    },
+    {
+      "relative_path": "standard_deviation_of_orography/0.0",
+      "url": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr/standard_deviation_of_orography/0.0",
+      "bytes": 1250322,
+      "sha256": "89ba09e18fcdff01933a5f256cf3770b89bfb09b20dff95bbcc4515f448c100d",
+      "google_generation": "1705393149727191",
+      "etag": "\"0014792da1527291811d2ad7083007f7\""
+    },
+    {
+      "relative_path": "land_sea_mask/0.0",
+      "url": "https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-wb13-6h-1440x721_with_derived_variables.zarr/land_sea_mask/0.0",
+      "bytes": 808766,
+      "sha256": "03111ffe4a9da8dd3f2bf5201dc37cd5542e8c4c55cf3b220a863a7c201f98a3",
+      "google_generation": "1705393150319638",
+      "etag": "\"66eccc7e1839cd1088e2032e50e51ee8\""
+    }
+  ],
+  "license_url": "https://storage.googleapis.com/weatherbench2/datasets/era5/LICENSE",
+  "license_sha256": "ffe05f9653f14ffd23322bf1ebecfd6dd519ba59726280b34593fcf69ccab60e",
+  "USGS_requests": [
+    {
+      "plant_id": 7526,
+      "relative_path": "usgs/7526.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.769&y=38.116415&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "4defc3cc019e18c7f5bc67e5dacf05ecb76900d4a1781e60a8b50ee0b8e326fe",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 10191,
+      "relative_path": "usgs/10191.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3897&y=35.060556&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "04f93c5be2f0f680f2c8738cc583e31ba86a586b82deecc775101e6d94256d61",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 10586,
+      "relative_path": "usgs/10586.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3158&y=35.075&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6440635edc7af400b05e51c2ce5355a2bc135ab79f2b4ad015b74ad804afecf7",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 10597,
+      "relative_path": "usgs/10597.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3167&y=35.0697&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "5f33ba0515508f888741ceab4952d26309be93a59f1b31738476f27bcadf6e3a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 10718,
+      "relative_path": "usgs/10718.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5622&y=33.92194&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "82be597917e338677e4867508cf49b2c996c61cc9326df726231e923505ecefa",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50276,
+      "relative_path": "usgs/50276.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5631&y=33.9131&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "1ba909d82bd8097643c7bd497c27cbc5d899697d8a3f9ca3295f9d799491d0b7",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50281,
+      "relative_path": "usgs/50281.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.615&y=33.926111&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "ee66769d7ef6c65b37ad9943893f9e5cdf1025df3d481164cd71423fc7c9138e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50386,
+      "relative_path": "usgs/50386.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3581&y=35.0522&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6304cf86d513df18ac40c11dba87d956a0698ebe9c1a6a7fea964d2daf5848fc",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50485,
+      "relative_path": "usgs/50485.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5551&y=33.915023&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "980e9d1cc269bdad2e9151d630a2e52d6ae3707714b84790871def694c4cba7e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50532,
+      "relative_path": "usgs/50532.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3833&y=35.0686&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "5fb754b2cb514191d6a04ae6cea2e01570d63b977a84a3c662146c631f7cd13a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50535,
+      "relative_path": "usgs/50535.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.6769&y=33.9461&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fc28ae57f9813aab604ce3596f28b23869d8c5538b11bf453d9528ab841f6547",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50536,
+      "relative_path": "usgs/50536.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2469&y=35.2608&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "a0eb3dc44e17a627ef8efb785a7b5d508a38974a6511778ed1bb461a3f6a6e78",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50552,
+      "relative_path": "usgs/50552.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.7103&y=33.914986&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "429305707a1a9ed2531a7ceb7ce348e04ab17ab8c84744ddb730583797c190ce",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50553,
+      "relative_path": "usgs/50553.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.4603&y=33.881667&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "405f8335d7f3d54a21ea227fe5fe488c42e95aff1a5b5406d9abc7c3446083c2",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50690,
+      "relative_path": "usgs/50690.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5781&y=33.934&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "203a9e14db90a05c9a9e36a285f75784a563038293ce9066ed59791ccf727edb",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50754,
+      "relative_path": "usgs/50754.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2764&y=35.043889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "75fd30ebffa5f7b0e540d3028fb8e26304314330660084f024f011478d8ca2be",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 50820,
+      "relative_path": "usgs/50820.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5415&y=33.890913&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "63c3c21ffeae0f43ccb9010619724fc9b6a83af64a7de3ba826d274a8ed50b38",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 52162,
+      "relative_path": "usgs/52162.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3372&y=35.1011&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "f1aa3d59f7a08c9f0913fbca8c891e5a538b318d52dd95692db2da865f3ff4bd",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 52163,
+      "relative_path": "usgs/52163.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3372&y=35.1011&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "f1aa3d59f7a08c9f0913fbca8c891e5a538b318d52dd95692db2da865f3ff4bd",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 52165,
+      "relative_path": "usgs/52165.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3936&y=35.0908&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "95117ccca18a6902f34e9f47ff172f864a28b00302cd85d91d62471eb1dbd451",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54298,
+      "relative_path": "usgs/54298.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3417&y=35.0583&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "9e96c3db752d595a1a75a0cb89390ee7ef402a43da68e25526674efbc9376c6c",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54299,
+      "relative_path": "usgs/54299.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3417&y=35.075&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "86a75bbe582a363c8ec319bf75985560aca36c8f4cc89170e4179278d0f04525",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54453,
+      "relative_path": "usgs/54453.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8333&y=38.1167&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fa1498a1e5564dd2c4026ba7c3ecde84bb7d890636b7e544f9ea7bf7c68983d4",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54454,
+      "relative_path": "usgs/54454.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5739&y=33.918395&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "16fc0675537a53a2a93a6781d7a0344771fde3d73c1b1afc319af88a247c0499",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54647,
+      "relative_path": "usgs/54647.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2572&y=35.05&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "a8bdd008b15d11fea10e71420b78ba147b9eb1bebce04323bffd65bc1a88dd54",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54650,
+      "relative_path": "usgs/54650.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.661&y=33.942&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "48e48bd491854b15e4ce43b1cc281e349ebf1afac3bb9b450b6d816f738ed522",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54686,
+      "relative_path": "usgs/54686.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.1714&y=35.0506&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "cb0d3973d12bd00523bd5b4805a20421ddae423a9d90d3f1154364e4552cbf26",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54750,
+      "relative_path": "usgs/54750.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3394&y=35.0663&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "ba456c066e8c1a69e583d91ea369ce083eb6f0bc1770585a131e4e4834945675",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54909,
+      "relative_path": "usgs/54909.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3114&y=35.1061&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "483e6ccc1c5b9c22b8be7c7be5aab6a358c450b0842cf69791addb25737d0356",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 54931,
+      "relative_path": "usgs/54931.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3153&y=35.074&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "e5a24eac4f99f680caaaafbe77485ed5835aedf745983d55c67e3e1a12e9591e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 55396,
+      "relative_path": "usgs/55396.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.7167&y=33.9014&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "ca6c4fb5c28a5b4fcd0ab251083623e70eb8048394d2b2695b70bfc8a870ac16",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56011,
+      "relative_path": "usgs/56011.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.735&y=33.9172&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "70a2b64d0480355ddb99cc932096168b2fb9e6f51b1787c922ff3de40659a5b0",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56012,
+      "relative_path": "usgs/56012.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.6178&y=33.925&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "1d42107720076cf4a85ba4e04412658d151d6d6e5a97930090701a830cdee4e3",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56075,
+      "relative_path": "usgs/56075.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8053&y=38.1381&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "e3b88d5be8266da0140c171fbb0bd547a0ed7256c819eacfa6be1ea5f30ebed7",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56112,
+      "relative_path": "usgs/56112.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5914&y=33.9141&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "a8e7fd78f0a2ccb70773bc88b04908c6ac98ee4615702b3dbfdfb9f4a8b5a1b1",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56271,
+      "relative_path": "usgs/56271.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.6144&y=37.763653&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "5647ef42472e6fd22484ce04ba51590dd60acbedd77f989da251cb0b1a57b38e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56275,
+      "relative_path": "usgs/56275.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3952&y=35.0925&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "5efc3d1fa43c499602b7c257b088d09fc054b5fecc6836e48bcc5da9e83d3615",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56276,
+      "relative_path": "usgs/56276.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3811&y=35.0772&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "3d358c739cc5d2dc240b7b541d192c17cabc818dd1e7a292482414bde92e9f4d",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56295,
+      "relative_path": "usgs/56295.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.3425&y=32.705556&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "8d1a72d2e1f3730079e595597546ce9e6c6e390d20adb18412a01ca68359d338",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56302,
+      "relative_path": "usgs/56302.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2924&y=35.06094&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "557cca8b046c6f291f1444b08c37da6f4c3a56ba43e9fa4015383731036d84d6",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56362,
+      "relative_path": "usgs/56362.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.85&y=38.12&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "4cd19d54292b164ad126c6f1ffcc9c697a2f8c728a5db7071cf47cada2634048",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56433,
+      "relative_path": "usgs/56433.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.1754&y=35.248006&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "eff87593ec6e348ffa17ce007d541bb3f0df512dc9fb91fa4e55e31d3500808d",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56446,
+      "relative_path": "usgs/56446.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.6672&y=37.805&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "a9048716d3fdac578105f293db982d497c4dda11d3eaeb0a1413f45bb4fc4903",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56570,
+      "relative_path": "usgs/56570.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3789&y=35.1161&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "deda5b2aac62d906a99d03aa9f8d37da45fc0fcee9d2acb09ac68ad1a62670f5",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56654,
+      "relative_path": "usgs/56654.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8036&y=40.8981&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "2a513f3c42d09245bac7295425dd10e7f5eb50a85cfadb72e4bd282070960fbe",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56791,
+      "relative_path": "usgs/56791.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5527&y=33.9393&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "0085effbc12193a5eda47c7dba9dc5e8962258d28bcf9645bd94e126091b21bb",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 56874,
+      "relative_path": "usgs/56874.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8461&y=38.1711&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "0668482e351dca22e4bf3126ec407ef0041040d56ec09338c05d52578878c520",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57201,
+      "relative_path": "usgs/57201.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.7966&y=38.163581&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "58a25854d1fd5ee56baa0b8d497c97b965c3e14f44e11f25497f890e112a55b5",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57282,
+      "relative_path": "usgs/57282.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3534&y=35.033725&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "aabb290523d187bc5b01d43a87947403b4331ad8cd21ecddbff745b82d1461b3",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57291,
+      "relative_path": "usgs/57291.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2953&y=35.023889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6616899c6830178dae72eccab56359da32fa92fe38f658a7270f3058e574e29c",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57292,
+      "relative_path": "usgs/57292.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2953&y=35.023889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6616899c6830178dae72eccab56359da32fa92fe38f658a7270f3058e574e29c",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57293,
+      "relative_path": "usgs/57293.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2422&y=35.008611&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "c59faa13192f8d593f6b0785be18cb2de03601a9da476540fb49e2ba0b01d2f4",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57294,
+      "relative_path": "usgs/57294.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2422&y=35.008611&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "c59faa13192f8d593f6b0785be18cb2de03601a9da476540fb49e2ba0b01d2f4",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57301,
+      "relative_path": "usgs/57301.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5603&y=33.8942&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "49355303f016bd553fd7e2f03c6fc36b55f2377273f764ea7bbd1788b9f4fc3a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57302,
+      "relative_path": "usgs/57302.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5825&y=33.9053&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fb8a3cf77ec46751f475e17dad72d6c7a336fc1663fa2792bacd5309a7af26ee",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57459,
+      "relative_path": "usgs/57459.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5527&y=33.8816&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "368c9ba422bd6e7497527e656a89e2395f685ff50a7d8533094fe51e1a8da1f9",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57484,
+      "relative_path": "usgs/57484.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.4612&y=34.9349&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "460c4cf3f452ac09191a7b84d22bc21b8a329c48cb086343d66e0e399302e0ab",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57514,
+      "relative_path": "usgs/57514.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.0447&y=32.752778&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fcb99b1f8eb11629402e8c42cc92b785f1b9398e116ac2fd60a89034e4a713ff",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57586,
+      "relative_path": "usgs/57586.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8469&y=38.169444&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "c80ca81238c12d2032e6018cc487b826a1ab165677f95579b4347bf1e1c248b2",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57594,
+      "relative_path": "usgs/57594.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.3564&y=37.6167&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "1cf2f41527b63820c2f8ed9eb8b28cbe62d395babd01853ff1e1dff63ed79fbf",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57621,
+      "relative_path": "usgs/57621.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2183&y=35.0775&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fcdefa3c12a7e8e85168cc72b0ad719d34c2edfaf75a5ac45d2fe90df24bd1bd",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57626,
+      "relative_path": "usgs/57626.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.5217&y=37.714167&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "477d0be02765bf6058ddb193ae482c759d5b0b7f0eff24e4433794d8e6413d9f",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57700,
+      "relative_path": "usgs/57700.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.7181&y=37.790833&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "04de747f69ac773a2ce32cca4fb560fe918a9b468d275bb355d8d89500cd24f1",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57701,
+      "relative_path": "usgs/57701.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8219&y=38.116667&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "53a926c0ae2675b382312fa9adc12040034a955ed269ad5a5f23bc65d4454d77",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57725,
+      "relative_path": "usgs/57725.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8553&y=38.137488&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "1abb10c52689aef73f0050677c0b95d8eaaeef04da44bc33d518527abcf81eb1",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57757,
+      "relative_path": "usgs/57757.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.4325&y=34.891389&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "ac37976b83b86b4a0097965e73408c7b6c749d36afb796b98bcbbf666aa1b13d",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57774,
+      "relative_path": "usgs/57774.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.3547&y=35.054167&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "ffdc7508790105f0e51dafbfa3e934adec113ffbfd93f23b6fd451db050cd0b6",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57791,
+      "relative_path": "usgs/57791.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-122.0928&y=38.232222&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "c5d01990c6d470efe2f11bad13a2369e065e8675ff2e1449408a5b264c815c80",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57792,
+      "relative_path": "usgs/57792.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-117.5294&y=34.084722&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "023ad5008874af1f7f28451bfb058c04fa8f81b7ec5baaf4476d94d0dabffe5e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57833,
+      "relative_path": "usgs/57833.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2932&y=35.030855&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "d4ff981ab9cdd075bf1e6456420265096ebcab9b4ce739e3bf0f57ee6834a099",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57834,
+      "relative_path": "usgs/57834.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2118&y=35.043411&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "836eb5b599b2e1f27142f1d0e0c303c278eba48f279b30b54e002d62306a2d39",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57835,
+      "relative_path": "usgs/57835.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2348&y=35.026683&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "bf5ef5ef81a88a905dd32c259b880b6c4858ff60e9e3efae393f89698d095bc6",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57837,
+      "relative_path": "usgs/57837.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2233&y=35.026759&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6740fb77d2ae4cda6144ea3b4ac4a8fdc8f938a1516102e7d5497036384e2f37",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57913,
+      "relative_path": "usgs/57913.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.2897&y=32.663889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "061197063721bed87806ba8ff1823565682830af0f23d013ef4443e21fa49888",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 57962,
+      "relative_path": "usgs/57962.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2414&y=35.008333&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "e0c966f956f07048590a8ca4b0157f36ce3fe7703985be53ae3cd78b40765ebc",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58101,
+      "relative_path": "usgs/58101.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-117.3072&y=34.561944&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "5640faf2f0f4042d094390710e6e26b4f327e4a923166f4a783de252bb8d2a6a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58102,
+      "relative_path": "usgs/58102.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-117.1125&y=34.623056&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "81fb7673688536f4dc3ac5db91353fd8831a3a48b8a8c071e6db784790920d07",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58104,
+      "relative_path": "usgs/58104.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.8181&y=38.42&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "f6b0e7571618507ecbc4016769f6ec3460f3573b4dc76a0c6c438face2b3f418",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58105,
+      "relative_path": "usgs/58105.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-122.1939&y=40.111111&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "3f62c6e8fad913f40af486fc2d463e7cd8241e02caa69548b6e613b75e08c509",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58112,
+      "relative_path": "usgs/58112.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.9325&y=38.692778&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "fbfc0ab849efe405630c5796b7ec38ec30a2d81c7b373522c77e99e7e3a498d4",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58113,
+      "relative_path": "usgs/58113.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.815&y=33.917222&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "a135ffcb797bbaaab817e33b39be75140aa56edcb2a772fecc4e86839e8a7b12",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58114,
+      "relative_path": "usgs/58114.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.7492&y=33.914167&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "b37fd9e214ce2772076418b90ffa6b48525e4d4ce6079414c21883e7874befd5",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58154,
+      "relative_path": "usgs/58154.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.1864&y=35.347778&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "411616717e2088414f83ee275f4839d0b6df4c20476986cfa0b75c9da19e2c47",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58233,
+      "relative_path": "usgs/58233.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.5556&y=33.908889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "0874a0cba2ca7d2a6b3331105f9bc75466f458e7770938f4301c16b7edb106b8",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58394,
+      "relative_path": "usgs/58394.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2&y=35.06&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "216c73fe685447a09f60a604d6c4c5c63b5e92bb05b43a6cb1fda99a17b64bf0",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 58395,
+      "relative_path": "usgs/58395.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.39&y=35.065&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "604a55549f32b95a4558c0b868cd5c113ca550cc30741b8e687787ec49f60ff3",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59235,
+      "relative_path": "usgs/59235.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2064&y=35.088889&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "4091bc22654870f459775a55dacb1550ce8f0214c0b61f7cadaa3d01ecca8d12",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59236,
+      "relative_path": "usgs/59236.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2433&y=35.060556&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "95634075fad08a68086f1e658b218da6e6a7633823e1ccc94a9f307573eb21d4",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59328,
+      "relative_path": "usgs/59328.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-116.3546&y=32.702107&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "cda0e8777d4cc538fdca318edeb87144bbda817e83a4d88874d1f2007c121965",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59329,
+      "relative_path": "usgs/59329.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.3403&y=36.421111&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "7f62b0c028d99e424ab13dcd1c2091ed721a3bf0792d8efa6ec5465b0f0113ef",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59330,
+      "relative_path": "usgs/59330.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.4517&y=36.505&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "2fc59d5f6a9e1c5c13b49051904f6276d49f05d1635535e87f48add0d0d9574a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 59331,
+      "relative_path": "usgs/59331.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-122.0925&y=38.233611&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6ec35b776e4fc6d048b7bf87b559d9c4976ede954bb1ae852bf100853cd27713",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 60049,
+      "relative_path": "usgs/60049.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.6404&y=37.713311&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "6cdb135363e5607eab1ef7f69df089975ee0b2c3347306bc74936fc798cc486f",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 60594,
+      "relative_path": "usgs/60594.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2827&y=35.046061&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "bf6588947b9575e759f3b5c8055f04091f5d2aeba7b17948a2341b8db38d098a",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61066,
+      "relative_path": "usgs/61066.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.221&y=34.691&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "68201e823bd2d71936564f97a5bae8d657dc50ed2a07cd99949989a79262287f",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61067,
+      "relative_path": "usgs/61067.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.1916&y=36.274508&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "8fc7b9ec136d5810d30678818e132cf7305032f71bc8e8c019fddb6954d8be61",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61222,
+      "relative_path": "usgs/61222.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.6302&y=37.769189&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "9411082795b39c93da27db68f070ca4b4d2d41466ba1d601616350b14168505e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61442,
+      "relative_path": "usgs/61442.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.382&y=36.464&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "472e8f8f77ec6a8e72ba498fbd7bd3dbf6d06c80a903e753ceafc97d1a3acb8f",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61443,
+      "relative_path": "usgs/61443.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.454&y=36.504&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "4c36cb4139a9ae2e9ef147b7c1dd671d207ab1e5c8143e1512f49f3a9b1b420e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61444,
+      "relative_path": "usgs/61444.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-121.371&y=36.474&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "64857465c4b851ae27cce3bd05b4fad5224ea478a352cdb1d72cf2201f39226e",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61582,
+      "relative_path": "usgs/61582.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2686&y=35.073377&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "551f3334532f21f03169362c5a95cf342ddbd8d058b4d3d84ad8cba1e73faecb",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61583,
+      "relative_path": "usgs/61583.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2647&y=35.060768&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "3991f1929ddb26a5d76fdf2e41a00110afc69475a2586d52a3c22078f34007b2",
+      "status": "downloaded"
+    },
+    {
+      "plant_id": 61584,
+      "relative_path": "usgs/61584.json",
+      "url": "https://epqs.nationalmap.gov/v1/json?x=-118.2497&y=35.077872&units=Meters&wkid=4326&includeDate=true",
+      "sha256": "e96227b611affb5e15065e975ff5d7feadaa4358f180e467701784ab16258d42",
+      "status": "downloaded"
+    }
+  ]
+}

@@ -6,9 +6,9 @@ Status as of November 23, 2026. This is a scientific and processing worklist, no
 
 | Check | Current evidence | Remaining work |
 | --- | --- | --- |
-| Wind amplitude and physical assumptions | **Open.** The stricter 103-plant comparison gives observed nominal CF 16.92% versus nearest IEC II bounds 9.85%–11.06%. Bilinear sampling lowers output further. | Investigate high-residual sites, actual turbine curves/hubs, terrain and an independent wind reference. Separate model correction from uncertainty; test changes on an unused period. |
+| Wind amplitude and physical assumptions | **Open.** The stricter 103-plant comparison gives observed nominal CF 16.92% versus nearest IEC II bounds 9.85%–11.06%. Bilinear sampling lowers output further. | The latest terrain/curve audit supplies 103 DEM references and identifies limited candidate provenance; inspect high-residual sites and obtain defensible turbine curves/hubs and an independent wind reference. Separate model correction from uncertainty; test changes on an unused period. |
 | Asset identities and capacity denominators | **Partly checked.** Monthly snapshots, whole-plant rules, annual unit capacities and exclusions are recorded. Two capacity increases suggest unresolved reporting consolidation. | Establish defensible asset lineage and a compatible generation population. Treat the 103-plant subset as conservative evidence, not a fully reconstructed operating fleet. |
-| Coordinate and wind mechanics | **Checked for the pilot.** Monthly/annual coordinates agree within four metres; field units, vector flags, chronology and nearest/bilinear calculations pass checks. | Verify turbine/farm locations and topography at high-residual sites. Shared source coordinates and interpolation do not resolve micrositing or terrain bias. |
+| Coordinate and wind mechanics | **Checked for the pilot.** Monthly/annual coordinates agree within four metres; field units, vector flags, chronology and nearest/bilinear calculations pass checks. | Public ERA5 terrain and 103 USGS DEM points are now compared; median absolute point/grid height difference is 205 m. Verify turbine/farm footprints and independent wind: terrain differences alone do not establish the bias cause. |
 | PV amplitude | **Open.** Timing/daylight and tilt sensitivity were checked; BA-wide shape correlation is not plant-matched PV energy validation. | Match PV-only generation to AC capacity and siting; assess tracker/fixed-tilt mix, losses, temperature and radiation decomposition. Keep solar thermal and distributed PV populations explicit. |
 | Other seasons/years | **Open.** January alone cannot validate seasonal behavior or support out-of-sample model selection. | Add at least a contrasting season and another year using preselected parameters. Report wind/PV energy and temporal errors on matched populations; do not select thresholds to produce events. |
 
@@ -32,6 +32,7 @@ No additional access or user-side environment change was needed for the latest d
 - [PV implementation and sensitivity](pv_model.md), [event comparison](event_comparison.md), and [wind curve/location sensitivity](wind_assessment.md).
 - [Observed temporal shapes](observed_generation_comparison.md), with unmatched-population limits.
 - [Initial January inventory and missing-hour bounds](january_wind_match.md), now qualified by the annual-capacity audit.
-- [Latest site/capacity diagnostics](wind_site_diagnostics.md) and [verification](wind_site_verification.json).
+- [Site/capacity diagnostics](wind_site_diagnostics.md) and [verification](wind_site_verification.json).
+- [Latest terrain/curve-provenance audit](wind_terrain_and_curve_audit.md) and [verification](terrain_curve_verification.json).
 
-The current suite has **63 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.
+The current suite has **72 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.

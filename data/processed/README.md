@@ -56,3 +56,7 @@ The first **47 rolling means are intentionally missing** because there is not ye
 ## Observed generation and paired shapes
 
 `caiso_generation_hourly_2020_01.csv` contains 744 Pacific-January hours with explicit UTC end labels, mean production MW, and separately aggregated curtailment MW. No production gaps were filled. `eia923_generation_scope_audit_2020_01.csv` retains 767 CA-state/CISO-BA wind/solar source rows, Excel row numbers, raw/numeric January MWh, missing-value and synthetic-state-increment flags, respondent frequency and prior-inventory plant matches. `observed_shape_comparison_2020_01.csv` contains the 735 common hours of unchanged model CFs and CAISO MW. These are different quantities; no observed fleet CF is inferred. See [method and scope](../../docs/observed_generation_comparison.md).
+
+## Matched wind energy and operational-source audit
+
+`matched_january_wind_known_hours_2020_01.csv` contains four reference-curve CF series for 735 modeled hours of the matched January plant cohort. The missing nine hours are bounded separately in the results; no zero-filled/full-month synthetic series is produced. `generation_source_hourly_audit_2020_01.csv` pairs 744 EIA-930 hourly net-energy MWh observations with CAISO hourly mean production MW (one-hour MW × 1 h is MWh). Signed EIA net-solar values are preserved. Different source populations remain unreconciled. See [method and limits](../../docs/january_wind_match.md).

@@ -117,6 +117,16 @@ These are temporal-shape diagnostics across unmatched populations, **not CF-ampl
 python scripts/11_compare_observed_shapes.py --headless
 ```
 
+## Plant-matched January wind diagnostic
+
+The [January inventory match](docs/january_wind_match.md) retains **106 plants / 123 generators / 5,985.7 MW**, covering **99.6%** of EIA's California January wind energy. Its observed nominal monthly CF is **17.06%**. The IEC II reference model's full-month CF is bounded at **9.83%–11.04%**, even allowing every missing hour full output. All four reference curves fall below observed energy under these matching assumptions. The earlier shape agreement therefore does not establish energy-amplitude accuracy; investigate wind representation and turbine/hub assumptions before expanding the climatology.
+
+The [bounds](results/tables/matched_january_wind_bounds_2020_01.csv), [figure](results/figures/matched_january_wind_bounds_2020_01.png), [inventory decisions](data/reference/jan2020_wind_plant_audit.csv) and [verification](docs/january_wind_verification.json) preserve the evidence. Missing-hour bounds are not total model-error confidence intervals. An additional [EIA-930/CAISO/EIA-923 source audit](results/tables/generation_source_monthly_audit_2020_01.csv) leaves their population discrepancy explicitly unresolved. All **56 tests** passed; earlier scenario files and event counts remain unchanged.
+
+```bash
+python scripts/13_bound_matched_wind_generation.py --headless
+```
+
 ## Local workflow
 
 To reproduce the event tables directly from the included processed series, run from the repository root:
@@ -150,7 +160,7 @@ The local workflow produces maps, time series, and a duration histogram.
 
 ## Remaining work
 
-- Validate wind and PV estimates against observed generation and justify the final reference deployment and physical assumptions.
+- Investigate the plant-matched wind energy shortfall, validate PV amplitudes, and justify final deployment/physical assumptions before a multi-year run.
 - Extend and verify event extraction across contiguous months and years, with adequate boundary context.
 - Assess land/coastal-mask assumptions and PV capacity-location weighting; wind-location sensitivity is now documented.
 - Establish a final event definition that accounts for ordinary nighttime conditions, seasonality, and model uncertainty.

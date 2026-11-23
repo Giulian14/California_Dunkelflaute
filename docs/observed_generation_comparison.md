@@ -75,3 +75,7 @@ Used the existing clean Python 3.11.11 Linux environment and pinned wind require
 ## Next requirements for amplitude validation
 
 Reconcile the EIA and CAISO source populations, reconstruct a January-specific operating inventory, select compatible observed and modeled plant groups, and obtain the missing ERA5 boundary hours. Match solar PV technology and AC capacity denominators separately from solar thermal and distributed systems. Then compare energy/CF magnitudes on identical support, quantify losses and uncertainty, and test another period without tuning to January. Earlier event results remain unchanged; a full 2005–2024 analysis has not yet been run.
+
+## Follow-up: plant-matched energy assessment
+
+The [January inventory/energy diagnostic](january_wind_match.md) now matches whole plants and bounds missing model hours. It finds an energy shortfall despite the shape agreement reported here; this report's correlations must not be interpreted as amplitude validation. The follow-up also clarifies EIA frequency: Schedule 3D requires wind/solar annual respondents to provide monthly operations. An A flag alone implies neither annual-only observations nor allocated monthly estimates. The additional EIA-930 audit preserves rather than clips signed net-solar values and leaves the operational-versus-plant population difference unresolved.

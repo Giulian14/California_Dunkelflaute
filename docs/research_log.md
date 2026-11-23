@@ -112,6 +112,42 @@ Independent streaming Excel/array calculations verified the source selection, al
 
 Before amplitude validation, reconcile observation populations, reconstruct a January-specific operating inventory, match plant/technology/AC-capacity denominators, and obtain missing boundary weather hours. Then test a separate period. Original pilot/PV/event/wind artifacts and event thresholds remain unchanged.
 
+## November 23 January inventory match, energy bounds and source cross-check
+
+### Objective and source acquisition
+
+Move beyond BA-wide shape comparison by matching monthly plant generation to an appropriate January wind inventory. Retrieved official EIA-860M December 2019 and January 2020 XLSX snapshots; reused the existing EIA-923 extraction, California boundary, ERA5 wind/mask inputs and reference curves. Verified workbook titles and saved source/member/output checksums. Reused the clean Python 3.11.11 wind environment without package installation or another ERA5 download.
+
+For the unresolved source-population discrepancy, made a small official EIA-930 API request for CISO wind and solar over Pacific January (1,488 hourly values) using the public demo key. Also saved route metadata, whose hourly description explicitly specifies UTC. Retrieved the official OMB-hosted EIA-923 form to check reporting requirements. An older instruction-PDF mirror returned HTTP 403 and was not used as an input; the official form's Schedule 3D establishes that annual wind/solar respondents provide operations for each month. An annual-frequency flag alone does not imply an estimated allocation or annual-only generation.
+
+### Inventory decisions and exclusions
+
+The December operating sheet has 137 wind records / 117 plants / 6,166.2 MW, of which OP records total 6,148.7 MW. January has 131 records / 112 plants / 6,099.5 MW, of which 129 OP records at 111 plants total 6,082.0 MW. These differ from the preserved end-2020 reference inventory; it is not silently replaced.
+
+Six generator keys disappear across snapshots. The January Retired sheet dates five retirements totaling 64.9 MW to January 2020, and one 1.8 MW retirement to December 2019. Thus snapshot disappearance is not synonymous with a January retirement. Exclude any whole plant whose wind unit set/status/capacity/operation-date/fuel/prime-mover records change, whose wind units are not all OP before January, or whose coordinates/generation cannot be matched. This prevents dividing a whole plant's generation by only its surviving units. Three otherwise stable plants (50823, 52143, 52144; 86.5 MW) lack an EIA-923 WND/WT match; no inferred aliases or successor IDs are substituted.
+
+The final cohort has **106 plants / 123 generators / 5,985.7 MW**, with **759,921.181 MWh** of January net generation, or **99.6000%** of the EIA CA-state wind total. Excluded EIA rows sum to **3,051.580 MWh**; the energy ledger closes exactly to numerical precision. The cohort occupies **24 ERA5 centers**; none of their nearest centers falls outside the administrative mask. All observed plant nominal CFs are in 0–1. The fixed denominator is installed nameplate MW × 744 h, not measured available capacity. Snapshot stability does not prove hourly availability or exclude unreported within-month changes.
+
+### Model/time-support decisions and findings
+
+Assigned each retained plant's nominal MW to its nearest grid center, without an extra cosine-latitude factor. Kept all four wind curves, the 100 m input, and nonlinear-before-averaging convention. Averaged adjacent wind CF snapshots once. The known model series supplies **735** Pacific-January intervals; **nine** end-of-month hours are absent. Instead of fabricating weather or assuming zero output, bounded every missing hourly CF by 0–1. Full-month bounds are known-CF-sum/744 and (known-CF-sum+9)/744; they cover missing support only, not all model uncertainty.
+
+Observed matched nominal monthly CF is **17.0640%**. Model monthly CF bounds are **5.69–6.90% cubic**, **7.38–8.59% IEC I**, **9.83–11.04% IEC II**, and **12.44–13.65% IEC III**. Every model upper bound is below observed net generation. IEC II's upper energy bound is **491,592.763 MWh**, at least **268,328.418 MWh / 35.31%** below observed energy even if all missing hours generate at full capacity. This is a material model-validation warning under the cohort/time/capacity assumptions. Strong prior shape correlation did not establish correct energy amplitude. No fitted gain, curve selection, additional loss factor or event-threshold adjustment was made.
+
+### Operational-source audit
+
+EIA-930 CISO wind totals **1,002,027 MWh**, **1.0571%** above CAISO's raw **991,545.496 MWh**, with hourly correlation **0.9858**. EIA-930 solar totals **1,493,359 MWh**, **4.1580%** below CAISO, correlation **0.9675**. Preserved **382 negative EIA net-solar hours**, with no clipping. Both operational wind totals remain substantially above EIA-923's reported-CISO **748,408.868 MWh**. Operational/plant-survey population and physical/commercial accounting definitions are documented; no specific cause or numerical reconciliation has been established, and no correction factor was imposed. Use matched EIA-923 plants for the amplitude diagnostic, rather than either BA-wide operational series divided by statewide capacity.
+
+### Code, verification and evidence
+
+Added [cohort preparation](../scripts/12_match_january_wind_inventory.py), [bounded comparison](../scripts/13_bound_matched_wind_generation.py), [source audit](../scripts/14_audit_generation_sources.py), [helpers](../scripts/january_wind.py) and [14 scientific/integrity tests](../tests/test_january_wind.py). All **56 tests** passed. Independent original-workbook and array calculations reproduced the 106 plants, 123 generators, capacity/energy ledger, six retirement matches, all four power series, all **424 plant/curve bounds**, and all **1,488** API values. Published-curve series agreed within 1.7e-16; source/output hashes were checked and the bounds figure was visually reviewed.
+
+Saved the [full method and findings](january_wind_match.md), [inventory metadata](../data/reference/jan2020_wind_inventory_metadata.json), [bounds](../results/tables/matched_january_wind_bounds_2020_01.csv), [source totals](../results/tables/generation_source_monthly_audit_2020_01.csv), [figure](../results/figures/matched_january_wind_bounds_2020_01.png), and [verification record](january_wind_verification.json). Raw workbooks, API responses and ERA5 inputs remain outside Git.
+
+### Consequence for the research plan
+
+Investigate grid-scale wind/terrain representation at high-capacity sites, centroid versus turbine locations, and actual turbine/hub specifications before selecting/calibrating a long-term wind model. Boundary weather can narrow the bounds but cannot resolve this shortfall under the current reference assumptions. Earlier event counts remain preserved conditional scenario results, not validated climatological estimates. Neither the full 2005–2024 run nor a solar-amplitude validation was started in this stage.
+
 ## How to use this record for the paper
 
 Use the linked source and algorithm records to write a reproducible methods narrative. Summarize the original proxy as a pilot, then explain the selected final physical models and event definitions. Keep alternative scenarios in a sensitivity subsection. Put environment troubleshooting and detailed execution history in a reproducibility appendix rather than presenting each interactive-console action as a scientific method.

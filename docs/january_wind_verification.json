@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-23",
+  "python": "3.11.11",
+  "runtime": "Existing clean Linux wind environment; no packages added",
+  "unit_tests": {
+    "total": 56,
+    "new_cohort_bounds_and_API_tests": 14,
+    "failures": 0,
+    "errors": 0
+  },
+  "pip_check": "No broken requirements found",
+  "independent_checks": {
+    "status": "passed",
+    "raw_monthly_wind_records": [
+      137,
+      131
+    ],
+    "independent_matched_plants": 106,
+    "independent_matched_generators": 123,
+    "independent_capacity_mw": 5985.7,
+    "independent_generation_mwh": 759921.181,
+    "disappeared_keys_with_retirement_dates": 6,
+    "known_model_hours": 735,
+    "missing_model_hours_bounded": 9,
+    "independent_curve_series": 4,
+    "maximum_curve_series_absolute_difference": 1.6653345369377348e-16,
+    "independent_plant_curve_bounds": 424,
+    "source_API_values_verified": 1488,
+    "negative_solar_values_preserved": 382,
+    "metadata_artifact_hashes": "passed"
+  },
+  "independent_method": "Stream both original Operating sheets and January Retired sheet separately; reconstruct whole-plant intersections with original field names; match plant-level EIA rows and close the state energy ledger; independently evaluate original cubic and searchsorted/linear-blend published curves; calculate each of 424 plant/curve bounds from known sums and nine missing hours; check all API source values and signed net-energy metrics. No project helper is imported.",
+  "code_sha256": {
+    "scripts/january_wind.py": "0f4929541fccad39bee15900c4e295d4652fc22a7faf6218353d0dddf5232bd6",
+    "scripts/12_match_january_wind_inventory.py": "91963de025190062d86ed73631f4f34905df82ac1a6c49f76b9bebe291769d3f",
+    "scripts/13_bound_matched_wind_generation.py": "a8c203a6f57206057e0e60ff8e3c0ffe0c76bfa1f111bd4f3cbe709a1ffb5f7d",
+    "scripts/14_audit_generation_sources.py": "d23a137e7dece5fe8a749b394ddf2e7718368009916a4bf0258125931a90357e",
+    "tests/test_january_wind.py": "a3ed9ca7d1c23e3e2fb2b5857c7c6ace918f9740ed567a30435c77afd2289ea1"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/generation_source_hourly_audit_2020_01.csv",
+      "bytes": 47985,
+      "sha256": "ba20b719583ed4d6cd51f570235148c7d2211d272ba8e6f5920d3c84345edbdd"
+    },
+    {
+      "path": "data/processed/matched_january_wind_known_hours_2020_01.csv",
+      "bytes": 78898,
+      "sha256": "111c1a199927c43fc2f4d2b85e15c16fcb0434cc87a9034fe6415c4cc407e56b"
+    },
+    {
+      "path": "data/reference/dec2019_ca_wind_snapshot.csv",
+      "bytes": 12040,
+      "sha256": "ec399a3ecc007d6900e7cb6dd3cfa2b1688ea6d8decff62b04a5fd3db829cf2c"
+    },
+    {
+      "path": "data/reference/jan2020_ca_wind_snapshot.csv",
+      "bytes": 11512,
+      "sha256": "34a528ac6ad67ab695e338eec19938ad30baa62edf113c5f8e44464e15ba0e07"
+    },
+    {
+      "path": "data/reference/jan2020_wind_generator_transition.csv",
+      "bytes": 24377,
+      "sha256": "13e2a7f647bb55708e2cb309e81905cf16a2607c7cb524e9af98e7e558ffd842"
+    },
+    {
+      "path": "data/reference/jan2020_wind_inventory_metadata.json",
+      "bytes": 3244,
+      "sha256": "271f8ae63f8712f8541192e9f69c9e91522f41f274a8823c52bd9e764bb4466b"
+    },
+    {
+      "path": "data/reference/jan2020_wind_matched_generators.csv",
+      "bytes": 10841,
+      "sha256": "024d748e81e6419688548da815287c97d0f2c69e96b32b43dc2bf9ae0437f1ca"
+    },
+    {
+      "path": "data/reference/jan2020_wind_matched_plants.csv",
+      "bytes": 10698,
+      "sha256": "081bed2d1351e381f326babaf82cc069da139975ae4632a0d453a95a7260cc0c"
+    },
+    {
+      "path": "data/reference/jan2020_wind_plant_audit.csv",
+      "bytes": 9032,
+      "sha256": "08f834f3ed02bab55d5881eabdd9afc69ffce6f0a44932d90a76012acc7de443"
+    },
+    {
+      "path": "data/reference/jan2020_wind_retirements.csv",
+      "bytes": 399,
+      "sha256": "e1d9841052ee18aadf2654af1c0196196aa43fcf0661d8352588c79abfc90c99"
+    },
+    {
+      "path": "results/figures/matched_january_wind_bounds_2020_01.png",
+      "bytes": 79284,
+      "sha256": "e5dd6e6b3fba2fe8c3338627ceb0505f63798b1e19ec6bd21208c8455e4b84a3"
+    },
+    {
+      "path": "results/tables/generation_source_audit_metadata_2020_01.json",
+      "bytes": 2276,
+      "sha256": "f0e459a69897f60816d038b231ba9d29ff3799c147e52e4f6b40aba0ac885934"
+    },
+    {
+      "path": "results/tables/generation_source_hourly_metrics_2020_01.csv",
+      "bytes": 424,
+      "sha256": "502ee88ee4605121784aae11934f34fe3189422e2eb7f1fc3aa44f95a31d895d"
+    },
+    {
+      "path": "results/tables/generation_source_monthly_audit_2020_01.csv",
+      "bytes": 506,
+      "sha256": "d6443a7de7ade4a177996f34800d28438030fea925fceafd77d9ae4c431e3533"
+    },
+    {
+      "path": "results/tables/january_wind_inventory_summary_2020_01.csv",
+      "bytes": 258,
+      "sha256": "8d66710734f32fb66fe0f4b799581c847bab918ba50bcf8b6a216273c2f47d0f"
+    },
+    {
+      "path": "results/tables/matched_january_wind_bounds_2020_01.csv",
+      "bytes": 1153,
+      "sha256": "8c68095fb84d507e5491318c4a119fa857de767a2f8a32ace4e2c9016a58d52d"
+    },
+    {
+      "path": "results/tables/matched_january_wind_metadata_2020_01.json",
+      "bytes": 2602,
+      "sha256": "9a004c85932f471eb708aa1871fd27494f8cb511abefa28a842efd1c1fb3c897"
+    },
+    {
+      "path": "results/tables/matched_january_wind_plant_bounds_2020_01.csv",
+      "bytes": 65397,
+      "sha256": "241c1252cb4db8236815d47948e1b777ce359a23ae85184d1236e8c76792b764"
+    },
+    {
+      "path": "results/tables/matched_january_wind_site_assignments_2020_01.csv",
+      "bytes": 12655,
+      "sha256": "e246c63adf2bc80c6d5394ab63b4efe016155757d3273465dcb36cf339c24669"
+    }
+  ],
+  "documentary_reference": {
+    "url": "https://www.reginfo.gov/public/do/DownloadDocument?objectID=126697301",
+    "sha256": "f8c109b45954a420b913040b5a62a0c25dea7cedad0e2ec2779757854836eaa3",
+    "use": "Schedule 3D: annual wind/solar respondents supply monthly operations; not a numerical generation input"
+  },
+  "visual_review": "Bounds figure inspected; bars cover missing hours only and are not labeled total uncertainty; original scenario figures untouched",
+  "interpretation_limits": [
+    "Whole-plant nominal-capacity diagnostic; monthly snapshot stability does not establish hourly availability or complete reporting.",
+    "Nine missing hours bounded under model CF 0\u20131; all model upper bounds remain below observed energy under the matching assumptions.",
+    "Model at 100 m with generic curves and grid-scale ERA5 winds; no fit, gain, loss-factor or threshold adjustment.",
+    "API route metadata identifies hourly as UTC; EIA-930 signed net-solar values preserved.",
+    "CAISO/EIA operational/plant source populations remain numerically unreconciled; no discrepancy cause or correction asserted.",
+    "No full 2005\u20132024 processing or solar-amplitude/event validation performed."
+  ]
+}

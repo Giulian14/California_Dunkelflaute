@@ -68,3 +68,7 @@ These commands are intended for an environment with the model dependencies avail
 ## Observed-generation benchmark
 
 The November 23 observation extraction and comparison reused the existing wind environment and installed no additional packages. `requirements-wind.txt` supplies openpyxl for CAISO/EIA workbooks; `11_compare_observed_shapes.py` can instead use the committed CSVs. All **42 tests** and `pip check` passed. The nine new tests cover Pacific market-hour interpretation, UTC end labeling, energy conservation, missing/partial-hour rejection, complete local days and dimensionless shape metrics. Import intentionally supports January 2020 only; multi-month/DST handling remains future work.
+
+## Matched January wind follow-up
+
+Scripts 12–14 and `january_wind.py` reuse the existing wind environment and install no new dependencies. All **56 tests** pass (42 earlier + 14 cohort/bounds/API tests). Source workbooks, API JSON and route metadata are explicit file arguments; no script makes a network request. The matched model reuses the existing ERA5 wind and mask, with optional file-path overrides. No credentials are required to run it using the committed reference cohort and local weather inputs.

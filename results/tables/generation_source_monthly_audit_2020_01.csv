@@ -1,0 +1,11 @@
+source_scope,technology,january_energy_mwh,missing_source_rows
+EIA-930 CISO,wind,1002027.0,0
+CAISO raw archive,wind,991545.4957638744,0
+EIA-930 CISO,solar,1493359.0,0
+CAISO raw archive,solar,1558147.3268519877,0
+EIA-923 California state,solar PV,1468672.459,42
+EIA-923 California state,solar thermal,65564.0,0
+EIA-923 California state,wind,762972.761,0
+EIA-923 EIA reported CISO BA,solar PV,1539932.971,36
+EIA-923 EIA reported CISO BA,solar thermal,65564.0,0
+EIA-923 EIA reported CISO BA,wind,748408.868,0

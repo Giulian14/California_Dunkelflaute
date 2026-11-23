@@ -1,0 +1,38 @@
+{
+  "retrieved_on": "2026-11-23",
+  "EIA930_endpoint": "https://api.eia.gov/v2/electricity/rto/fuel-type-data/data/",
+  "query_without_credentials": {
+    "frequency": "hourly",
+    "data": [
+      "value"
+    ],
+    "respondent": [
+      "CISO"
+    ],
+    "fueltype": [
+      "WND",
+      "SUN"
+    ],
+    "start": "2020-01-01T09",
+    "end": "2020-02-01T08",
+    "length": 5000
+  },
+  "raw_response_sha256": "48da2b0064151c414204e9964a4a66f3e027f5aa6897cb88ef0f32a0560a1146",
+  "route_metadata_endpoint": "https://api.eia.gov/v2/electricity/rto/fuel-type-data/",
+  "route_metadata_sha256": "d887c46c248a54047b9591983e0204ed946eaa38edde024d9633f829cd0a4a07",
+  "time_convention": "Route identifies hourly as UTC; EIA-930 documentation specifies hourly interval-end labels",
+  "negative_values": "Preserved as reported net energy, never clipped to force agreement",
+  "monthly_resolution": "EIA-923 plant-level and EIA-930 BA-level populations remain unreconciled; no correction factor applied",
+  "reporting_frequency_clarification": "Annual submission frequency is not annual-only generation: EIA-923 Schedule 3D requires wind/solar annual respondents to supply each month's operations. It alone does not imply estimated monthly allocation.",
+  "interpretation": "EIA-930 and CAISO are BA operational series, not independent plant-matched validation targets; close agreement does not resolve their difference from EIA-923",
+  "input_sha256": {
+    "data/processed/caiso_generation_hourly_2020_01.csv": "bc7bdea256e9c4a97d9ab6333b0be55f313a43ab88574ae1ae271b3e0d9ec87a",
+    "results/tables/generation_observation_metadata_2020_01.json": "8dff22f84ba3709efae8515c3b047cf791246a3c706e23e43cb7e810c522c486",
+    "results/tables/eia923_generation_scope_summary_2020_01.csv": "e8eb4a9c2570333e32e686b967851649c61eb0c56d3c18067bcfee553ca91eb8"
+  },
+  "artifacts_sha256": {
+    "data/processed/generation_source_hourly_audit_2020_01.csv": "ba20b719583ed4d6cd51f570235148c7d2211d272ba8e6f5920d3c84345edbdd",
+    "results/tables/generation_source_monthly_audit_2020_01.csv": "d6443a7de7ade4a177996f34800d28438030fea925fceafd77d9ae4c431e3533",
+    "results/tables/generation_source_hourly_metrics_2020_01.csv": "502ee88ee4605121784aae11934f34fe3189422e2eb7f1fc3aa44f95a31d895d"
+  }
+}

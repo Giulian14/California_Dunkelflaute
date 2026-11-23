@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-23",
+  "python": "3.11.11",
+  "runtime": "Existing wind environment; no packages or raw weather added",
+  "unit_tests": {
+    "total": 63,
+    "new_site_and_capacity_tests": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_checks": {
+    "status": "passed",
+    "capacity_disagreement_plant_ids": [
+      50821,
+      52142,
+      55719
+    ],
+    "capacity_consistent_plants": 103,
+    "capacity_consistent_generators": 119,
+    "capacity_mw": 5842.099999999999,
+    "net_generation_mwh": 735337.752,
+    "independent_sampling_curve_cases": 8,
+    "maximum_series_abs_difference": 2.220446049250313e-16,
+    "independent_plant_IECII_cases": 206,
+    "prior_nearest_plant_bounds_regression": "passed",
+    "reported_height_weighted_mean_m": 73.81452952876533,
+    "artifact_hashes": "passed"
+  },
+  "independent_method": "Join raw annual turbine records independently; exclude whole plants for capacity disagreement; manually compute four-corner u/v interpolation and magnitude without calling project helpers or xarray.interp; independently evaluate curve interpolation and all eight series/bounds; check 206 IEC II plant/sampling cases and regression to earlier per-plant nearest bounds.",
+  "code_sha256": {
+    "scripts/wind_sites.py": "360e6cb41d412e53950937f4f75649e166023292203c89450b054bb44743aee8",
+    "scripts/15_diagnose_wind_sites.py": "4f2bed39fb66e2606c1ac9d534957475bf19252229ede8df2e0595bbd66b8a39",
+    "tests/test_wind_sites.py": "0da7b60611024ddbe8d53c61859aca8c569a47ea8be5ee131ed54ed5096cc854"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/wind_site_sampling_2020_01.csv",
+      "bytes": 138983,
+      "sha256": "fe53c74ac945acb60b1aa28a7f66b2f74143aa75b03005575c5880699331a9a8"
+    },
+    {
+      "path": "data/reference/jan2020_wind_annual_turbine_audit.csv",
+      "bytes": 18342,
+      "sha256": "ab49a23f72cd046f5ada0bd7b0ff3c34037e5d73fa05e6e270771cc240e32144"
+    },
+    {
+      "path": "data/reference/jan2020_wind_capacity_consistent_plants.csv",
+      "bytes": 10425,
+      "sha256": "0a5972fb7276331ada2f51cf3c8607d67681fca8a68b8e215b180c25f16d34ef"
+    },
+    {
+      "path": "results/figures/wind_site_sampling_bounds_2020_01.png",
+      "bytes": 73974,
+      "sha256": "27778230d60c0d12b003d366bd183f69591d4765c3c0720a10be7f8d02125a89"
+    },
+    {
+      "path": "results/tables/wind_site_coordinate_audit_2020_01.csv",
+      "bytes": 18694,
+      "sha256": "7c347785013b4b3f12a745f65fa6b0cffa1ae3cff6ddef4b25bd766fcefe9c68"
+    },
+    {
+      "path": "results/tables/wind_site_diagnostic_metadata_2020_01.json",
+      "bytes": 3451,
+      "sha256": "4f4c6c37d9048c37e96da6b34df624065f2a732e454af3f12b1f5f244f4835be"
+    },
+    {
+      "path": "results/tables/wind_site_iec2_diagnostics_2020_01.csv",
+      "bytes": 43893,
+      "sha256": "3bc17631b47b550f9826766a47276bdc462bc471199b2d9ad216a7b0c7b1d887"
+    },
+    {
+      "path": "results/tables/wind_site_sampling_bounds_2020_01.csv",
+      "bytes": 1855,
+      "sha256": "ee5e9963352449cc726aa6491a8ed835b8fa5cef2fd8733b80274e16de9183b1"
+    }
+  ],
+  "interpretation": [
+    "Earlier 106-plant match qualified by annual capacity inconsistencies; new conservative subset 103 plants, 119 generators.",
+    "Potential reporting consolidation not assumed proven; no asset IDs merged or energy allocated.",
+    "Nearest/bilinear results remain below observed nominal monthly energy; no fit or threshold adjustment.",
+    "Annual height/model records descriptive only; no confirmed January turbine identities or height extrapolation.",
+    "Terrain and independent wind reference remain unverified; no full 2005\u20132024 or PV-amplitude validation."
+  ],
+  "visual_review": "Bounds figure inspected; separate colors for sampling methods; intervals bound missing hours only."
+}

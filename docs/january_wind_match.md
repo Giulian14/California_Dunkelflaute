@@ -1,5 +1,7 @@
 # January wind inventory match and bounded energy diagnostic
 
+**Follow-up qualification:** the [annual turbine-capacity audit](wind_site_diagnostics.md) identified three plants whose January and annual capacities disagree. The 106-plant results below remain conditional on the earlier monthly-snapshot match; the more conservative comparison now uses **103 plants / 119 generators / 5,842.1 MW**, with observed nominal CF **16.92%**. Use the follow-up for the latest interpretation.
+
 The November 23, 2026 follow-up matches EIA plant-level January generation to a conservative monthly wind inventory. It finds a substantial energy shortfall in all four reference-curve scenarios. This changes the interpretation of the earlier strong timing correlation: geographic weighting improves shape agreement, but the model's energy level still needs investigation before a multi-year study.
 
 ## Inventory and plant matching

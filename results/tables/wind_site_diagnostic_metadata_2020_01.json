@@ -1,0 +1,48 @@
+{
+  "status": "Conservative annual-capacity consistency check and spatial sampling sensitivity; not final fleet validation",
+  "python": "3.11.11",
+  "source_retrieved_on": "2026-11-23",
+  "capacity_rule": "Exclude every plant with any missing annual unit or any monthly/annual capacity difference >1e-6 MW; no inferred reporting consolidation",
+  "prior_cohort_plants": 106,
+  "subset_plants": 103,
+  "subset_generators": 119,
+  "subset_capacity_mw": 5842.099999999999,
+  "subset_generation_mwh": 735337.752,
+  "subset_observed_nominal_cf": 0.16917841076811202,
+  "excluded_plant_ids": [
+    50821,
+    52142,
+    55719
+  ],
+  "annual_coordinate_match_count": 106,
+  "maximum_monthly_annual_coordinate_distance_km": 0.00413432512163232,
+  "nearest_center_distance_median_km": 10.4372234841544,
+  "nearest_center_distance_maximum_km": 17.127651775739906,
+  "reported_height_matched_subset_generators": 119,
+  "annual_reported_height_capacity_weighted_mean_m": 73.81452952876533,
+  "height_caveat": "End-2020 predominant equipment reports, not proof of January turbine identities. Heights descriptive only; no vertical extrapolation performed.",
+  "spatial_caveat": "Bilinear interpolation is applied to u/v before magnitude and curve, not to cell CF. It does not add terrain information or prove more accurate micrositing.",
+  "terrain_status": "No surface geopotential/orography or turbine-level/met-mast reference acquired; terrain explanation remains unverified.",
+  "wind_checks": "100 m components in m/s, unrotated grid, finite fields, strict hourly chronology; curve and interval conventions preserved",
+  "archive_sha256": "ce519fd0b02c74b8c4231dc023bf07f922ae5f2a018fcaf88914502f61aa89ea",
+  "workbook_sha256": {
+    "3_2_Wind_Y2020.xlsx": "f33ffca4ce69ab6529365e45f7d6b7d88af52481404ea5cd4fa93f8f8ac10203",
+    "2___Plant_Y2020.xlsx": "25c8fdca330bea75212aa32632f041308d895cd4db898c0f94fbe12f01003e2c"
+  },
+  "input_sha256": {
+    "data/reference/jan2020_wind_matched_generators.csv": "024d748e81e6419688548da815287c97d0f2c69e96b32b43dc2bf9ae0437f1ca",
+    "data/reference/jan2020_wind_matched_plants.csv": "081bed2d1351e381f326babaf82cc069da139975ae4632a0d453a95a7260cc0c",
+    "data/reference/jan2020_wind_inventory_metadata.json": "271f8ae63f8712f8541192e9f69c9e91522f41f274a8823c52bd9e764bb4466b",
+    "data/reference/wind_curves/manifest.json": "b78cf70bfacca5e36b03743757714ebb23966a2521bd5b9812091287a0deb197"
+  },
+  "wind_NetCDF_sha256": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+  "artifacts_sha256": {
+    "data/reference/jan2020_wind_annual_turbine_audit.csv": "ab49a23f72cd046f5ada0bd7b0ff3c34037e5d73fa05e6e270771cc240e32144",
+    "data/reference/jan2020_wind_capacity_consistent_plants.csv": "0a5972fb7276331ada2f51cf3c8607d67681fca8a68b8e215b180c25f16d34ef",
+    "results/tables/wind_site_coordinate_audit_2020_01.csv": "7c347785013b4b3f12a745f65fa6b0cffa1ae3cff6ddef4b25bd766fcefe9c68",
+    "results/tables/wind_site_sampling_bounds_2020_01.csv": "ee5e9963352449cc726aa6491a8ed835b8fa5cef2fd8733b80274e16de9183b1",
+    "data/processed/wind_site_sampling_2020_01.csv": "fe53c74ac945acb60b1aa28a7f66b2f74143aa75b03005575c5880699331a9a8",
+    "results/tables/wind_site_iec2_diagnostics_2020_01.csv": "3bc17631b47b550f9826766a47276bdc462bc471199b2d9ad216a7b0c7b1d887",
+    "results/figures/wind_site_sampling_bounds_2020_01.png": "27778230d60c0d12b003d366bd183f69591d4765c3c0720a10be7f8d02125a89"
+  }
+}

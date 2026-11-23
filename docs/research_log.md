@@ -148,6 +148,36 @@ Saved the [full method and findings](january_wind_match.md), [inventory metadata
 
 Investigate grid-scale wind/terrain representation at high-capacity sites, centroid versus turbine locations, and actual turbine/hub specifications before selecting/calibrating a long-term wind model. Boundary weather can narrow the bounds but cannot resolve this shortfall under the current reference assumptions. Earlier event counts remain preserved conditional scenario results, not validated climatological estimates. Neither the full 2005–2024 run nor a solar-amplitude validation was started in this stage.
 
+## November 23 wind-site diagnostics and expansion-readiness review
+
+### Scope and important refinement of the previous plant match
+
+Continue investigating the wind energy shortfall and identify what must be checked before expanding to 2005–2024. Reused the same EIA-860 2020 ZIP, January cohort, original ERA5 wind and curve files; no weather download, new dependency or credential was required. The annual wind workbook contains both Operable and Retired and Canceled sheets, allowing all 123 January generators to be joined by their original keys.
+
+The additional join found capacity disagreements at **50821/GEN1 (48.0 versus 88.5 MW)**, **52142/GEN1 (29.0 versus 75.0 MW)** and **55719/GENI (44.4 versus 42.6 MW)**. The first two increases exactly equal capacities of the three previously unmatched Mojave plants. This suggests reporting consolidation and makes the earlier monthly-snapshot match insufficient as proof of comparable generation populations. No asset merge or allocation was inferred. Excluded each affected whole plant, including Mountain View's other unchanged 22.2 MW unit. The old 106-plant numerical artifacts are preserved but the original report and README now explicitly qualify them.
+
+The stricter **capacity-consistent subset** has **103 plants / 119 generators / 5,842.1 MW**, with **735,337.752 MWh** and nominal observed monthly CF **16.9178%**. Capacity consistency does not prove complete asset lineage or hourly availability. This is the most conservative available diagnostic, not a finished historical operating-fleet reconstruction.
+
+### Coordinates, turbine information and wind mechanics
+
+Compared monthly and annual plant coordinates: all **106** matched, maximum difference **0.00413 km** (about four metres). Nearest ERA5-center distances have median **10.44 km** and maximum **17.13 km**. The two EIA sources may share underlying coordinates, so this does not independently validate turbine micrositing.
+
+All 119 retained generators have positive end-2020 reported hub heights; January-MW-weighted mean height is **73.81 m**. Retained predominant manufacturer/model and source sheet/row. These annual descriptors are not confirmed January equipment configurations; no height adjustment or equipment-specific power curve was silently substituted. No surface geopotential/orography, met-mast or turbine-level independent wind source was acquired, so a terrain explanation remains unverified.
+
+Checked 100 m vector-component units, unrotated-grid flags, finite fields and UTC chronology. Compared nearest-cell sampling with bilinear interpolation of **u and v before magnitude and power conversion**, preserving endpoint averaging once. Bilinear interpolation adds no subgrid terrain information.
+
+### Results and implications
+
+The subset's IEC II monthly bounds are **9.85–11.06% nearest-center** and **8.68–9.89% bilinear**, versus **16.92%** observed nominal CF. The corresponding minimum energy shortfalls are **34.65%** and **41.53%**, even with missing-hour upper bounds. All eight curve/sampling cases remain below observed energy. Neither capacity refinement nor this interpolation alternative resolves the shortfall. No fitted gain, curve parameter, loss factor or event threshold was introduced.
+
+Saved plant-level diagnostics to prioritize investigation. Voyager Wind II, Tule Wind, Shiloh I and Shiloh 2 have the largest positive nearest-center IEC II residuals against model upper bounds. These identify sites to inspect, not proven causes of bias. Prior event counts remain conditional modeled scenarios.
+
+### Verification, outputs and next checks
+
+Added [site helper](../scripts/wind_sites.py), [driver](../scripts/15_diagnose_wind_sites.py), [seven tests](../tests/test_wind_sites.py), [method](wind_site_diagnostics.md) and [expansion-readiness record](expansion_readiness.md). All **63 tests** passed. Independent source joins and manual four-corner vector interpolation checked the 103/119 subset, all eight power time series, all **206** IEC II plant/sampling cases, and agreement of nearest bounds with aggregation of the preserved earlier per-plant results. Source/output checksums and [verification](wind_site_verification.json) are retained; the figure was visually reviewed.
+
+The readiness record lists remaining wind physics/asset-lineage validation, plant-matched PV amplitudes, contrasting-season/held-out-year checks, fixed-versus-evolving fleet choice, full input/time-support QC, chunk equivalence across months/years/leap days, event-definition sensitivity and temperature-reference design. A proposed UTC 2005–2024 core has **175,320 complete hourly intervals**, requiring appropriate endpoint samples and external window/event context. No 20-year processing was started.
+
 ## How to use this record for the paper
 
 Use the linked source and algorithm records to write a reproducible methods narrative. Summarize the original proxy as a pilot, then explain the selected final physical models and event definitions. Keep alternative scenarios in a sensitivity subsection. Put environment troubleshooting and detailed execution history in a reproducibility appendix rather than presenting each interactive-console action as a scientific method.

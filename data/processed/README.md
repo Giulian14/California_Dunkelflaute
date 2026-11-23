@@ -60,3 +60,7 @@ The first **47 rolling means are intentionally missing** because there is not ye
 ## Matched wind energy and operational-source audit
 
 `matched_january_wind_known_hours_2020_01.csv` contains four reference-curve CF series for 735 modeled hours of the matched January plant cohort. The missing nine hours are bounded separately in the results; no zero-filled/full-month synthetic series is produced. `generation_source_hourly_audit_2020_01.csv` pairs 744 EIA-930 hourly net-energy MWh observations with CAISO hourly mean production MW (one-hour MW × 1 h is MWh). Signed EIA net-solar values are preserved. Different source populations remain unreconciled. See [method and limits](../../docs/january_wind_match.md).
+
+## Wind-site sampling sensitivity
+
+`wind_site_sampling_2020_01.csv` contains 735 known hourly CFs for eight curve/sampling cases on the capacity-consistent 103-plant subset. Nearest-center sampling preserves file-order ties; bilinear sampling interpolates vector components before speed and nonlinear power conversion. Missing end-of-month hours remain absent and are bounded in the results. This subset supersedes the earlier 106-plant cohort for conservative interpretation; historical series remain unchanged.

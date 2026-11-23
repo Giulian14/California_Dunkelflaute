@@ -117,7 +117,9 @@ These are temporal-shape diagnostics across unmatched populations, **not CF-ampl
 python scripts/11_compare_observed_shapes.py --headless
 ```
 
-## Plant-matched January wind diagnostic
+## Initial January wind diagnostic (qualified by follow-up)
+
+The [annual-capacity follow-up](docs/wind_site_diagnostics.md) subsequently identified three ambiguous plants; the more conservative subset has 103 plants and observed nominal CF 16.92%. The initial results below remain conditional on the monthly-snapshot match.
 
 The [January inventory match](docs/january_wind_match.md) retains **106 plants / 123 generators / 5,985.7 MW**, covering **99.6%** of EIA's California January wind energy. Its observed nominal monthly CF is **17.06%**. The IEC II reference model's full-month CF is bounded at **9.83%–11.04%**, even allowing every missing hour full output. All four reference curves fall below observed energy under these matching assumptions. The earlier shape agreement therefore does not establish energy-amplitude accuracy; investigate wind representation and turbine/hub assumptions before expanding the climatology.
 
@@ -126,6 +128,12 @@ The [bounds](results/tables/matched_january_wind_bounds_2020_01.csv), [figure](r
 ```bash
 python scripts/13_bound_matched_wind_generation.py --headless
 ```
+
+## Latest wind-site checks and expansion readiness
+
+The [site audit](docs/wind_site_diagnostics.md) excludes whole plants with monthly/annual capacity disagreement, leaving **103 plants / 119 generators / 5,842.1 MW**. Observed nominal monthly CF is **16.92%**; IEC II bounds are **9.85%–11.06% nearest-center** and **8.68%–9.89% bilinear-vector** sampling. Source coordinates agree within four metres, but neither interpolation resolves the energy shortfall. Annual reported hub heights and predominant equipment remain descriptive; terrain and actual January turbine identities need further validation.
+
+The [expansion-readiness record](docs/expansion_readiness.md) lists the remaining physical, PV, temporal-boundary, fleet-definition and event-analysis checks before 2005–2024 production processing. All **63 tests** passed, with independent checks of the subset, eight sampling/curve series and 206 IEC II plant/sampling cases. Earlier numerical artifacts are preserved and their qualifications are explicit.
 
 ## Local workflow
 

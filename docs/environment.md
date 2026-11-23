@@ -72,3 +72,7 @@ The November 23 observation extraction and comparison reused the existing wind e
 ## Matched January wind follow-up
 
 Scripts 12–14 and `january_wind.py` reuse the existing wind environment and install no new dependencies. All **56 tests** pass (42 earlier + 14 cohort/bounds/API tests). Source workbooks, API JSON and route metadata are explicit file arguments; no script makes a network request. The matched model reuses the existing ERA5 wind and mask, with optional file-path overrides. No credentials are required to run it using the committed reference cohort and local weather inputs.
+
+## Wind-site sampling follow-up
+
+The turbine audit and nearest/bilinear diagnostics reuse the existing wind environment, including xarray's SciPy-backed interpolation; no new packages were installed. All **63 tests** pass (56 earlier + seven site/capacity tests). `15_diagnose_wind_sites.py` requires the already downloaded official annual EIA-860 archive and original wind NetCDF, with explicit optional file locations. It makes no network request and preserves prior scenario artifacts.

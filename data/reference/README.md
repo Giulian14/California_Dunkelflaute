@@ -13,3 +13,7 @@ The EIA snapshot describes end-of-2020 status and is held fixed as a location ex
 ## January-specific wind matching
 
 `dec2019_ca_wind_snapshot.csv` and `jan2020_ca_wind_snapshot.csv` preserve CA wind records extracted from the official monthly Operating sheets, including non-OP statuses and source row numbers. `jan2020_wind_generator_transition.csv` and `jan2020_wind_retirements.csv` document changes and reported retirement months. `jan2020_wind_plant_audit.csv` retains every plant-level inclusion/exclusion; `jan2020_wind_matched_plants.csv` and `jan2020_wind_matched_generators.csv` define the conservative 106-plant, 123-generator, 5,985.7 MW cohort. Checksums and rules are in `jan2020_wind_inventory_metadata.json`. These are separate from the preserved fixed end-2020 scenario. See [method](../../docs/january_wind_match.md).
+
+## Annual-capacity consistency refinement
+
+`jan2020_wind_annual_turbine_audit.csv` joins all 123 original generators to annual wind records, retaining capacity-consistency/whole-plant flags, source sheet/row and reported predominant equipment. `jan2020_wind_capacity_consistent_plants.csv` defines the more conservative 103-plant, 119-generator, 5,842.1 MW subset. Three whole plants are excluded for capacity disagreement; no reporting-consolidation alias is inferred. This refines, rather than overwrites, the previous monthly-snapshot cohort. See [latest interpretation](../../docs/wind_site_diagnostics.md).

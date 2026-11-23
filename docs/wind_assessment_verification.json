@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-23",
+  "python": "3.11.11",
+  "platform": "Linux x86_64",
+  "unit_tests": {
+    "total": 33,
+    "new_wind_tests": 11,
+    "previous_event_and_pv_tests": 22,
+    "failures": 0,
+    "errors": 0
+  },
+  "checks": {
+    "independent_eia_OP_rows": 117,
+    "independent_unique_plants": 101,
+    "independent_capacity_mw": 5916.5,
+    "independent_occupied_grid_centers": 25,
+    "capacity_and_area_weights_match": true,
+    "original_cubic_uniform_regression_within_float32_relative_precision": true,
+    "interval_alignment_matches_snapshot_endpoint_average": true,
+    "published_curve_checks": "Independent searchsorted/linear-blend calculations match all six curve/weight series",
+    "published_curve_max_abs_differences": {
+      "wtk_iec1_uniform": 8.326672684688674e-17,
+      "wtk_iec1_eia2020": 1.1102230246251565e-16,
+      "wtk_iec2_uniform": 8.326672684688674e-17,
+      "wtk_iec2_eia2020": 1.1102230246251565e-16,
+      "wtk_iec3_uniform": 1.1102230246251565e-16,
+      "wtk_iec3_eia2020": 1.1102230246251565e-16
+    },
+    "independent_48h_sensitivity_cases": 72,
+    "all_event_sensitivity_counts_and_edge_flags_match": true,
+    "independent_hourly_reference_cases": 8,
+    "all_hourly_reference_counts_match": true
+  },
+  "code_sha256": {
+    "scripts/wind_model.py": "23fdc0c17343a6d138d5e99721c3219a3698f76dcefc0ad6d856b4c9a17da5ba",
+    "scripts/00_prepare_eia_wind_inventory.py": "a5b04f8f781f5de4d3bdfe537f789cab66eb5681dfcdb62df58f9048219bede7",
+    "scripts/09_assess_wind_model.py": "0214854e92be77a3ba1b2129ef2cddb20d9b13cbb868637fac74ec3e0dd1fddf",
+    "tests/test_wind_model.py": "246e118ee0ee288619aecfe4f93b43ad1d4172aea85d7392a7a9a9a046096d3b"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/wind_assessment_2020_01.csv",
+      "bytes": 139794,
+      "sha256": "e5f6dff716caa55a94fc55b445c66bfe773145dc9fab0f444d0c91391cdb1016"
+    },
+    {
+      "path": "data/processed/wind_assessment_snapshots_2020_01.csv",
+      "bytes": 139691,
+      "sha256": "14e81c6a2c75b4d9a55124bc3b011823b022fe36daca9e7752d64cafb55f09ad"
+    },
+    {
+      "path": "results/figures/wind_model_geography_assessment_2020_01.png",
+      "bytes": 520475,
+      "sha256": "ab89b5b053c334c961bba74b3619d9d5d8a85e582fabbe1fb8d03ef3c896d443"
+    },
+    {
+      "path": "results/tables/wind_assessment_48h_events_2020_01.csv",
+      "bytes": 5965,
+      "sha256": "8bc29df0617d0bfbf465f8ce4db7043e86228db6f4a06ab3e0ee0bb797308e56"
+    },
+    {
+      "path": "results/tables/wind_assessment_event_sensitivity_2020_01.csv",
+      "bytes": 2826,
+      "sha256": "c37c6ae71132a8771caab50825a0f03149e4d7439eadf2fea39efec5f95ed8c2"
+    },
+    {
+      "path": "results/tables/wind_assessment_grid_weights_2020_01.csv",
+      "bytes": 61949,
+      "sha256": "2ac2cb434bcad541f89ce70bbd73511402bfb9208d969ab9021684aeac1080a2"
+    },
+    {
+      "path": "results/tables/wind_assessment_metadata_2020_01.json",
+      "bytes": 2101,
+      "sha256": "e3445746eac7f0348dd16f2b36445b2c311ad84abffa8379699846f8a10c4bea"
+    },
+    {
+      "path": "results/tables/wind_assessment_reference_periods_2020_01.csv",
+      "bytes": 25896,
+      "sha256": "4dd7d71cbaa0ad965df16cbdde9e76c0f179fef3202d2d3666acbbfbd079ff79"
+    },
+    {
+      "path": "results/tables/wind_assessment_site_assignments_2020_01.csv",
+      "bytes": 7386,
+      "sha256": "ff2c538f074a2102b0d6c7adaa1238ce26bce69e97d2be9e143407bec4b9bee4"
+    },
+    {
+      "path": "results/tables/wind_assessment_summary_2020_01.csv",
+      "bytes": 1074,
+      "sha256": "a97d931d418112cb32e6797a24fcaa0432fbe4379a9a04fef92de224a168257b"
+    }
+  ],
+  "limitations": [
+    "Reference power curves and fixed end-2020 locations, not actual historical fleet output or observed-generation validation.",
+    "All wind modeled at 100 m; reported capacity-weighted hub height is about 73.26 m.",
+    "Nearest-grid plant points, no micrositing, density, wake or availability corrections.",
+    "PV remains the uniform-area 35-degree baseline; only wind geography varied."
+  ]
+}

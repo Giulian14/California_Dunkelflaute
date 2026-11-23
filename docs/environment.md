@@ -58,3 +58,9 @@ These commands are intended for an environment with the model dependencies avail
 ## Event-comparison extension
 
 `08_compare_event_definitions.py` and its helper `energy_events.py` operate on the included processed CSVs and metadata. They require no additional dependencies beyond the original pilot runtime. They do not rerun PV modeling or access Copernicus. The complete test suite now contains 22 passing tests (12 event tests plus 10 PV tests), executed in the clean Python 3.11.11 PV environment. Running the complete suite requires `requirements-pv.txt`; the event-only suite can be run using `python -m unittest discover -s tests -p 'test_energy_events.py' -v`.
+
+## Wind assessment and EIA inventory preparation
+
+`requirements-wind.txt` includes the PV requirements and adds openpyxl **3.1.5** for reading the EIA source workbooks. A separate clean Python 3.11.11 Linux environment passed `pip check`, all **33 tests**, and the January wind assessment. [Resolved packages](validated_wind_linux_packages.txt) are recorded.
+
+`09_assess_wind_model.py` uses the committed small reference tables and existing local ERA5 wind/mask files. It makes no network request. `00_prepare_eia_wind_inventory.py` is an optional provenance-reproduction step requiring a separately downloaded EIA-860 ZIP. The original environment snapshots are retained.

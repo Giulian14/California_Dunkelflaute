@@ -1,0 +1,47 @@
+{
+  "status": "Controlled curve/location sensitivity, not observed generation validation",
+  "wind_height_m": 100,
+  "density_wake_availability_losses": "Not explicitly modeled",
+  "inventory": "Fixed 2020 annual EIA OP plant layout; not actual January fleet availability",
+  "uniform_weighting": "Cos(latitude) per selected administrative grid center",
+  "capacity_weighting": "Plant wind nameplate MW aggregated at nearest ERA5 center; no extra latitude factor",
+  "nearest_center_tie_rule": "First coordinate in ERA5 file order",
+  "pv_assumption": "Existing 35-degree PV scenario held fixed with its original uniform area weights",
+  "event_assumptions": "Hourly each <0.20 for >=24h; 48h combined windows at 0.05/0.06/0.10 and 25/50/75% wind shares",
+  "input_snapshots": 744,
+  "complete_intervals": 743,
+  "administrative_grid_centers": 695,
+  "capacity_weighted_grid_centers": 25,
+  "mapped_plants": 101,
+  "mapped_capacity_mw": 5916.5,
+  "plants_nearest_to_outside_admin_centers": 0,
+  "capacity_nearest_to_outside_admin_centers_mw": 0.0,
+  "power_curve_archive_commit": "e9e4ccc6a87f50c0c65d236154a2897e752c47c9",
+  "python": "3.11.11",
+  "inputs": [
+    {
+      "path": "data/raw/data_stream-oper_stepType-instant.nc",
+      "sha256": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115"
+    },
+    {
+      "path": "data/processed/california_mask.nc",
+      "sha256": "c129c6b24b4df4a55a66d86c17f5e8ba1aa43b71bca457ab30329e96199339f7"
+    },
+    {
+      "path": "data/reference/eia2020_ca_wind_plants.csv",
+      "sha256": "9491b10b2e6ddc197ab117b13ac8e56b3bf305614e24250a04c326b7bb35a464"
+    },
+    {
+      "path": "data/reference/eia2020_ca_wind_metadata.json",
+      "sha256": "404aab9e7a7aa879d77ff712574fa7750376b49508ebb01e649a7a703a6d60f3"
+    },
+    {
+      "path": "data/processed/pv_ac_capacity_factor_2020_01.csv",
+      "sha256": "8f19bbf9038b4d2fda9f1e66dd6ddc3a34684b5e674f1c5da36476aa1e1fe047"
+    },
+    {
+      "path": "data/reference/wind_curves/manifest.json",
+      "sha256": "b78cf70bfacca5e36b03743757714ebb23966a2521bd5b9812091287a0deb197"
+    }
+  ]
+}

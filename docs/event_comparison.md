@@ -100,3 +100,7 @@ python -m unittest discover -s tests -v
 All **22 tests passed**, including 12 event tests and the 10 existing PV tests. Independent direct-slice calculations reproduced the rolling means and explicitly marked window supports in all 27 cases; merged durations, window counts, and boundary flags agreed. The four hourly reference cases also matched direct calculations. The smallest rolling-mean distance from a tested threshold was about 5.62e-6, far above floating-point differences observed in the original wind reproduction.
 
 These checks establish implementation consistency. The illustrative wind curve, uniform geographic deployment, administrative waters, inferred PV irradiance components, and system parameters remain model assumptions. January alone cannot establish rarity, seasonal patterns, comparisons with Germany, or temperature-extreme associations. Further model validation and multi-year data are needed for those scientific conclusions.
+
+## Subsequent wind-model sensitivity
+
+This comparison holds the original cubic wind curve and uniform wind-area weighting fixed. The later [wind assessment](wind_assessment.md) changes the curve and wind geography in a separate factorial experiment. Its results should not be substituted into this report without changing the scenario label. The original 199-hour result remains a conditional finding for its original wind/PV assumptions.

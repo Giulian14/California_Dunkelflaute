@@ -1,0 +1,32 @@
+{
+  "source": "U.S. Energy Information Administration, annual EIA-860 2020 inventory",
+  "url": "https://www.eia.gov/electricity/data/eia860/archive/xls/eia8602020.zip",
+  "retrieved_on": "2026-11-23",
+  "archive_sha256": "ce519fd0b02c74b8c4231dc023bf07f922ae5f2a018fcaf88914502f61aa89ea",
+  "workbook_sha256": {
+    "2___Plant_Y2020.xlsx": "25c8fdca330bea75212aa32632f041308d895cd4db898c0f94fbe12f01003e2c",
+    "3_2_Wind_Y2020.xlsx": "f33ffca4ce69ab6529365e45f7d6b7d88af52481404ea5cd4fa93f8f8ac10203"
+  },
+  "boundary_sha256": "459de647c6458ff9c1ce7b56148914cb7d5fb53f619a7e8aa2cfaf0ddd88661c",
+  "derived_files_sha256": {
+    "eia2020_ca_wind_generators.csv": "296d93ae3b30b801c4f3aedae2e38a2cc618a2dc286b1de86659d861074ba1c8",
+    "eia2020_ca_wind_plants.csv": "9491b10b2e6ddc197ab117b13ac8e56b3bf305614e24250a04c326b7bb35a464",
+    "eia2020_ca_wind_exclusions.csv": "ae7318a5ac25a05e328e1a82af1a3d42686365746e22cea8372adb8df8b55e4d"
+  },
+  "selection": "CA, Onshore Wind Turbine, Operable sheet, status OP, positive MW, valid in-boundary coordinates",
+  "layout_interpretation": "Fixed 2020 annual reference deployment; not the actual January 2020 fleet or historical hourly availability",
+  "qa": {
+    "ca_onshore_candidate_generators": 122,
+    "candidate_capacity_mw": 5970.6,
+    "retained_generators": 117,
+    "retained_plants": 101,
+    "retained_capacity_mw": 5916.5,
+    "excluded_generators": 5,
+    "excluded_capacity_mw": 54.1,
+    "exclusion_counts": {
+      "not_operating_status_OP": 5
+    },
+    "known_hub_height_capacity_mw": 5916.5,
+    "capacity_weighted_reported_hub_height_m": 73.26005472965437
+  }
+}

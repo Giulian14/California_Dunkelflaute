@@ -39,3 +39,9 @@ The additional `pv_ac_capacity_factor_2020_01.png` figure compares modeled fixed
 [The comparison figure](figures/wind_pv_event_comparison_2020_01.png) shows individual CFs, 48-hour combined means for three capacity mixes, and sensitivity of merged events/covered hours. The hourly reference catalogues are in `pv_reference_*.csv`; window-based results are in `wind_pv_48h_*.csv`. Their distinct meanings, edge-context flags, input provenance, and verification are documented in [the comparison report](../docs/event_comparison.md).
 
 The 35° PV baseline gives zero observed 24-hour uninterrupted events and zero low 48-hour windows for a 50/50 rated-capacity mix at threshold 0.06. Other hypothetical mixes/thresholds produce periods, including one 199-hour union period for 75% wind at 0.06. Original pilot and PV artifacts are preserved.
+
+## Wind curve and geographic weighting assessment
+
+[The four-panel assessment figure](figures/wind_model_geography_assessment_2020_01.png) separates curve and location assumptions. `wind_assessment_summary_2020_01.csv` reports the eight wind scenarios; `wind_assessment_event_sensitivity_2020_01.csv` contains 72 capacity-mix/threshold cases. Other `wind_assessment_*` tables preserve reference periods, merged-window catalogues, plant-to-grid assignments, normalized grid weights, and run metadata.
+
+The [assessment method](../docs/wind_assessment.md), [verification record](../docs/wind_assessment_verification.json), and [dated research log](../docs/research_log.md) describe the evidence and limits. All original pilot, PV, and event-comparison results remain separate.

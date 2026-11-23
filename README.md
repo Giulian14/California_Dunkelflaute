@@ -2,6 +2,8 @@
 
 Graduate project for EN 530.637 — Energy Meteorology, Johns Hopkins University.
 
+The [dated research log](docs/research_log.md) records the workflow, decisions, checks, results and limitations needed for later methods writing. Earlier history is explicitly marked as reconstructed.
+
 ## Research question
 
 How frequently do prolonged periods of low wind and solar energy availability occur in California, and how often do they coincide with temperature extremes?
@@ -93,6 +95,18 @@ python scripts/08_compare_event_definitions.py --headless
 
 This step needs no raw ERA5 data or additional downloads. All **22 tests** passed, and independent direct-slice/support checks agreed for all 27 rolling-window cases. See the [comparison figure](results/figures/wind_pv_event_comparison_2020_01.png), [sensitivity table](results/tables/wind_pv_48h_sensitivity_2020_01.csv), and [method and limits](docs/event_comparison.md). This remains a January scenario study, not a multi-year climatology or actual fleet adequacy assessment.
 
+## Wind curve and geographic weighting assessment
+
+The [November 23 assessment](docs/wind_assessment.md) compares the original cubic curve and three published 100 m WTK onshore reference curves, each with uniform-area and fixed EIA-860 2020 capacity-location weights. The reference inventory retains **117 operating generator records at 101 plants, totaling 5,916.5 MW**, mapped to 25 ERA5 centers. It is a fixed end-2020 layout, not January hourly fleet availability.
+
+Across 743 intervals, mean modeled wind CF ranges from **4.73% to 12.56%**. The IEC II curve with capacity-location weights gives **9.92%**, versus **4.73%** for cubic/uniform. All eight cases retain zero observed baseline events at the 24-hour simultaneous definition and the 50/50, 0.06 combined definition. Other mixes and thresholds remain sensitive to these choices. Higher CF is not evidence of higher accuracy without observational validation.
+
+```bash
+python scripts/09_assess_wind_model.py --headless
+```
+
+The small reference datasets and source/license records are committed; existing ERA5 wind and mask inputs are still needed locally. [The method](docs/wind_assessment.md), [summary](results/tables/wind_assessment_summary_2020_01.csv), [figure](results/figures/wind_model_geography_assessment_2020_01.png) and [verification](docs/wind_assessment_verification.json) record the controlled design. All **33 tests** passed, with independent checks of capacity selection, weights, published-curve outputs, eight hourly cases and 72 event sensitivities.
+
 ## Local workflow
 
 To reproduce the event tables directly from the included processed series, run from the repository root:
@@ -126,9 +140,9 @@ The local workflow produces maps, time series, and a duration histogram.
 
 ## Remaining work
 
-- Assess the illustrative turbine curve and validate the new PV model against observations and additional parameter sensitivities.
+- Validate wind and PV estimates against observed generation and justify the final reference deployment and physical assumptions.
 - Extend and verify event extraction across contiguous months and years, with adequate boundary context.
-- Assess land filtering and capacity-location weighting.
+- Assess land/coastal-mask assumptions and PV capacity-location weighting; wind-location sensitivity is now documented.
 - Establish a final event definition that accounts for ordinary nighttime conditions, seasonality, and model uncertainty.
 - Extend the validated workflow to 2005–2024.
 - Analyze temperature extremes, meteorological mechanisms, and threshold sensitivity.

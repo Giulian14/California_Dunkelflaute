@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/NatLabRockies/turbine-models",
+  "commit": "e9e4ccc6a87f50c0c65d236154a2897e752c47c9",
+  "retrieved_on": "2026-11-23",
+  "curves": {
+    "wtk_iec1": {
+      "hub_height": 100.0,
+      "cut_in_wind_speed": 3.0,
+      "cut_out_wind_speed": 25.0,
+      "rated_power": 2000.0,
+      "csv": "WTK_Validation_IEC-1_normalized.csv",
+      "spec_yaml": "WTK_Validation_IEC-1_normalized.yaml"
+    },
+    "wtk_iec2": {
+      "hub_height": 100.0,
+      "cut_in_wind_speed": 3.0,
+      "cut_out_wind_speed": 25.0,
+      "rated_power": 2000.0,
+      "csv": "WTK_Validation_IEC-2_normalized.csv",
+      "spec_yaml": "WTK_Validation_IEC-2_normalized.yaml"
+    },
+    "wtk_iec3": {
+      "hub_height": 100.0,
+      "cut_in_wind_speed": 3.0,
+      "cut_out_wind_speed": 22.0,
+      "rated_power": 2000.0,
+      "csv": "WTK_Validation_IEC-3_normalized.csv",
+      "spec_yaml": "WTK_Validation_IEC-3_normalized.yaml"
+    }
+  },
+  "files": {
+    "LICENSE.txt": "c855db7975f89527d2a8069aa0a8dcbfc7941a11928eb5a2f0ada395f15fe4d7",
+    "WTK_Validation_IEC-1_normalized.csv": "c84cf52b4a9e4c0da40b3d372b221871d07c4da7c612628c579336482e3388af",
+    "WTK_Validation_IEC-1_normalized.yaml": "e0ae24701c0cf914a0eecfa60949dc0ee072699012aa6590ddfa1fe74a13834c",
+    "WTK_Validation_IEC-2_normalized.csv": "f717959f0e89926eecdf733cff197007d1d09e60bc02ee91f6230bda0f5b89c8",
+    "WTK_Validation_IEC-2_normalized.yaml": "0309456b6c632eb8a5c4525be9da77a00890dfbf41562c5893575995878e77a7",
+    "WTK_Validation_IEC-3_normalized.csv": "4e0fd8fbf0c7a64ff91bf709434a4c3f59d52ad3c6f3fbba10fe83d004945e5c",
+    "WTK_Validation_IEC-3_normalized.yaml": "8b22f69638e1b82001a65fa4a5a00ecc695eabf7614d306076b0f6d50ba2d362"
+  },
+  "operating_convention": "Zero below cut-in and strictly above cut-out; tabulated endpoints retained."
+}

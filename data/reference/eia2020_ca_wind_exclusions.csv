@@ -1,0 +1,6 @@
+plant_id,generator_id,plant_name,status,capacity_mw,latitude,longitude,operating_year,operating_month,reported_hub_height_m,turbines,exclusion_reason
+52162,WGNS,85 A,OA,14.1,35.1011,-118.3372,1985,1,24.384,157,not_operating_status_OP
+52163,WTGN,85 B,OA,21.2,35.1011,-118.3372,1985,1,24.384,235,not_operating_status_OP
+54300,SX1S,CTV Power Purchase Contract Trust,OS,0.1,35.0583,-118.3083,1985,12,64.92240000000001,3,not_operating_status_OP
+54650,EXI2,Alta Mesa Repower LLC,OS,9.1,33.942,-116.661,1989,12,22.981920000000002,57,not_operating_status_OP
+54650,EXIS,Alta Mesa Repower LLC,OS,9.6,33.942,-116.661,1988,12,22.981920000000002,60,not_operating_status_OP

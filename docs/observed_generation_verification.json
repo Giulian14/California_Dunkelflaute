@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-23",
+  "python": "3.11.11",
+  "runtime": "Existing clean Linux wind environment; requirements-wind.txt; no added packages",
+  "unit_tests": {
+    "total": 42,
+    "new_observation_tests": 9,
+    "failures": 0,
+    "errors": 0
+  },
+  "pip_check": "No broken requirements found",
+  "independent_checks": {
+    "status": "passed",
+    "raw_caiso_production_rows": 8928,
+    "hourly_energy_conservation_and_curtailments": "passed",
+    "independently_checked_eia_rows": 767,
+    "matched_wind_plants": 101,
+    "paired_hours": 735,
+    "complete_local_days": 30,
+    "independent_scenario_metrics": 9,
+    "checksums": "passed"
+  },
+  "independent_method": "Stream original Excel rows separately; reshape five-minute production into 744x12 arrays; accumulate sparse curtailments by date/hour; preserve EIA raw missing markers and synthetic IDs; manually group common hour-start local dates; compute centered-dot Pearson correlations and own-mean RMSE without calling project helpers.",
+  "code_sha256": {
+    "scripts/observed_generation.py": "2b695e9f547efc368254e4fd50ccaa7740832cd2fe27bc633bdedeb59bd30d2f",
+    "scripts/10_prepare_generation_observations.py": "675aff834dc1b70bec1a89a2c80d4a37e57297150a35f965418d472ff8cdb794",
+    "scripts/11_compare_observed_shapes.py": "730607fbf5ae34da5e0fe7e6b8f50402084eccd800b7ec4a214fa90f736d2a5d",
+    "tests/test_observed_generation.py": "ab151a2a5c7439986e9a0a1b98c1e523dcf831dfdeb045d9433e74df82dc43d8"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/caiso_generation_hourly_2020_01.csv",
+      "bytes": 54561,
+      "sha256": "bc7bdea256e9c4a97d9ab6333b0be55f313a43ab88574ae1ae271b3e0d9ec87a"
+    },
+    {
+      "path": "data/processed/eia923_generation_scope_audit_2020_01.csv",
+      "bytes": 67293,
+      "sha256": "fa0d8950d4b03b9ee420ad44f48747720f857727a8ef427f2aa63c4c81e0b4c9"
+    },
+    {
+      "path": "data/processed/observed_shape_comparison_2020_01.csv",
+      "bytes": 180849,
+      "sha256": "cbe99ffd3a143315c710cc111ba2a46fd498ff8ad3cbc7cd2ca9230a22a9718d"
+    },
+    {
+      "path": "results/tables/eia923_generation_scope_summary_2020_01.csv",
+      "bytes": 484,
+      "sha256": "e8eb4a9c2570333e32e686b967851649c61eb0c56d3c18067bcfee553ca91eb8"
+    },
+    {
+      "path": "results/tables/generation_observation_metadata_2020_01.json",
+      "bytes": 3090,
+      "sha256": "8dff22f84ba3709efae8515c3b047cf791246a3c706e23e43cb7e810c522c486"
+    },
+    {
+      "path": "results/tables/observed_shape_comparison_metadata_2020_01.json",
+      "bytes": 2711,
+      "sha256": "4f984b71dc7f5610d41454b4db5c10d4fad31162848f40f52b6e00ddcd8f5b91"
+    },
+    {
+      "path": "results/tables/observed_shape_daily_means_2020_01.csv",
+      "bytes": 8644,
+      "sha256": "b016820713150316023b1db50463db228a9aa76af6ab443d2aadf9173b22085c"
+    },
+    {
+      "path": "results/tables/observed_shape_metrics_2020_01.csv",
+      "bytes": 1752,
+      "sha256": "2b456e7b470ed40f84dd2631259556581dced91e28323fd37fdf5b509692ab9a"
+    },
+    {
+      "path": "results/figures/observed_generation_shapes_2020_01.png",
+      "bytes": 516589,
+      "sha256": "20fc2eafd1269809681fbe2e8db8fa3e493b43b5161cdaf136d0d4b12c9ca50c"
+    }
+  ],
+  "visual_review": "Four-panel PNG inspected; date labels readable; normalization and unmatched-fleet scope visible",
+  "limits": [
+    "Exploratory temporal-shape benchmark, not CF-amplitude or observed-event validation.",
+    "Pacific interval-start interpretation documented; archive Read_me does not explicitly state timezone; importer restricted to January 2020.",
+    "EIA and CAISO population/generation totals remain unreconciled; annual-respondent and missing-entry caveats preserved.",
+    "735 paired hours and 30 complete local days; no missing boundary model hours fabricated.",
+    "No parameters, lags, thresholds or regression gain fitted; original pilot and model/event artifacts unchanged."
+  ]
+}

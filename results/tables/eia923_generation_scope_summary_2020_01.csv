@@ -1,0 +1,7 @@
+scope,fuel,prime_mover,source_rows,plants_excluding_state_fuel_increment,state_fuel_increment_rows,available_january_generation_mwh,missing_january_rows,annual_respondent_rows
+California state,SUN,PV,630,627,3,1468672.459,42,574
+California state,SUN,ST,12,12,0,65564.0,0,0
+California state,WND,WT,114,114,0,762972.761,0,103
+EIA reported CISO BA,SUN,PV,529,529,0,1539932.971,36,480
+EIA reported CISO BA,SUN,ST,12,12,0,65564.0,0,0
+EIA reported CISO BA,WND,WT,113,113,0,748408.868,0,102

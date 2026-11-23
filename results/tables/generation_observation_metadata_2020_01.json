@@ -1,0 +1,56 @@
+{
+  "retrieved_on": "2026-11-23",
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "openpyxl": "3.1.5"
+  },
+  "prior_wind_inventory_sha256": "9491b10b2e6ddc197ab117b13ac8e56b3bf305614e24250a04c326b7bb35a464",
+  "sources": [
+    {
+      "url": "https://www.caiso.com/documents/productionandcurtailmentsdata_2020.xlsx",
+      "sha256": "daefb9ea0a3ce5b03d4d403cd2f83c6e497bfd579785bda334252ce1b37c0706",
+      "sheets": [
+        "Read_me",
+        "Production",
+        "Curtailments"
+      ]
+    },
+    {
+      "url": "https://www.eia.gov/electricity/data/eia923/archive/xls/f923_2020.zip",
+      "sha256": "b8c6516cc0ae306abffc03a4af393de496d52b84b41347521f7acb184a4f7bf9",
+      "member": "EIA923_Schedules_2_3_4_5_M_12_2020_Final_Revision.xlsx",
+      "member_sha256": "0e5afa8f0c38124017b01688a8a7e0583a0d04785b90c65c848f70dbaf102e44",
+      "sheet": "Page 1 Generation and Fuel Data",
+      "header_excel_row": 6
+    }
+  ],
+  "caiso_units": "Five-minute MW aggregated by arithmetic mean; hourly MW equals hourly MWh numerically",
+  "caiso_time_assumption": "Production Date is interval start in Pacific market time; Hour 1 starts at 00:00; interval 1 starts at minute 0. January only, UTC-08:00. Date and Hour/Interval checked for agreement; workbook Read_me does not explicitly name a timezone.",
+  "caiso_raw_quality": "Source is reviewed raw production data, not operational or settlement-quality data",
+  "caiso_curtailment_handling": "Separate columns; unlisted/blank curtailments zero per sparse-table description. Never filled missing production or added curtailment to generation.",
+  "five_minute_production_rows": 8928,
+  "hourly_observations": 744,
+  "negative_production_value_counts": {
+    "wind_production_mw": 0,
+    "solar_production_mw": 0
+  },
+  "full_local_january_energy_mwh": {
+    "solar_production_mw": 1558147.3268519877,
+    "wind_production_mw": 991545.4957638744,
+    "wind_curtailment_mw": 7932.5637149529975,
+    "solar_curtailment_mw": 130069.55907601575
+  },
+  "eia_scope": "CA-state or EIA-reported CISO BA; WND, SUN. Solar PV=prime mover PV; solar thermal kept separately.",
+  "eia_monthly_caveat": "Annual respondents are flagged; monthly entries in annual-final files must not all be described as direct monthly reports. Missing values preserved.",
+  "eia_state_fuel_increments": "Synthetic plant ID 99999 / State-Fuel Level Increment retained and flagged for scope totals; excluded from plant counts and inventory matches.",
+  "prior_wind_inventory_matched_plants": 101,
+  "prior_wind_inventory_unmatched_plant_ids": [],
+  "matched_inventory_generation_mwh_available": 757441.8350000001,
+  "artifacts_sha256": {
+    "data/processed/caiso_generation_hourly_2020_01.csv": "bc7bdea256e9c4a97d9ab6333b0be55f313a43ab88574ae1ae271b3e0d9ec87a",
+    "data/processed/eia923_generation_scope_audit_2020_01.csv": "fa0d8950d4b03b9ee420ad44f48747720f857727a8ef427f2aa63c4c81e0b4c9",
+    "results/tables/eia923_generation_scope_summary_2020_01.csv": "e8eb4a9c2570333e32e686b967851649c61eb0c56d3c18067bcfee553ca91eb8"
+  }
+}

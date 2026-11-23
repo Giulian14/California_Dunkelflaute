@@ -64,3 +64,7 @@ These commands are intended for an environment with the model dependencies avail
 `requirements-wind.txt` includes the PV requirements and adds openpyxl **3.1.5** for reading the EIA source workbooks. A separate clean Python 3.11.11 Linux environment passed `pip check`, all **33 tests**, and the January wind assessment. [Resolved packages](validated_wind_linux_packages.txt) are recorded.
 
 `09_assess_wind_model.py` uses the committed small reference tables and existing local ERA5 wind/mask files. It makes no network request. `00_prepare_eia_wind_inventory.py` is an optional provenance-reproduction step requiring a separately downloaded EIA-860 ZIP. The original environment snapshots are retained.
+
+## Observed-generation benchmark
+
+The November 23 observation extraction and comparison reused the existing wind environment and installed no additional packages. `requirements-wind.txt` supplies openpyxl for CAISO/EIA workbooks; `11_compare_observed_shapes.py` can instead use the committed CSVs. All **42 tests** and `pip check` passed. The nine new tests cover Pacific market-hour interpretation, UTC end labeling, energy conservation, missing/partial-hour rejection, complete local days and dimensionless shape metrics. Import intentionally supports January 2020 only; multi-month/DST handling remains future work.

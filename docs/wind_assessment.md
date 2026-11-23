@@ -95,3 +95,7 @@ All **33 tests** passed: 11 new wind/inventory tests plus the existing 22 PV/eve
 The calculation uses nominal curve behavior without additional density, wake, curtailment or availability corrections. Wind therefore represents reference turbine potential, whereas PV includes the stated system/inverter losses; loss-model consistency remains part of final physical-model validation. Nearest-grid plant centroids do not resolve wind-farm extent, turbine micrositing or mountain-pass flow. The 101 plant points occupy 25 weather cells and are not independent weather samples. Actual hubs differ from the controlled 100 m height, and PV siting is unchanged. Observed-generation validation, a justified final reference deployment, and continuous multi-year processing remain necessary before making historical climatological or system-adequacy claims.
 
 The dated [research log](research_log.md) records this stage and the earlier steps needed for later methods writing.
+
+## Subsequent production comparison
+
+The [first observed-generation benchmark](observed_generation_comparison.md) compares the temporal shapes of all eight preserved scenarios with CAISO production. Capacity-location weights improve January shape agreement, but populations and capacity denominators remain unmatched. The benchmark does not supersede this assessment's amplitude limitations or establish a final best curve.

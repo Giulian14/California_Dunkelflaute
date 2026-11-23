@@ -1,4 +1,4 @@
 # Includes PV dependencies so the complete test suite can run.
 -r requirements-pv.txt
-# Needed only to reproduce the EIA workbook extraction.
+# Needed to reproduce EIA and CAISO workbook extraction.
 openpyxl==3.1.5

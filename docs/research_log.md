@@ -82,6 +82,36 @@ All eight scenarios still have zero observed 24-hour simultaneous events, and ze
 
 The 2020 layout and the generic 100 m curves are reference scenarios. Comparing with observed generation is still required before making accuracy claims. ERA5 at 0.25° cannot resolve turbine micrositing, and 101 plant points do not supply 101 independent weather samples when they occupy 25 cells. PV siting and other physical losses remain separate assumptions. Multi-year processing must use contiguous data and appropriate event-edge context; no 2005–2024 climatology has yet been calculated.
 
+## November 23 first observed-generation comparison
+
+### Purpose, inputs and scope decision
+
+Begin checking modeled wind/PV behavior against official generation records before selecting a final model or processing 2005–2024. Downloaded CAISO's 2020 Production and Curtailments XLSX and EIA-923's 2020 annual-final revision ZIP from their official archive pages. Recorded archive/member SHA-256 hashes and retrieval date. Reused the existing Python 3.11.11 wind environment (including openpyxl 3.1.5); no new dependency installation or ERA5 download was needed.
+
+CAISO's balancing area is not the California state mask or the fixed EIA wind inventory. EIA's reported-CISO population also does not reconcile numerically with the CAISO raw archive. Therefore this stage is a **temporal-shape benchmark across unmatched fleets**, not a validation of CF magnitudes or event classifications. No lag, gain, curve, loss factor or threshold was fitted to the observations.
+
+### Processing and quality decisions
+
+- Interpreted January CAISO market hours as Pacific interval starts, checked Production Date against Hour/Interval for every row, converted to UTC, and averaged twelve five-minute MW values into each preceding-hour mean. The workbook does not explicitly name the timezone; this interpretation is recorded as an assumption. Rejected gaps/duplicates/partial hours; restricted the importer to January 2020 so DST ambiguity cannot be silently resolved.
+- Retained **8,928 five-minute observations / 744 complete hours**. Kept reported curtailment separate from production, with zeros only for unlisted/blank entries in the documented sparse curtailment table. January curtailment sums round to **7,933 MWh wind** and **130,070 MWh solar**, matching the separate published monthly report's rounded totals. Its production maxima differ from this raw workbook, so no general reconciliation is claimed.
+- Intersected actual interval supports: **735 common hours**, ending January 1 09:00 UTC through January 31 23:00 UTC. Eight existing model intervals precede the Pacific observation month; nine observed end-of-month hours lack model data. Used only **30 complete Pacific days** for daily comparisons, assigning midnight end labels to the preceding local date.
+- Extracted **767** EIA source rows for California-state or CISO-BA wind/solar scope checks. Preserved respondent frequency, missing January values, and source Excel row numbers. Detected three synthetic `State-Fuel Level Increment` PV rows under ID 99999; kept them flagged in state totals but excluded them from physical plant counts. All **101** prior wind-reference plant IDs match EIA wind records, totaling **757,441.835 MWh** in January; a plant-ID join alone does not establish generator-level availability or a January capacity denominator.
+- Calculated hourly and daily correlations and own-mean-scaled dimensionless RMSE. This removes amplitude and must not be described as CF accuracy. Added a daylight-only PV correlation and hourly first-difference correlations to expose limits of apparent agreement.
+
+### Findings and interpretation
+
+With the same cubic wind curve, changing from uniform to capacity-location weights raises hourly correlation with CAISO wind from **0.341 to 0.783**, and daily-mean correlation from **0.503 to 0.883**. IEC II/location gives **0.796 hourly / 0.888 daily**, but only **0.245** for adjacent hourly differences. These support the relevance of deployment geography for shape; they do not select a best curve or establish amplitude accuracy.
+
+PV correlation is **0.969 hourly**, **0.912** over 316 positive-modeled-PV hours, and **0.641** across complete daily means. The shared day–night cycle contributes strongly to hourly agreement. Fixed-tilt versus fleet technology/siting differences and operations remain unmodeled. One autocorrelated month is not independent long-term validation.
+
+### Implementation, verification and saved evidence
+
+Added [observation preparation](../scripts/10_prepare_generation_observations.py), [shape comparison](../scripts/11_compare_observed_shapes.py), [helpers](../scripts/observed_generation.py), and [nine tests](../tests/test_observed_generation.py). All **42 tests** and `pip check` passed. A test initially exposed a pandas timestamp-resolution assumption; duration checks were corrected to compare timedeltas rather than assume integer timestamps always use nanoseconds.
+
+Independent streaming Excel/array calculations verified the source selection, all hourly aggregates, energy conservation, curtailments, paired support, local-day grouping and all nine scenario metric rows. Source and artifact hashes were checked, and the figure was visually reviewed. See the [method and scope report](observed_generation_comparison.md), [verification record](observed_generation_verification.json), [metrics](../results/tables/observed_shape_metrics_2020_01.csv), [EIA scope summary](../results/tables/eia923_generation_scope_summary_2020_01.csv), and [figure](../results/figures/observed_generation_shapes_2020_01.png).
+
+Before amplitude validation, reconcile observation populations, reconstruct a January-specific operating inventory, match plant/technology/AC-capacity denominators, and obtain missing boundary weather hours. Then test a separate period. Original pilot/PV/event/wind artifacts and event thresholds remain unchanged.
+
 ## How to use this record for the paper
 
 Use the linked source and algorithm records to write a reproducible methods narrative. Summarize the original proxy as a pilot, then explain the selected final physical models and event definitions. Keep alternative scenarios in a sensitivity subsection. Put environment troubleshooting and detailed execution history in a reproducibility appendix rather than presenting each interactive-console action as a scientific method.

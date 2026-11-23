@@ -1,0 +1,32 @@
+{
+  "status": "Exploratory temporal-shape comparison across unmatched fleets; not CF/amplitude or event validation",
+  "paired_hours": 735,
+  "complete_local_days": 30,
+  "first_interval_end_utc": "2020-01-01 09:00:00+00:00",
+  "last_interval_end_utc": "2020-01-31 23:00:00+00:00",
+  "model_hours_outside_observation_month": 8,
+  "observation_month_hours_without_model": 9,
+  "source_time_assumption": "Production Date is interval start in Pacific market time; Hour 1 starts at 00:00; interval 1 starts at minute 0. January only, UTC-08:00. Date and Hour/Interval checked for agreement; workbook Read_me does not explicitly name a timezone.",
+  "amplitude_handling": "Normalize each series by its own mean over the same paired support; no capacity denominator, fitted gain, lag optimization or bias correction",
+  "hourly_rmse_units": "Dimensionless after own-mean scaling; not capacity-factor RMSE",
+  "solar_checks": "Hourly correlation includes daily cycle; daylight subset uses modeled PV>0, daily means use complete local days only. No weather-skill claim from hourly correlation alone.",
+  "curtailment": "Reported separately; production only used as observation. Neither reconstructed potential nor low-resource events inferred.",
+  "scope_limits": [
+    "CAISO balancing area is not the California administrative mask or EIA fixed reference fleet",
+    "CAISO Solar technology mix is not assumed to be PV-only; model is fixed-tilt PV",
+    "Wind/solar net production includes operational effects absent from reference resource models",
+    "One month and autocorrelated hours/days provide no independent out-of-sample validation"
+  ],
+  "input_sha256": {
+    "data/processed/wind_assessment_2020_01.csv": "e5f6dff716caa55a94fc55b445c66bfe773145dc9fab0f444d0c91391cdb1016",
+    "data/processed/pv_ac_capacity_factor_2020_01.csv": "8f19bbf9038b4d2fda9f1e66dd6ddc3a34684b5e674f1c5da36476aa1e1fe047",
+    "data/processed/caiso_generation_hourly_2020_01.csv": "bc7bdea256e9c4a97d9ab6333b0be55f313a43ab88574ae1ae271b3e0d9ec87a",
+    "results/tables/generation_observation_metadata_2020_01.json": "8dff22f84ba3709efae8515c3b047cf791246a3c706e23e43cb7e810c522c486"
+  },
+  "artifacts_sha256": {
+    "data/processed/observed_shape_comparison_2020_01.csv": "cbe99ffd3a143315c710cc111ba2a46fd498ff8ad3cbc7cd2ca9230a22a9718d",
+    "results/tables/observed_shape_daily_means_2020_01.csv": "b016820713150316023b1db50463db228a9aa76af6ab443d2aadf9173b22085c",
+    "results/tables/observed_shape_metrics_2020_01.csv": "2b456e7b470ed40f84dd2631259556581dced91e28323fd37fdf5b509692ab9a",
+    "results/figures/observed_generation_shapes_2020_01.png": "20fc2eafd1269809681fbe2e8db8fa3e493b43b5161cdaf136d0d4b12c9ca50c"
+  }
+}

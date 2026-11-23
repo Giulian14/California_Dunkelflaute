@@ -107,6 +107,16 @@ python scripts/09_assess_wind_model.py --headless
 
 The small reference datasets and source/license records are committed; existing ERA5 wind and mask inputs are still needed locally. [The method](docs/wind_assessment.md), [summary](results/tables/wind_assessment_summary_2020_01.csv), [figure](results/figures/wind_model_geography_assessment_2020_01.png) and [verification](docs/wind_assessment_verification.json) record the controlled design. All **33 tests** passed, with independent checks of capacity selection, weights, published-curve outputs, eight hourly cases and 72 event sensitivities.
 
+## First observed-generation benchmark
+
+The [November 23 comparison](docs/observed_generation_comparison.md) uses official CAISO five-minute production and EIA-923 monthly records. It aligns **735 shared hours** and **30 complete Pacific days**. With the same cubic curve, capacity-location weighting increases hourly wind correlation from **0.341 to 0.783**; IEC II/location gives **0.796**. PV correlation is **0.969 hourly** but **0.641 across daily means**, emphasizing the role of the shared day–night cycle.
+
+These are temporal-shape diagnostics across unmatched populations, **not CF-amplitude or event validation**. EIA and CAISO totals are not reconciled; source frequency, missing values, synthetic state increments, curtailments and time assumptions are documented. All **42 tests** passed, with independent Excel/array checks. The [metrics](results/tables/observed_shape_metrics_2020_01.csv), [figure](results/figures/observed_generation_shapes_2020_01.png), [source metadata](results/tables/generation_observation_metadata_2020_01.json) and [verification](docs/observed_generation_verification.json) are committed. Reproduce using the included processed data:
+
+```bash
+python scripts/11_compare_observed_shapes.py --headless
+```
+
 ## Local workflow
 
 To reproduce the event tables directly from the included processed series, run from the repository root:

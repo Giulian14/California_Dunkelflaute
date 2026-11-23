@@ -52,3 +52,7 @@ The first **47 rolling means are intentionally missing** because there is not ye
 ## Wind curve and location sensitivity
 
 `wind_assessment_snapshots_2020_01.csv` contains 744 UTC wind snapshots; `wind_assessment_2020_01.csv` contains 743 preceding-hour CF approximations. Each has eight columns: cubic and WTK IEC I/II/III curves crossed with `uniform` and `eia2020` geographic weights. Values are dimensionless rated-output fractions. Spatial conversion occurs before averaging, and temporal endpoint averaging occurs once. The EIA labels mean a fixed end-2020 nameplate-location scenario at 100 m, not historical hourly fleet generation. See [the methods and verification](../../docs/wind_assessment.md).
+
+## Observed generation and paired shapes
+
+`caiso_generation_hourly_2020_01.csv` contains 744 Pacific-January hours with explicit UTC end labels, mean production MW, and separately aggregated curtailment MW. No production gaps were filled. `eia923_generation_scope_audit_2020_01.csv` retains 767 CA-state/CISO-BA wind/solar source rows, Excel row numbers, raw/numeric January MWh, missing-value and synthetic-state-increment flags, respondent frequency and prior-inventory plant matches. `observed_shape_comparison_2020_01.csv` contains the 735 common hours of unchanged model CFs and CAISO MW. These are different quantities; no observed fleet CF is inferred. See [method and scope](../../docs/observed_generation_comparison.md).

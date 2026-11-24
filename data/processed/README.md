@@ -68,3 +68,6 @@ The first **47 rolling means are intentionally missing** because there is not ye
 ## Continuity experiment
 
 `continuity_reference_resources_2020_01.csv`, `continuity_two_files_resources_2020_01.csv` and `continuity_irregular_files_resources_2020_01.csv` each contain 743 UTC-end-labeled hours of unchanged cubic/uniform wind and 35° fixed-tilt PV. The latter two are recomputed from temporary NetCDF partitions of the same January inputs. They are processing checks, not new observations or a new validated fleet scenario. See [method](../../docs/chunk_continuity.md).
+## November 24 additional scenarios
+
+`fixed_tilt_pv_hourly_2020_01.csv` is capacity-weighted modeled AC CF for the conservative 219-plant fixed-tilt subset, not the original statewide pilot. Three `rehearsal_*_five_cells.csv` files contain separately labeled Open-Meteo-processed ERA5 scenarios for five preselected cells, not the 695-cell statewide mask or deployment fleet. Attribute ECMWF/Copernicus ERA5 and Open-Meteo ([CC BY 4.0](https://open-meteo.com/en/licence)); the conversion/modeling changes and exact support are documented in [the evidence report](../../docs/pre_expansion_checks.md). The sources are not silently interchangeable. All original processed artifacts remain preserved.

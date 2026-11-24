@@ -1,0 +1,52 @@
+{
+  "execution_date": "2026-11-24",
+  "summary": {
+    "plant_count": 219,
+    "generator_count": 345,
+    "capacity_mw": 2636.5,
+    "observed_energy_mwh": 294147.955,
+    "observed_cf": 0.1499564401933975,
+    "known_hours": 735,
+    "missing_hours": 9,
+    "month_hours": 744,
+    "known_support_mean_cf": 0.18755241659083205,
+    "monthly_cf_lower_bound": 0.18528363735787842,
+    "monthly_cf_upper_bound": 0.19738041155142683,
+    "monthly_energy_lower_bound_mwh": 363444.23056117055,
+    "monthly_energy_upper_bound_mwh": 387172.73056117055
+  },
+  "stable_capacity_matched_plants": 539,
+  "exclusion_counts": {
+    "tracking_mixed_or_unclassified_technology": 320,
+    "": 219,
+    "monthly_unit_set_changed_or_absent": 58,
+    "annual_unit_population_differs": 17,
+    "annual_AC_capacity_differs": 12,
+    "missing_January_PV_generation": 3,
+    "monthly_status_capacity_or_service_changed": 2
+  },
+  "sources_sha256": {
+    "/workspace/work/january_inventory/sources/december_generator2019.xlsx": "c202eb88b17cd60e3c712f5935312c57b9568da4c30102dd585993030177a3c5",
+    "/workspace/work/january_inventory/sources/january_generator2020.xlsx": "b5f43ed9e0e2ddd77b86565067f28aec41471cff768051e7af196bd3128a1ed5",
+    "/workspace/work/wind_assessment/sources/eia8602020.zip": "ce519fd0b02c74b8c4231dc023bf07f922ae5f2a018fcaf88914502f61aa89ea",
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-instant.nc": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-accum.nc": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822",
+    "/workspace/work/california_repository/data/processed/eia923_generation_scope_audit_2020_01.csv": "fa0d8950d4b03b9ee420ad44f48747720f857727a8ef427f2aa63c4c81e0b4c9",
+    "/workspace/work/california_repository/data/boundaries/california_census_2026.geojson": "459de647c6458ff9c1ce7b56148914cb7d5fb53f619a7e8aa2cfaf0ddd88661c"
+  },
+  "artifacts_sha256": {
+    "results/tables/jan2020_pv_matching_audit.csv": "1abab68dc8447b4d3cc1bfa02f0abc937b1c2de17d1b2eb0000f59531b86a725",
+    "data/reference/jan2020_fixed_tilt_pv_generators.csv": "bdd869d7142fda542fb9d47b0c29485f4ca9978a087fa7db4e0cce3f7bcc1b15",
+    "results/figures/fixed_tilt_pv_validation_2020_01.png": "99e9de1ed02cd527aab64dd6197aae82476f86310bb8526fc03326adda58f0b5",
+    "results/tables/fixed_tilt_pv_plant_bounds_2020_01.csv": "35bcbb85e87179b54f56d88928084716946e231bb374161d03eb5cab86dbd276",
+    "results/tables/fixed_tilt_pv_model_parameters_2020_01.csv": "fd8f915719613616822a2526149cff06301c35b408ddf0af822b358e03553c61",
+    "data/processed/fixed_tilt_pv_hourly_2020_01.csv": "7733e03dcf24e1ef7de9acdc134926fedaff9ab4d5d754c385c1e8331a3708ff"
+  },
+  "limitations": [
+    "Annual technology and geometry are year-end proxies, not verified January equipment.",
+    "Select-all blank flags mean not selected; tracking absence is not independently verified.",
+    "Fixed-tilt subset does not validate tracker fleet, distributed PV, or solar thermal.",
+    "EIA net generation includes effects not modeled by fixed loss/temperature assumptions.",
+    "Nine missing Pacific-month hours are bounded, not imputed."
+  ]
+}

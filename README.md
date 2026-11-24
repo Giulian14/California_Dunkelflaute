@@ -8,7 +8,7 @@ The [dated research log](docs/research_log.md) records the workflow, decisions, 
 
 How frequently do prolonged periods of low wind and solar energy availability occur in California, and how often do they coincide with temperature extremes?
 
-The intended study period is **2005–2024**. Current work is a **January 2020 pilot**, not a completed climatological analysis.
+The intended study period is **2005–2024**, using a **fixed reference deployment** to isolate weather effects from fleet growth or relocation, with historical matched fleets for validation. See the [study protocol and justification](docs/study_protocol.md). Full-grid work remains a **January 2020 pilot**, supplemented by a separate five-cell adjoining-month/summer/held-out-weather rehearsal; this is not a completed climatological analysis.
 
 ## Current status
 
@@ -157,6 +157,14 @@ The [November 24 continuity check](docs/chunk_continuity.md) carries one weather
 A deliberately incorrect per-file control splits the existing **199-hour** union into two records; irregular files also lose **13 covered hours**. Synthetic New Year/leap/nonleap controls preserve 72-hour strict periods and 80-hour window unions, while naive independent monthly processing counts only 53 union hours. These fixtures are algorithm checks, not observed events. All **85 tests** passed; [run metadata](results/tables/continuity_metadata_2020_01.json), [comparisons](results/tables/continuity_weather_checks_2020_01.csv), [independent verification](docs/continuity_verification.json) and the [research log](docs/research_log.md) record the evidence.
 
 Real adjacent-month inputs, production acquisition/resumption and physical-model validation remain necessary. This stage does not establish a 20-year climatology.
+
+## Latest preparation before archive expansion
+
+The [fixed-tilt PV comparison](docs/pre_expansion_checks.md) matches 219 complete plants / 2,636.5 MW AC. Observed January CF is **15.00%**, versus modeled missing-hour bounds **18.53%–19.74%**. Wind underprediction and PV overprediction remain unresolved; no parameters were tuned to force agreement.
+
+Five preselected cells using separately attributed Open-Meteo-processed ERA5 pass exact monthly-file/resource/event continuity for January–February 2020, July 2020 and January 2021, including offline cached replay. This is a limited processing rehearsal, not statewide or held-out generation validation. [Metadata and overlap differences](results/tables/public_weather_rehearsal_metadata.json) distinguish that source from the original CDS inputs.
+
+A [242-request archive plan](results/tables/era5_2005_2024_request_plan.json), input QC/receipt checks and tested temperature-baseline helpers are prepared. **No 2005–2024 requests have been submitted.** All **102 tests** pass. The [readiness record](docs/expansion_readiness.md) identifies the remaining physical/source-validation gates, and the [research log](docs/research_log.md) records the work for later methods writing.
 
 ## Local workflow
 

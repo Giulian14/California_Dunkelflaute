@@ -1,0 +1,176 @@
+{
+  "status": "COMPUTATIONAL_CHECKS_PASS_PHYSICAL_VALIDATION_OPEN",
+  "execution_date": "2026-11-24",
+  "parent_commit": "7047f74c41f44cedee408087fc779aba6495b958",
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "xarray": "2026.9.0",
+    "netCDF4": "1.7.4",
+    "matplotlib": "3.11.2",
+    "shapely": "2.2.0",
+    "pvlib": "0.16.1",
+    "openpyxl": "3.1.5",
+    "numcodecs": "0.16.6"
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 102,
+    "failures": 0,
+    "new_tests": 17,
+    "log_sha256": "33cd44705c77c0ac6a5ef003ecec994d4cb1ee3235926cecb73e9dff01df8b38"
+  },
+  "syntax": "All scripts/tests compile; original download script not imported or executed.",
+  "preserved_preexisting_scientific_code_test_and_verification_artifacts": 165,
+  "checks": [
+    "Raw EIA monthly/annual whole-plant PV populations and AC capacities verified.",
+    "Raw EIA923 cohort energy independently reproduced.",
+    "Manual cohort capacity-weighted CF and nine-hour bounds verified.",
+    "Three limited secondary-source real-weather resource series independently reproduced within 2.23e-16.",
+    "Continuous versus monthly resources and event catalogues agree.",
+    "Verified 15 cached responses replayed without weather downloads.",
+    "Original January raw weather passes strict preflight.",
+    "242 monthly request plans are unsubmitted; 240 core months total 175320 hours.",
+    "Fixed-layout rationale and working temperature/event/boundary protocol documented.",
+    "Saved PV figure visually inspected."
+  ],
+  "code_sha256": {
+    ".github/workflows/scientific-checks.yml": "11c38950fd7a97fdcca0c4e6a3958198f97b21dd0774b14e922dcf350b5bbd80",
+    "scripts/19_validate_fixed_tilt_pv.py": "e4699ded73c09d596eaf7412c2c23cb33b38d7d89b57649d5954ed36386ad39b",
+    "scripts/20_rehearse_public_weather.py": "55c1950355d5d807cb2ea4cfb92770839c13a87b51acdd536bf4df646f0db6a7",
+    "scripts/21_prepare_archive_plan.py": "49b9312702a17164a89d54d99a4facd8bc783379b4888f34f9f48e0dc0d2af9f",
+    "scripts/22_verify_pre_expansion.py": "356a5c234ebeb427aa3d5f9e597d53fb568774d43dbcda7d8b7b363882134ceb",
+    "scripts/archive_preflight.py": "22ca812c6aefce4eb757c8c3b3a61dd3c2beb4ce4384debacbfeac0b7c229647",
+    "scripts/january_pv.py": "5d6503c98cbcf434115d3c0b8d9e4efdcacd83b3189d992b25c1ba0790e2a4e7",
+    "scripts/temperature_extremes.py": "c180839e6335115e1e11bff4e74a4eece3bf50ba71ac36c536e0a31833d74748",
+    "tests/test_archive_preflight.py": "7a7978dc6ecb86a00e8ed0f0a5a3eaaab97a52b72d69e01afa280f49b1948f34",
+    "tests/test_january_pv.py": "80f067814cc20890212fa62e38d6d6b062d8ae1fb08786216793cc27bd9b8b38",
+    "tests/test_public_weather.py": "f355ce9e580146448e84735964704618ae4c59d1779a055403d35525e6fc8b97",
+    "tests/test_temperature_extremes.py": "440e9aaf7f0787d08a2a8dd250955d6925961e151835fb91cbda0bd5c8159a91"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/fixed_tilt_pv_hourly_2020_01.csv",
+      "bytes": 27123,
+      "sha256": "7733e03dcf24e1ef7de9acdc134926fedaff9ab4d5d754c385c1e8331a3708ff"
+    },
+    {
+      "path": "data/processed/rehearsal_adjoining_2020_five_cells.csv",
+      "bytes": 81849,
+      "sha256": "4a8fc23b5234ebafc8625cf413a6701a98d9c80b656ec4d859b082678f70bacc"
+    },
+    {
+      "path": "data/processed/rehearsal_held_out_2021_five_cells.csv",
+      "bytes": 41681,
+      "sha256": "d90c378b67f1f7e1fe5b28b22b691e002eadd45b9e2252632f5b4e107b382bc5"
+    },
+    {
+      "path": "data/processed/rehearsal_summer_2020_five_cells.csv",
+      "bytes": 44417,
+      "sha256": "3d95221ebfb99dd21eb4eafdff778376867506807334c0745e4a6c399175252d"
+    },
+    {
+      "path": "data/reference/jan2020_fixed_tilt_pv_generators.csv",
+      "bytes": 39271,
+      "sha256": "bdd869d7142fda542fb9d47b0c29485f4ca9978a087fa7db4e0cce3f7bcc1b15"
+    },
+    {
+      "path": "results/figures/fixed_tilt_pv_validation_2020_01.png",
+      "bytes": 123095,
+      "sha256": "99e9de1ed02cd527aab64dd6197aae82476f86310bb8526fc03326adda58f0b5"
+    },
+    {
+      "path": "results/tables/archive_preflight_january_2020.json",
+      "bytes": 1108,
+      "sha256": "4de8a71b0d8f729e05792a50449b63c847c48874f0aacf419c79ad26a7fc126d"
+    },
+    {
+      "path": "results/tables/era5_2005_2024_request_plan.json",
+      "bytes": 456310,
+      "sha256": "9cd9b36378e4aa8f2f8455fe4e3a8f5296654c6f1ddb2ab3f81df4b72a84cdff"
+    },
+    {
+      "path": "results/tables/fixed_tilt_pv_model_parameters_2020_01.csv",
+      "bytes": 25840,
+      "sha256": "fd8f915719613616822a2526149cff06301c35b408ddf0af822b358e03553c61"
+    },
+    {
+      "path": "results/tables/fixed_tilt_pv_plant_bounds_2020_01.csv",
+      "bytes": 36436,
+      "sha256": "35bcbb85e87179b54f56d88928084716946e231bb374161d03eb5cab86dbd276"
+    },
+    {
+      "path": "results/tables/fixed_tilt_pv_validation_metadata_2020_01.json",
+      "bytes": 3247,
+      "sha256": "c57cd447bb6a9671b6dd5e5ae426dc90fde6b8bb41c6518a079fd9cb571b826a"
+    },
+    {
+      "path": "results/tables/jan2020_pv_matching_audit.csv",
+      "bytes": 50040,
+      "sha256": "1abab68dc8447b4d3cc1bfa02f0abc937b1c2de17d1b2eb0000f59531b86a725"
+    },
+    {
+      "path": "results/tables/pre_expansion_independent_checks.json",
+      "bytes": 974,
+      "sha256": "b42c99dbc8918c13116cfe396d4ee51fc72077bdd693cd605093f74be18fcf82"
+    },
+    {
+      "path": "results/tables/public_weather_overlap_2020_01.csv",
+      "bytes": 1161,
+      "sha256": "8ed8986f5e8c73ce6822e702ca2c2ee24a4be344d981b6576a77db9a415e1fb3"
+    },
+    {
+      "path": "results/tables/public_weather_rehearsal_metadata.json",
+      "bytes": 8268,
+      "sha256": "46b7eaf754b7a3785307b8e1e2b2f30041068baabcc065fc16a62c30141f599e"
+    },
+    {
+      "path": "results/tables/public_weather_rehearsal_summary.csv",
+      "bytes": 767,
+      "sha256": "e5063c8ed46d5c5a99c266cedef4c888e84972c34eda86baef1a40d82ce2a91e"
+    },
+    {
+      "path": "results/tables/rehearsal_adjoining_2020_strict_five_cells.csv",
+      "bytes": 5376,
+      "sha256": "4c13169be4d026b834557471aaa1afac2866f3bd0727c710b9defbf149108f92"
+    },
+    {
+      "path": "results/tables/rehearsal_adjoining_2020_window48_five_cells.csv",
+      "bytes": 121,
+      "sha256": "7634d1c32dd50ce7169748d317bd9088fcd358a6bc9463e57126267fb43f7a3d"
+    },
+    {
+      "path": "results/tables/rehearsal_held_out_2021_strict_five_cells.csv",
+      "bytes": 2518,
+      "sha256": "8c41c25bba2666674fa5eba4acaa6ee577f9f74bb550e2cf56bdb6c20ac8bdd3"
+    },
+    {
+      "path": "results/tables/rehearsal_held_out_2021_window48_five_cells.csv",
+      "bytes": 121,
+      "sha256": "7634d1c32dd50ce7169748d317bd9088fcd358a6bc9463e57126267fb43f7a3d"
+    },
+    {
+      "path": "results/tables/rehearsal_summer_2020_strict_five_cells.csv",
+      "bytes": 2686,
+      "sha256": "d9fba6026dba05432b86b00fe07e04b6a1f9fc679f216fbde75d2bc331c4f4e7"
+    },
+    {
+      "path": "results/tables/rehearsal_summer_2020_window48_five_cells.csv",
+      "bytes": 121,
+      "sha256": "7634d1c32dd50ce7169748d317bd9088fcd358a6bc9463e57126267fb43f7a3d"
+    }
+  ],
+  "cds_configuration": "No CDSAPI_KEY/default .cdsapirc present; presence-only check, no secret values read.",
+  "github_ci": "Workflow added; remote execution status must be checked separately after push.",
+  "limits": [
+    "Full-grid source-consistent adjoining/held-out observed-generation validation remains open.",
+    "Wind underprediction/PV subset overprediction not causally resolved; no correction fitted.",
+    "Tracker/full reference PV model and frozen inventory still required.",
+    "Five-cell public weather is rounded/processed secondary ERA5, not independent wind observations or statewide climate.",
+    "Annual PV equipment properties remain qualified January proxies.",
+    "Temperature code tested on synthetic baselines; no real 20-year temperature thresholds/coincidence inference.",
+    "Request/receipt helpers are preparation, not an executed complete production scheduler.",
+    "No full 2005\u20132024 acquisition or climatology executed."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "snapshot_hours": 744,
+  "variables": {
+    "u100": {
+      "minimum": -12.973129272460938,
+      "maximum": 16.958938598632812,
+      "dtype": "float32",
+      "units": "m s**-1"
+    },
+    "v100": {
+      "minimum": -20.012283325195312,
+      "maximum": 26.65478515625,
+      "dtype": "float32",
+      "units": "m s**-1"
+    },
+    "t2m": {
+      "minimum": 253.79116821289062,
+      "maximum": 300.77392578125,
+      "dtype": "float32",
+      "units": "K"
+    },
+    "ssrd": {
+      "minimum": 0.0,
+      "maximum": 2584000.0,
+      "dtype": "float32",
+      "units": "J m**-2"
+    }
+  },
+  "expver": "1",
+  "note": "Checks product consistency and broad physical bounds; does not validate weather accuracy.",
+  "source_sha256": {
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-instant.nc": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-accum.nc": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822"
+  },
+  "execution_date": "2026-11-24"
+}

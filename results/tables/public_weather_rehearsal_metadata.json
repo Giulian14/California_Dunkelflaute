@@ -1,0 +1,145 @@
+{
+  "execution_date": "2026-11-24",
+  "source": "https://open-meteo.com/en/docs/historical-weather-api",
+  "license": "CC BY 4.0; attribute Open-Meteo and underlying ECMWF/Copernicus ERA5",
+  "cells": [
+    [
+      40.5,
+      -121.5
+    ],
+    [
+      38.5,
+      -121.5
+    ],
+    [
+      36.5,
+      -120.0
+    ],
+    [
+      35.25,
+      -118.5
+    ],
+    [
+      33.5,
+      -116.5
+    ]
+  ],
+  "requests": [
+    {
+      "period": "adjoining_2020",
+      "cell": 0,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.5&longitude=-121.5&start_date=2020-01-01&end_date=2020-03-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "3383810fb100069a54d9c3ff657e8d65f990fb94e29e72cd091f85d5cf2a535d",
+      "bytes": 54284
+    },
+    {
+      "period": "adjoining_2020",
+      "cell": 1,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.5&longitude=-121.5&start_date=2020-01-01&end_date=2020-03-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "78f426a01b515768102064484f7dfae950c66a348f16f19b2f171780d8c33300",
+      "bytes": 54908
+    },
+    {
+      "period": "adjoining_2020",
+      "cell": 2,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.5&longitude=-120.0&start_date=2020-01-01&end_date=2020-03-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "cf153b257899c621f70583d5898060b85a03072850edc1c09ef8174d30c4fd77",
+      "bytes": 54834
+    },
+    {
+      "period": "adjoining_2020",
+      "cell": 3,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.25&longitude=-118.5&start_date=2020-01-01&end_date=2020-03-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "e3f5a9cf97d3330a575e1d79528c901a0a8b5698418b10ba62f4679c131748dd",
+      "bytes": 54521
+    },
+    {
+      "period": "adjoining_2020",
+      "cell": 4,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.5&longitude=-116.5&start_date=2020-01-01&end_date=2020-03-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "fe22e65444f106108e418a87f3ddf3fc89034fa9307249e423d3c2b10498ca07",
+      "bytes": 54548
+    },
+    {
+      "period": "summer_2020",
+      "cell": 0,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.5&longitude=-121.5&start_date=2020-07-01&end_date=2020-08-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "64c27c517bee9a35574ce7295a9987ab7299cc1cbcde1ebcfc5d8f523f907776",
+      "bytes": 29588
+    },
+    {
+      "period": "summer_2020",
+      "cell": 1,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.5&longitude=-121.5&start_date=2020-07-01&end_date=2020-08-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "fc66fccd4689f9ca9ac3ed5d0afc90f195622ac7b62460692b9549b67f297b5f",
+      "bytes": 29694
+    },
+    {
+      "period": "summer_2020",
+      "cell": 2,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.5&longitude=-120.0&start_date=2020-07-01&end_date=2020-08-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "9af6d41ca55ded5d2008041a4b564c0848c5b60b7ece520e2120bdf9be965fc9",
+      "bytes": 29663
+    },
+    {
+      "period": "summer_2020",
+      "cell": 3,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.25&longitude=-118.5&start_date=2020-07-01&end_date=2020-08-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "da7c3781db2b5c1dacde88510bd60105ee7207d436c229f8ed9fecd12aae9c0a",
+      "bytes": 29721
+    },
+    {
+      "period": "summer_2020",
+      "cell": 4,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.5&longitude=-116.5&start_date=2020-07-01&end_date=2020-08-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "19d2607652a328cd690969952d33522e495135f46e6fa0ad84be7a0732a70569",
+      "bytes": 29717
+    },
+    {
+      "period": "held_out_2021",
+      "cell": 0,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.5&longitude=-121.5&start_date=2021-01-01&end_date=2021-02-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "1e037173bd0b224e681ae9b6dcb2b0ad83f90f447c43eb90bdf79b8f988225fe",
+      "bytes": 28750
+    },
+    {
+      "period": "held_out_2021",
+      "cell": 1,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.5&longitude=-121.5&start_date=2021-01-01&end_date=2021-02-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "d8182f4092ae64ea34c03a1766e2b911156696f8da75993a5b626fe89ba79374",
+      "bytes": 28950
+    },
+    {
+      "period": "held_out_2021",
+      "cell": 2,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.5&longitude=-120.0&start_date=2021-01-01&end_date=2021-02-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "5eb07e6bc20dcf2c5927f669da7955f825100e8efb51395f2454687ef235b73f",
+      "bytes": 28909
+    },
+    {
+      "period": "held_out_2021",
+      "cell": 3,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.25&longitude=-118.5&start_date=2021-01-01&end_date=2021-02-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "252a095a2d74abe92946c3d6e6480d6f9fe9e499ce6a43e443155f8f7be19a39",
+      "bytes": 28650
+    },
+    {
+      "period": "held_out_2021",
+      "cell": 4,
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.5&longitude=-116.5&start_date=2021-01-01&end_date=2021-02-01&hourly=wind_speed_100m%2Cwind_direction_100m%2Ctemperature_2m%2Cshortwave_radiation&models=era5&wind_speed_unit=ms&timezone=UTC&elevation=nan&cell_selection=nearest",
+      "sha256": "e17c2fb948035209717fa5259763d7fe880cf1ebccfa8cf59731340c000c7626",
+      "bytes": 28621
+    }
+  ],
+  "original_sha256": {
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-instant.nc": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+    "/workspace/work/full_validation/run/data/raw/data_stream-oper_stepType-accum.nc": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822"
+  },
+  "scope": "Five preselected cells, not the 695-cell statewide model or independent weather observations.",
+  "parameters": "Preserved cubic wind and PV35; no fitting to summer or held-out year.",
+  "limitations": [
+    "Secondary rounded/processed ERA5 differs from original CDS forcing; do not splice sources.",
+    "No matched generation validation for summer or held-out period.",
+    "This checks real-weather processing continuity, not physical or statewide climatology validity."
+  ]
+}

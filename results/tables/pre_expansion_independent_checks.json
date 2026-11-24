@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "execution_date": "2026-11-24",
+  "matched_plants": 219,
+  "matched_generators": 345,
+  "capacity_mw": 2636.5,
+  "observed_energy_mwh": 294147.955,
+  "independent_weather_equations": [
+    {
+      "period": "adjoining_2020",
+      "hours": 1440,
+      "max_abs_difference": 2.220446049250313e-16
+    },
+    {
+      "period": "summer_2020",
+      "hours": 744,
+      "max_abs_difference": 2.220446049250313e-16
+    },
+    {
+      "period": "held_out_2021",
+      "hours": 744,
+      "max_abs_difference": 2.220446049250313e-16
+    }
+  ],
+  "method": "Direct raw EIA unit/technology/capacity and EIA923 energy checks; manual aggregation/bounds; direct pvlib equations and cubic curve, without new project helpers.",
+  "limitations": "Does not independently validate ERA5 weather or annual equipment timing; full physical/held-out validation remains open.",
+  "eia923_source_sha256": "b8c6516cc0ae306abffc03a4af393de496d52b84b41347521f7acb184a4f7bf9"
+}

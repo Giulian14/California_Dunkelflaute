@@ -1,0 +1,632 @@
+plant_id,plant_name,capacity_mw,generator_count,january_net_generation_mwh,stable_capacity_matched,selected_fixed_tilt,exclusion_reason
+10437,Sunray 2,20.0,1,3010.732,True,False,tracking_mixed_or_unclassified_technology
+10438,Sunray 3,13.8,1,1742.005,True,False,tracking_mixed_or_unclassified_technology
+50061,San Diego State University,0.7999999999999999,4,95.0,True,True,
+56768,CalRenew-1,5.0,1,473.278,True,True,
+56813,CSU Fresno Solar Project,1.0,2,59.239,True,True,
+56814,ELACC Photovoltaic Power Facility,1.0,2,0.0,True,True,
+56862,Bolthouse S&P and Rowen Farms Solar,1.2,4,143.272,True,False,tracking_mixed_or_unclassified_technology
+56875,Sacramento Soleil LLC,1.0,1,70.114,True,True,
+56909,Gap Pacific Distribution Center,1.2,4,203.334,True,False,tracking_mixed_or_unclassified_technology
+56917,"Imperial Valley Solar, LLC",199.89999999999998,3,21313.566,False,False,annual_unit_population_differs
+56939,Solar Blythe LLC,21.0,1,2142.692,True,True,
+56996,Solar Photovoltaic Project #02,1.0,2,37.223,True,True,
+57004,SunEdison Walgreens Moreno Valley,1.0,1,75.221,True,False,tracking_mixed_or_unclassified_technology
+57005,Mariani Packing Vacaville Solar,1.0,1,91.099,True,False,tracking_mixed_or_unclassified_technology
+57006,Walgreens Woodland Distribution Center,1.0,1,69.394,True,False,tracking_mixed_or_unclassified_technology
+57007,SunEdison Ironwood State Prison,1.0,1,103.317,True,False,tracking_mixed_or_unclassified_technology
+57008,SunEdison Procter & Gamble Oxnard,1.0,1,91.512,True,True,
+57009,Kohls San Bernardino Solar Facility,1.0,1,75.013,True,False,tracking_mixed_or_unclassified_technology
+57010,SunEdison Anheuser Busch Fairfield,1.0,1,71.147,True,False,tracking_mixed_or_unclassified_technology
+57011,Chuckawalla Valley State Prison,1.0,1,85.219,True,True,
+57012,SunEdison Walmart Apple Valley DC,1.0,1,118.836,True,False,tracking_mixed_or_unclassified_technology
+57041,Vaca Dixon Solar Station,2.0,1,184.518,True,True,
+57217,Solar Photovoltaic Project #03,1.0,2,29.386,True,True,
+57219,Solar Photovoltaic Project #05,2.5,5,137.241,True,True,
+57220,Solar Photovoltaic Project #06,2.0,4,126.517,True,True,
+57221,Solar Photovoltaic Project #07,2.5,5,118.836,True,True,
+57222,Solar Photovoltaic Project #08,2.0,4,99.966,False,False,annual_unit_population_differs
+57223,Solar Photovoltaic Project #09,1.0,2,61.403,False,False,annual_unit_population_differs
+57224,Solar Photovoltaic Project #10,1.5,3,84.396,False,False,annual_unit_population_differs
+57225,Solar Photovoltaic Project #11,3.5,7,168.071,True,True,
+57226,Solar Photovoltaic Project #12,0.5,1,,False,False,annual_unit_population_differs
+57227,Solar Photovoltaic Project #13,3.5,7,190.911,True,True,
+57229,Solar Photovoltaic Project #15,3.5,7,194.107,True,True,
+57230,Solar Photovoltaic Project #16,1.5,3,38.151,True,True,
+57231,Solar Photovoltaic Project #17,3.5,7,184.518,False,False,annual_unit_population_differs
+57232,Solar Photovoltaic Project #18,1.5,3,77.436,False,False,annual_unit_population_differs
+57236,Solar Photovoltaic Project #23,2.5,5,196.119,False,False,annual_unit_population_differs
+57237,Solar Photovoltaic Project #22,2.0,4,88.985,True,True,
+57245,Solar Photovoltaic Project #26,6.0,12,394.091,True,True,
+57246,Solar Photovoltaic Project #27,2.0,4,72.023,False,False,annual_unit_population_differs
+57247,Solar Photovoltaic Project #28,3.5,7,191.323,False,False,annual_unit_population_differs
+57254,Victor Valley CC CPV Solar,1.0,1,70.941,True,False,tracking_mixed_or_unclassified_technology
+57295,Alpine Solar,66.0,1,8042.486,False,False,annual_unit_population_differs
+57305,Adelanto Solar Project,10.0,1,634.698,True,True,
+57306,Pine Tree Solar Project,8.5,1,520.296,True,True,
+57308,Maclay Solar Project,2.2,1,45.06,True,True,
+57309,Pacific Cruise Ship Terminals Berth 93,1.1,1,21.034,True,True,
+57310,1420 Coil Av #C,1.3,1,88.3,True,True,
+57311,Occidental College Solar Project,1.0,1,85.84,True,True,
+57313,Metro Support Services Center Solar,1.2,1,57.999,True,True,
+57314,Los Angeles Harbor College,1.2,1,139.664,True,True,
+57340,Panoche Valley Solar Farm,140.0,1,16912.0,True,False,tracking_mixed_or_unclassified_technology
+57359,Avenal Park,6.0,1,579.483,True,True,
+57360,Sun City Project LLC,20.0,1,1943.844,True,True,
+57361,Sand Drag LLC,19.0,1,1850.22,True,True,
+57378,AV Solar Ranch One,253.0,1,39053.0,True,False,tracking_mixed_or_unclassified_technology
+57422,Yolo County Solar Project,1.0,1,68.67,True,False,tracking_mixed_or_unclassified_technology
+57439,California Valley Solar Ranch,249.8,5,33178.935,True,False,tracking_mixed_or_unclassified_technology
+57441,Solar Photovoltaic Project #42,5.0,10,344.03,True,True,
+57455,Solar Borrego I,26.0,1,3359.709,True,False,tracking_mixed_or_unclassified_technology
+57490,Imperial Solar Energy Center South,128.9,1,12528.372,True,True,
+57491,Imperial Solar Energy Center West,148.7,1,20108.921,True,False,tracking_mixed_or_unclassified_technology
+57497,Stroud Solar Station,20.0,1,1737.676,True,True,
+57498,Five Points Solar Station,15.0,1,1244.549,True,True,
+57499,Westside Solar Station,15.0,1,1257.384,True,True,
+57506,FRV SI Transport Solar LP,1.0,1,147.551,True,True,
+57521,Giffen,10.0,1,981.408,False,False,annual_unit_population_differs
+57522,Cantua Solar Station,20.0,1,2184.298,True,True,
+57523,Huron Solar Station,20.0,1,1941.782,True,True,
+57534,Solar Photovoltaic Project #32,1.5,3,75.322,True,True,
+57535,Solar Photovoltaic Project #33,1.0,2,72.641,True,True,
+57559,Sunset Reservoir North Basin,4.5,1,336.71,True,True,
+57579,Robert O Schulz Solar Farm,1.3,2,80.788,True,False,tracking_mixed_or_unclassified_technology
+57580,Broadridge Cogen,0.8,2,60.475,True,False,tracking_mixed_or_unclassified_technology
+57650,Regulus Solar Project,60.0,1,7675.876,True,False,tracking_mixed_or_unclassified_technology
+57651,Adobe Solar,20.0,1,2319.993,True,False,tracking_mixed_or_unclassified_technology
+57655,Bakersfield College Solar 01,1.1,1,0.0,True,False,tracking_mixed_or_unclassified_technology
+57656,"Temescal Canyon RV, LLC",1.5,1,109.813,True,True,
+57669,SMUD at Grundman,17.0,1,1666.63,True,True,
+57670,SMUD at Van Conett,2.9,1,277.626,True,True,
+57671,SMUD at Fleshman,2.9,1,283.556,True,True,
+57682,City of Madera WWTP,1.2,1,78.983,True,False,tracking_mixed_or_unclassified_technology
+57683,"Staples La Mirada, CA",1.1,1,80.22,True,True,
+57695,Topaz Solar Farm,585.9000000000001,5,80884.0,True,True,
+57697,Aerojet I,3.0,1,295.153,True,False,tracking_mixed_or_unclassified_technology
+57698,Aerojet II,2.7,1,193.436,True,False,tracking_mixed_or_unclassified_technology
+57708,Catalina Solar LLC,110.0,1,12924.112,True,True,
+57722,North Palm Springs 4A,4.0,1,463.689,True,False,tracking_mixed_or_unclassified_technology
+57743,North Palm Springs 1A,2.5,1,285.462,True,False,tracking_mixed_or_unclassified_technology
+57753,SMUD at Lawrence,1.0,1,88.416,True,True,
+57764,Naval Air Weapons Station China Lake,11.1,1,1365.754,True,False,tracking_mixed_or_unclassified_technology
+57773,Palo Verde College,1.2,1,105.688,True,False,tracking_mixed_or_unclassified_technology
+57777,RE Dillard 1 LLC,3.0,1,289.999,True,False,tracking_mixed_or_unclassified_technology
+57778,RE Kammerer 1 LLC,5.0,1,560.252,True,False,tracking_mixed_or_unclassified_technology
+57779,RE Dillard 2 LLC,3.0,1,324.49,True,False,tracking_mixed_or_unclassified_technology
+57780,RE Kammerer 2 LLC,5.0,1,575.821,True,False,tracking_mixed_or_unclassified_technology
+57781,RE Dillard 3 LLC,3.0,1,319.592,True,False,tracking_mixed_or_unclassified_technology
+57782,RE Kammerer 3 LLC,5.0,1,578.606,True,False,tracking_mixed_or_unclassified_technology
+57783,RE Bruceville 1 LLC,5.0,1,528.495,True,False,tracking_mixed_or_unclassified_technology
+57784,RE Bruceville 2 LLC,5.0,1,567.418,True,False,tracking_mixed_or_unclassified_technology
+57785,RE Bruceville 3 LLC,5.0,1,555.046,True,False,tracking_mixed_or_unclassified_technology
+57796,Golden Springs Building C-1,1.2,1,90.376,True,True,
+57797,Golden Springs Building D,1.3,1,96.616,True,True,
+57806,RE Dillard 4 LLC,0.4,1,,False,False,missing_January_PV_generation
+57816,RE McKenzie 1 LLC,5.0,1,583.711,True,False,tracking_mixed_or_unclassified_technology
+57817,RE McKenzie 2 LLC,5.0,1,604.024,True,False,tracking_mixed_or_unclassified_technology
+57818,RE McKenzie 3 LLC,5.0,1,608.303,True,False,tracking_mixed_or_unclassified_technology
+57819,RE McKenzie 4 LLC,5.0,1,568.346,True,False,tracking_mixed_or_unclassified_technology
+57820,RE McKenzie 5 LLC,5.0,1,590.925,True,False,tracking_mixed_or_unclassified_technology
+57821,RE McKenzie 6 LLC,5.0,1,590.723,True,False,tracking_mixed_or_unclassified_technology
+57827,Dinuba Wastewater Treatment Plant,1.0,1,89.551,True,False,tracking_mixed_or_unclassified_technology
+57831,Heliocentric,1.5,1,88.624,True,True,
+57836,L-8 Solar Project,1.5,1,108.215,True,True,
+57840,ISH Solar Hospital SDMC,1.1,1,10.619,True,True,
+57841,ISH Solar Hospital Downey,1.1,1,3.712,True,True,
+57849,Green Acres Solar Facility 1,3.0,1,292.319,True,False,tracking_mixed_or_unclassified_technology
+57850,Green Acres Solar Facility 2,1.0,1,109.039,True,False,tracking_mixed_or_unclassified_technology
+57856,Univ of California San Diego Solar,1.2,1,137.755,True,True,
+57860,Industry MetroLink PV 1,1.5,1,128.993,True,True,
+57870,Castle Rock Vineyards,1.0,1,50.833,True,True,
+57871,2555 E Olympic Bl,1.0,1,,False,False,missing_January_PV_generation
+57891,Guernsey Solar Station,20.0,1,2156.15,True,False,tracking_mixed_or_unclassified_technology
+57892,Gates Solar Station,20.0,1,1599.249,True,True,
+57895,Improvement Dst No. 4,1.1,1,28.098,True,False,tracking_mixed_or_unclassified_technology
+57900,Solar Photovoltaic Project #48,5.0,10,320.879,True,True,
+57904,San Antonio West Solar Rooftop,1.5,1,126.003,True,True,
+57933,Solar Star California II LLC,2.0,1,188.073,True,False,tracking_mixed_or_unclassified_technology
+57959,Desert Green Solar Farm LLC,6.3,1,704.297,True,False,tracking_mixed_or_unclassified_technology
+57970,Butte College Main Campus Solar,3.5,1,320.624,True,True,
+57982,Meridian Vineyards,1.1,2,78.157,True,True,
+57993,"Desert Sunlight 300, LLC",313.7,11,33947.263,True,True,
+58002,Alpaugh North,20.0,1,2320.921,True,False,tracking_mixed_or_unclassified_technology
+58003,Alpaugh 50,50.0,1,6706.943,True,False,tracking_mixed_or_unclassified_technology
+58028,IKEA Tejon 345,1.5,1,92.079,True,True,
+58034,Nickel 1 Solar Facility,1.5,1,118.217,True,True,
+58039,Axium Modesto Solar,25.0,1,3153.642,True,False,tracking_mixed_or_unclassified_technology
+58056,MillerCoors Irwindale Brewery,2.5,1,342.0,True,False,tracking_mixed_or_unclassified_technology
+58062,Imperial Valley Solar Company 1 LLC,23.0,1,2209.87,True,True,
+58073,SEPV 1,2.0,1,220.399,True,False,tracking_mixed_or_unclassified_technology
+58074,SEPV 2,2.0,1,203.694,True,False,tracking_mixed_or_unclassified_technology
+58076,Edwards Air Force Base,3.0,3,123.835,True,False,tracking_mixed_or_unclassified_technology
+58086,Intel Folsom,1.0,2,74.188,True,False,tracking_mixed_or_unclassified_technology
+58118,La Joya Del Sol,1.5,1,74.808,True,False,tracking_mixed_or_unclassified_technology
+58119,Depot Park Solar System,3.0,1,171.421,True,False,tracking_mixed_or_unclassified_technology
+58148,RE Kansas South LLC,20.0,1,2146.665,True,False,tracking_mixed_or_unclassified_technology
+58149,TA-High Desert LLC,20.0,1,2564.106,True,False,tracking_mixed_or_unclassified_technology
+58169,CSUF Trigeneration,3.9,5,378.0,False,False,annual_unit_population_differs
+58170,Crafton Hills College Solar Farm,1.3,1,70.527,True,False,tracking_mixed_or_unclassified_technology
+58202,RE Victor Phelan Solar One LLC,20.0,1,2274.006,True,False,tracking_mixed_or_unclassified_technology
+58204,Grassland 3&4 Solar Project,2.5,1,237.051,True,False,tracking_mixed_or_unclassified_technology
+58206,West Gates Solar Station,10.0,1,979.655,True,True,
+58217,Grassland 1&2 Solar Project,2.5,1,207.149,True,False,tracking_mixed_or_unclassified_technology
+58226,Newberry Solar 1 LLC,1.5,1,153.377,True,False,tracking_mixed_or_unclassified_technology
+58227,SEPV9 Power Plant,9.0,1,1064.826,True,False,tracking_mixed_or_unclassified_technology
+58232,Tahquitz High School,1.0,1,87.025,True,False,tracking_mixed_or_unclassified_technology
+58234,SEPV 8,12.0,1,1432.776,True,False,tracking_mixed_or_unclassified_technology
+58244,West Valley High School Solar,1.0,1,75.169,True,False,tracking_mixed_or_unclassified_technology
+58248,Pierce College,1.9,1,161.471,True,True,
+58249,VA Sepulveda Ambulatory Care Center,3.5,1,165.956,True,True,
+58253,CBS Television City,1.6,1,60.114,True,True,
+58261,FAA NorCal TRACON,1.0,1,51.142,True,False,tracking_mixed_or_unclassified_technology
+58289,Venable Solar 1,1.5,1,172.866,True,True,
+58290,Venable Solar 2,1.5,1,172.918,True,True,
+58304,Kingsburg Solar,3.7,3,345.73,True,True,
+58306,Exeter Solar,3.5,3,343.772,True,True,
+58307,Ivanhoe Solar,3.5,3,332.07,True,True,
+58308,Lindsay Solar,4.0,3,380.222,True,True,
+58309,Porterville Solar,3.5,3,339.029,True,True,
+58354,Radiance Solar 4,1.5,1,161.729,True,True,
+58355,Radiance Solar 5,1.5,1,166.731,True,True,
+58366,Atwell Island,20.2,1,1691.686,True,True,
+58370,Gridley Main,1.0,1,65.63,True,False,tracking_mixed_or_unclassified_technology
+58371,Gridley Main Two,2.5,1,157.244,True,False,tracking_mixed_or_unclassified_technology
+58373,White River Solar,20.0,1,2544.774,True,False,tracking_mixed_or_unclassified_technology
+58374,Corcoran Solar,20.0,1,2557.611,True,False,tracking_mixed_or_unclassified_technology
+58376,Oakley Solar Project,1.5,1,113.887,True,True,
+58388,Solar Star 1,318.0,7,50547.0,True,False,tracking_mixed_or_unclassified_technology
+58389,Solar Star 2,279.0,6,44125.0,True,False,tracking_mixed_or_unclassified_technology
+58398,Heber Solar,10.9,1,1265.015,True,False,tracking_mixed_or_unclassified_technology
+58417,Lone Valley Solar Park I LLC,10.0,1,1184.021,True,False,tracking_mixed_or_unclassified_technology
+58418,Victor Dry Farm Ranch A,5.0,1,489.004,True,True,
+58419,Victor Dry Farm Ranch B,5.0,1,486.528,True,True,
+58422,CSU Northridge Plant,0.6000000000000001,2,38.253,True,True,
+58430,Centinela Solar Energy,174.79999999999998,6,25725.882,True,False,tracking_mixed_or_unclassified_technology
+58445,Arrache 4006,2.0,2,120.898,True,False,tracking_mixed_or_unclassified_technology
+58446,Arrache 4013,1.5,1,179.927,True,False,tracking_mixed_or_unclassified_technology
+58447,Arrache 8083,4.0,3,189.931,True,False,tracking_mixed_or_unclassified_technology
+58448,Nunn,1.0,1,135.694,True,False,tracking_mixed_or_unclassified_technology
+58449,Rutan,4.0,3,204.521,True,False,tracking_mixed_or_unclassified_technology
+58450,Vinam,1.5,1,205.964,True,False,tracking_mixed_or_unclassified_technology
+58451,Ma,1.5,1,185.393,True,False,tracking_mixed_or_unclassified_technology
+58452,Horn,1.5,1,182.094,True,False,tracking_mixed_or_unclassified_technology
+58454,Watts 3115,2.0,2,170.34,True,False,tracking_mixed_or_unclassified_technology
+58462,McCoy Solar Energy Project,270.6,8,29343.318,True,False,tracking_mixed_or_unclassified_technology
+58467,Campo Verde Solar,147.4,1,17287.399,True,True,
+58498,RE Rosamond One LLC,20.0,1,2944.224,True,False,tracking_mixed_or_unclassified_technology
+58499,RE Rosamond Two LLC,20.0,1,2272.511,True,False,tracking_mixed_or_unclassified_technology
+58500,RE Rio Grande Solar LLC,5.0,1,537.567,True,False,tracking_mixed_or_unclassified_technology
+58502,RE Columbia 3 LLC,10.0,1,1184.743,True,False,tracking_mixed_or_unclassified_technology
+58506,Chuckawalla Solar,4.0,1,47.328,True,False,tracking_mixed_or_unclassified_technology
+58508,Bear Creek Solar,1.5,1,202.457,True,False,tracking_mixed_or_unclassified_technology
+58509,Vintner Solar,1.5,1,209.161,True,False,tracking_mixed_or_unclassified_technology
+58510,Kettleman Solar Project,1.0,1,131.827,True,False,tracking_mixed_or_unclassified_technology
+58513,Ironwood Solar LLC,4.0,1,49.029,True,False,tracking_mixed_or_unclassified_technology
+58514,Desert Hot Springs Solar,2.3,1,280.513,True,False,tracking_mixed_or_unclassified_technology
+58522,Madera Community Hospital,1.0,1,95.842,True,False,tracking_mixed_or_unclassified_technology
+58525,City of Hayward WWTP,1.0,1,184.463,False,False,annual_AC_capacity_differs
+58527,Crown Cooling Facility,1.0,1,54.561,True,True,
+58528,Garnet Solar Generation Station I LLC,4.0,1,369.703,True,False,tracking_mixed_or_unclassified_technology
+58542,"Desert Sunlight 250, LLC",249.7,9,31482.918,True,True,
+58545,Community Solar 1,5.7,1,732.602,True,False,tracking_mixed_or_unclassified_technology
+58578,Sonora 1,1.5,1,184.414,True,False,tracking_mixed_or_unclassified_technology
+58581,Oltmans SCE at Champagne,1.0,1,97.44,True,True,
+58582,Oltmans SCE at Jurupa,1.5,1,151.16,True,True,
+58585,Sierra Nevada Brewing Co Hybrid,1.7,1,126.052,True,False,tracking_mixed_or_unclassified_technology
+58590,Cascade Solar,18.5,1,2761.512,True,False,tracking_mixed_or_unclassified_technology
+58592,Solar Gen 2 Solar Facility,155.10000000000002,3,20369.33,False,False,annual_AC_capacity_differs
+58609,Industry Solar Power Generation Station 1 LLC,1.5,1,211.583,True,False,tracking_mixed_or_unclassified_technology
+58610,Navajo Solar Power Generation Station 1 LLC,1.5,1,219.678,True,False,tracking_mixed_or_unclassified_technology
+58611,Powhatan Solar Power Generation Station 1 LLC,1.5,1,225.607,True,False,tracking_mixed_or_unclassified_technology
+58612,Otoe Solar Power Generation Station 1 LLC,1.5,1,178.228,True,True,
+58616,Westlands Solar PV Farm,18.0,1,2194.507,True,False,tracking_mixed_or_unclassified_technology
+58621,Sol Orchard El Centro PV,20.0,1,2126.609,True,False,tracking_mixed_or_unclassified_technology
+58625,Santa Rita Jail,1.5,2,134.044,False,False,annual_unit_population_differs
+58626,Western Antelope Blue Sky Ranch A,20.0,1,2342.986,True,False,tracking_mixed_or_unclassified_technology
+58627,Western Antelope Dry Ranch,10.0,1,1338.998,True,False,tracking_mixed_or_unclassified_technology
+58633,Monterey Regional Water Pollution Control Agency,1.0,1,63.31,True,False,tracking_mixed_or_unclassified_technology
+58634,Lancaster Baptist Church,1.0,1,96.666,True,False,tracking_mixed_or_unclassified_technology
+58636,Sacramento Fairbain Water Treatment Plant,1.0,1,64.547,True,False,tracking_mixed_or_unclassified_technology
+58642,Tulare 1 and 2,3.0,2,240.351,True,True,
+58646,Stateline Solar,299.5,7,33688.664,True,True,
+58698,Mira Loma,3.0,3,118.732,True,True,
+58711,Lost Hills/Blackwell,32.0,2,4348.903,True,False,tracking_mixed_or_unclassified_technology
+58713,North Star Solar,62.5,1,7362.986,False,False,annual_AC_capacity_differs
+58718,Orion Solar I,12.0,1,1335.955,True,False,tracking_mixed_or_unclassified_technology
+58721,Orion Solar II,8.0,1,864.686,True,False,tracking_mixed_or_unclassified_technology
+58748,North Bay Solar 1,1.0,1,101.823,True,False,tracking_mixed_or_unclassified_technology
+58750,Lancaster Dry Farm Ranch B,5.0,1,616.704,True,False,tracking_mixed_or_unclassified_technology
+58751,Rodeo Solar C2,1.5,1,154.664,True,True,
+58752,Rodeo Solar D2,1.5,1,195.654,True,True,
+58753,Summer Solar A2,1.5,1,194.107,True,True,
+58754,Summer Solar B2,1.5,1,192.354,True,True,
+58755,Summer Solar C2,1.5,1,189.468,True,True,
+58756,Summer Solar D2,1.0,1,116.876,True,True,
+58757,Summer North Solar,6.5,4,720.435,True,True,
+58761,Expressway Solar A,2.0,1,244.218,True,True,
+58762,Expressway Solar B,2.0,1,211.272,True,True,
+58763,Expressway Solar C2,1.5,1,186.889,True,True,
+58814,Shasta Solar Farm,3.0,2,351.351,True,False,tracking_mixed_or_unclassified_technology
+58831,Redcrest Solar Farm,16.6,1,1745.099,True,False,tracking_mixed_or_unclassified_technology
+58889,ASTI,1.0,1,73.364,True,True,
+58890,Beringer,1.2,1,70.374,True,True,
+58906,Valley Center 1,2.5,1,302.425,True,False,tracking_mixed_or_unclassified_technology
+58907,Valley Center 2,5.0,1,603.146,True,False,tracking_mixed_or_unclassified_technology
+58909,Ramona 1,2.0,1,453.945,True,False,tracking_mixed_or_unclassified_technology
+58911,Ramona 2,5.0,1,223.132,True,False,tracking_mixed_or_unclassified_technology
+58912,Santa Fe Springs Rooftop Solar BLDG M,1.8,1,150.8,True,True,
+58913,Santa Fe Springs Rooftop Solar BLDG H,1.5,1,139.302,True,False,tracking_mixed_or_unclassified_technology
+58918,2081 Terzian Solar Project,1.2,1,124.043,True,False,tracking_mixed_or_unclassified_technology
+58919,2127 Harris Solar Project,1.3,1,122.236,True,False,tracking_mixed_or_unclassified_technology
+58920,2097 Helton Solar Project,1.5,1,188.024,True,False,tracking_mixed_or_unclassified_technology
+58949,Cloverdale Solar I,1.5,1,6.494,True,True,
+58954,Intel Folsom Phase 2,1.0,1,81.561,True,False,tracking_mixed_or_unclassified_technology
+58963,Las Virgenes Municipal Water District,1.0,1,65.681,True,False,tracking_mixed_or_unclassified_technology
+58973,White River Solar 2,19.8,1,2544.156,True,False,tracking_mixed_or_unclassified_technology
+58975,Henrietta Solar Project,102.0,1,12438.151,True,False,tracking_mixed_or_unclassified_technology
+58983,RE Camelot LLC,45.0,1,6390.395,True,False,tracking_mixed_or_unclassified_technology
+58984,"RE Adams East, LLC",19.0,1,2241.317,True,False,tracking_mixed_or_unclassified_technology
+58985,"RE Kansas Solar, LLC",20.0,1,2321.643,True,False,tracking_mixed_or_unclassified_technology
+58986,"RE Old River One, LLC",20.0,1,2428.93,True,False,tracking_mixed_or_unclassified_technology
+58990,"RE Columbia Two, LLC",15.0,1,2196.98,True,False,tracking_mixed_or_unclassified_technology
+58991,"RE Kent South, LLC",20.0,1,2486.825,True,False,tracking_mixed_or_unclassified_technology
+59008,Woodmere Solar Farm,15.0,1,1839.032,True,False,tracking_mixed_or_unclassified_technology
+59009,Hayworth Solar,27.0,1,2502.756,True,False,tracking_mixed_or_unclassified_technology
+59058,Vacaville,1.0,1,100.635,True,True,
+59086,"Cottonwood Solar, LLC (Goose Lake)",12.0,1,1619.766,True,False,tracking_mixed_or_unclassified_technology
+59087,"Cottonwood Solar, LLC (City of Corcoran)",12.0,1,1360.6,True,False,tracking_mixed_or_unclassified_technology
+59088,Calipatria Solar Farm,20.0,1,2155.941,True,False,tracking_mixed_or_unclassified_technology
+59094,Division 1,1.5,1,147.034,True,True,
+59095,Division 2,1.0,1,105.173,True,True,
+59096,Division 3,1.0,1,97.956,True,True,
+59098,Kettering Solar 1,1.0,1,94.862,True,True,
+59099,Kettering Solar 2,1.0,1,105.327,True,True,
+59122,Enerparc CA1 LLC,1.5,1,162.141,True,True,
+59129,CSD 2- Freedom High,1.1,1,62.485,True,True,
+59130,CSD 2 - Heritage High,1.3,1,97.39,True,True,
+59132,EAFB - North Base,1.1,1,127.909,True,False,tracking_mixed_or_unclassified_technology
+59133,EAFB - South Base,1.1,1,112.494,True,False,tracking_mixed_or_unclassified_technology
+59138,SDCCD - Miramar,1.1,1,66.918,True,True,
+59139,SDCWA - Twin Oaks,1.1,1,95.686,True,True,
+59150,RE Mustang LLC,100.0,1,11923.475,True,False,tracking_mixed_or_unclassified_technology
+59167,Lancaster Solar 1,1.5,1,165.133,True,True,
+59169,Lancaster Solar 2,1.5,1,174.051,True,False,tracking_mixed_or_unclassified_technology
+59182,Hesperia,1.5,1,143.428,True,True,
+59183,"CID Solar, LLC",20.0,1,2451.922,True,False,tracking_mixed_or_unclassified_technology
+59203,Farmersville,4.5,3,397.028,True,True,
+59219,Porterville 6 and 7,3.0,2,249.89,True,True,
+59237,Lone Valley Solar Park II LLC,20.0,1,2372.889,True,False,tracking_mixed_or_unclassified_technology
+59249,Rio Bravo Solar 1 LLC,20.0,1,2342.573,True,False,tracking_mixed_or_unclassified_technology
+59250,Rio Bravo Solar II LLC,20.0,1,2364.175,True,False,tracking_mixed_or_unclassified_technology
+59253,Wildwood Solar II,15.0,1,1816.4,True,False,tracking_mixed_or_unclassified_technology
+59262,Lancaster Little Rock,5.0,1,582.628,True,True,
+59265,Merced Solar LLC,1.5,1,199.418,True,False,tracking_mixed_or_unclassified_technology
+59267,Mission Solar LLC,1.5,1,206.326,True,False,tracking_mixed_or_unclassified_technology
+59268,Hollister Solar LLC,1.5,1,196.374,True,False,tracking_mixed_or_unclassified_technology
+59269,Victor Mesa Linda B2,1.5,1,189.413,True,True,
+59270,Victor Mesa Linda C2,1.5,1,187.868,True,True,
+59271,Victor Mesa Linda D2,1.5,1,187.507,True,True,
+59272,Victor Mesa Linda E2,1.5,1,185.393,True,True,
+59273,SEPV Palmdale East,10.0,1,1268.058,True,False,tracking_mixed_or_unclassified_technology
+59283,California PV Energy at ISD WWTP,1.0,1,25.571,True,True,
+59300,Hanford 1 and 2,3.0,2,294.174,True,True,
+59308,Beacon Solar Plant Site 5,37.8,1,5336.0,True,False,tracking_mixed_or_unclassified_technology
+59309,Beacon Solar Plant Site 2,47.3,1,6811.0,True,False,tracking_mixed_or_unclassified_technology
+59315,Hecate Energy Beacon Solar 1,56.0,1,7525.0,True,False,tracking_mixed_or_unclassified_technology
+59316,Hecate Energy Beacon Solar 3,56.0,1,7488.0,True,False,tracking_mixed_or_unclassified_technology
+59317,Hecate Energy Beacon Solar 4,50.0,1,6573.0,True,False,tracking_mixed_or_unclassified_technology
+59322,Pumpjack Solar I,20.0,1,2323.809,True,False,tracking_mixed_or_unclassified_technology
+59323,Sacramento (SMUD),1.5,1,0.0,True,True,
+59334,"Catalina Solar 2, LLC",18.0,1,2483.681,True,False,tracking_mixed_or_unclassified_technology
+59339,Quinto Solar PV Project,108.0,1,13717.91,True,False,tracking_mixed_or_unclassified_technology
+59359,SCE-Snowline-Duncan Road (North),1.5,1,153.531,True,False,tracking_mixed_or_unclassified_technology
+59360,SCE-Snowline-Duncan Road (South),1.0,1,125.072,True,False,tracking_mixed_or_unclassified_technology
+59380,"Wildwood Solar I, LLC",19.5,1,2266.323,True,False,tracking_mixed_or_unclassified_technology
+59395,City of Tulare Water Facility,1.0,1,202.576,False,False,annual_unit_population_differs
+59405,Diamond Valley Solar Project,1.3,1,129.919,True,False,tracking_mixed_or_unclassified_technology
+59408,Shafter Solar LLC,20.0,1,2567.099,True,False,tracking_mixed_or_unclassified_technology
+59409,"Madelyn Solar, LLC",1.0,1,112.701,True,False,tracking_mixed_or_unclassified_technology
+59410,"Rudy Solar, LLC",1.5,1,191.94,True,False,tracking_mixed_or_unclassified_technology
+59411,"Mitchell Solar, LLC",1.5,1,186.785,True,False,tracking_mixed_or_unclassified_technology
+59412,Algonquin SKIC20 Solar LLC,20.0,1,2393.716,True,False,tracking_mixed_or_unclassified_technology
+59413,Corcoran Solar 2,19.8,1,2476.102,True,False,tracking_mixed_or_unclassified_technology
+59414,Atwell Island West Solar,20.0,1,2664.897,True,False,tracking_mixed_or_unclassified_technology
+59416,Anaheim Solar Energy Plant,2.1,1,166.524,True,True,
+59421,SCE-Snowline-White Road (South),1.5,1,149.459,True,False,tracking_mixed_or_unclassified_technology
+59422,SCE-Snowline-White Road (North),1.5,1,185.444,True,False,tracking_mixed_or_unclassified_technology
+59423,SCE-Snowline-White Rd (Central),1.5,1,197.406,True,False,tracking_mixed_or_unclassified_technology
+59431,Sierra Solar Greenworks,20.0,1,2098.925,True,True,
+59440,"Adelanto Solar II, LLC",7.0,1,845.766,True,False,tracking_mixed_or_unclassified_technology
+59441,"Adelanto Solar, LLC",20.0,1,2807.602,True,False,tracking_mixed_or_unclassified_technology
+59443,"TA-Acacia, LLC",20.0,1,2985.985,True,False,tracking_mixed_or_unclassified_technology
+59469,Alamo Solar,20.0,1,2143.105,True,False,tracking_mixed_or_unclassified_technology
+59473,Apple Campus 2 PV,14.4,1,830.403,True,True,
+59522,Giffen Solar Park,20.0,1,1551.919,True,False,tracking_mixed_or_unclassified_technology
+59523,Five Points Solar Park,60.0,1,6944.15,True,False,tracking_mixed_or_unclassified_technology
+59524,Blackwell Solar Park,20.0,1,2375.259,True,False,tracking_mixed_or_unclassified_technology
+59525,Wright Solar Park,200.0,1,20944.0,True,False,tracking_mixed_or_unclassified_technology
+59528,Solar Oasis LLC,20.0,1,2621.023,True,False,tracking_mixed_or_unclassified_technology
+59531,Borden Solar Farm,,0,,False,False,monthly_unit_set_changed_or_absent
+59532,Springbok Solar Farm 1,105.0,1,15189.197,True,False,tracking_mixed_or_unclassified_technology
+59536,Coronus Adelanto West 1,1.5,1,104.555,True,True,
+59537,Coronus Adelanto West 2,1.5,1,109.092,True,True,
+59539,Park Meridian #1,1.5,1,150.54,True,True,
+59540,Rancho Cucamonga Dist #1,1.8,1,158.687,True,True,
+59541,Terra Francesco,1.5,1,147.5,True,True,
+59550,Putah Creek Solar Farm,2.0,1,248.806,True,False,tracking_mixed_or_unclassified_technology
+59555,Vega Solar,20.0,1,2221.161,True,False,tracking_mixed_or_unclassified_technology
+59597,"Colton Solar One, LLC",2.5,1,225.45,True,True,
+59598,"Colton Solar Two, LLC",1.0,1,84.913,True,False,tracking_mixed_or_unclassified_technology
+59599,Tropico Solar PV Plant,14.0,1,1683.746,True,False,tracking_mixed_or_unclassified_technology
+59600,Nicolis Solar PV Plant,20.0,1,2431.559,True,False,tracking_mixed_or_unclassified_technology
+59607,"Maricopa West Solar PV, LLC",20.0,1,2148.57,True,False,tracking_mixed_or_unclassified_technology
+59610,"AP North Lake I, LP",20.0,1,2236.423,True,False,tracking_mixed_or_unclassified_technology
+59633,Kettleman Solar -Centaurus,20.0,1,2486.36,True,False,tracking_mixed_or_unclassified_technology
+59638,Coronal Lost Hills,20.0,1,2390.159,True,False,tracking_mixed_or_unclassified_technology
+59651,"Forever 21 Retail, Inc.",1.6,1,111.875,True,True,
+59652,Nordhoff Place,1.2,1,66.868,True,True,
+59657,"Imperial Valley Solar Co (IVSC) 2, LLC",20.0,1,2267.972,True,True,
+59687,Sun Harvest Solar NDP1,1.5,1,8.818,True,False,tracking_mixed_or_unclassified_technology
+59703,"Cottonwood Solar, LLC Cottonwood Carport",1.0,1,61.661,True,True,
+59722,Seville 1,20.0,1,2654.949,True,False,tracking_mixed_or_unclassified_technology
+59723,Seville 2,30.0,1,4120.151,True,False,tracking_mixed_or_unclassified_technology
+59730,SEPV 18,2.0,1,272.315,True,False,tracking_mixed_or_unclassified_technology
+59737,Aspiration G,9.0,1,1087.046,True,False,tracking_mixed_or_unclassified_technology
+59738,Citizen B,5.0,1,532.464,True,True,
+59739,Lancaster WAD B,5.0,1,379.138,False,False,annual_AC_capacity_differs
+59740,SEPV Mojave West,20.0,1,2724.445,True,False,tracking_mixed_or_unclassified_technology
+59746,DSH (CA) - Coalinga State Hospital,2.0,1,245.145,True,False,tracking_mixed_or_unclassified_technology
+59748,CDCR (CA) - Pleasant Valley State Prison,1.2,1,151.006,True,False,tracking_mixed_or_unclassified_technology
+59798,Colon PV,1.3,1,103.368,True,True,
+59840,Springbok Solar Farm 2,155.0,1,21189.214,True,False,tracking_mixed_or_unclassified_technology
+59868,Kingbird A Solar LLC,20.0,1,2908.289,True,False,tracking_mixed_or_unclassified_technology
+59870,"Little Bear Solar 1, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+59872,UC Davis South Campus,13.0,1,1432.88,True,False,tracking_mixed_or_unclassified_technology
+59878,Windhub Solar A LLC,20.0,1,2553.693,True,False,tracking_mixed_or_unclassified_technology
+59879,North Rosamond Solar LLC,160.0,1,20460.0,False,False,annual_AC_capacity_differs
+59900,Corcoran Solar 3,20.0,1,2409.493,True,False,tracking_mixed_or_unclassified_technology
+59915,Oro Loma,20.0,1,2638.655,True,False,tracking_mixed_or_unclassified_technology
+59916,SunE- E Philadelphia Ontario,1.0,1,84.807,True,True,
+59939,RE Tranquillity,205.3,1,22071.276,True,False,tracking_mixed_or_unclassified_technology
+59940,"Great Valley Solar Portfolio Holdings, LLC",305.3,4,24205.0,False,False,annual_AC_capacity_differs
+59942,Morgan Lancaster 1,1.5,1,181.68,True,False,tracking_mixed_or_unclassified_technology
+59948,Bakersfield 111,1.4,1,162.346,True,False,tracking_mixed_or_unclassified_technology
+59961,Western Antelope Blue Sky B,20.0,1,2839.105,True,False,tracking_mixed_or_unclassified_technology
+59962,North Lancaster Ranch,20.0,1,1736.436,True,True,
+59963,Central Antelope Dry Ranch C,20.0,1,1686.584,True,True,
+59964,Elevation Solar C,40.0,1,6508.0,True,False,tracking_mixed_or_unclassified_technology
+59976,RE Astoria,100.0,1,16092.0,True,False,tracking_mixed_or_unclassified_technology
+59977,RE Astoria 2,75.0,1,12383.0,True,False,tracking_mixed_or_unclassified_technology
+59978,"Enerparc CA2, LLC",1.5,1,179.824,True,False,tracking_mixed_or_unclassified_technology
+59979,"Columbia Solar Energy, LLC",19.2,1,1721.846,True,True,
+60007,Morelos del Sol,15.0,1,1833.825,True,False,tracking_mixed_or_unclassified_technology
+60026,Little Rock Pham Solar,3.0,1,419.816,True,False,tracking_mixed_or_unclassified_technology
+60027,Adera Solar,20.0,1,1903.269,True,True,
+60032,SunE Rochester,1.0,1,0.0,True,True,
+60033,"CA Flats Solar 130, LLC",130.0,1,18089.0,True,False,tracking_mixed_or_unclassified_technology
+60034,"CA Flats Solar 150, LLC",150.0,1,19000.0,True,False,tracking_mixed_or_unclassified_technology
+60035,Tequesquite Landfill Solar PV Project,7.3,1,717.241,True,False,tracking_mixed_or_unclassified_technology
+60039,Frontier Solar LLC,20.0,1,2557.87,True,False,tracking_mixed_or_unclassified_technology
+60043,"Cuyama Solar, LLC",40.0,1,5693.0,True,False,tracking_mixed_or_unclassified_technology
+60060,Lindberg FIeld Solar,3.2,3,272.418,True,True,
+60077,CED Avenal,15.8,1,2098.252,True,False,tracking_mixed_or_unclassified_technology
+60078,CED Ducor 1,20.0,1,2565.756,True,False,tracking_mixed_or_unclassified_technology
+60079,CED Ducor 2,20.0,1,2598.752,True,False,tracking_mixed_or_unclassified_technology
+60080,CED Ducor 3,15.0,1,1948.691,True,False,tracking_mixed_or_unclassified_technology
+60081,CED Ducor 4,20.0,1,2510.645,True,False,tracking_mixed_or_unclassified_technology
+60083,Fresno Solar,3.0,2,329.439,True,False,tracking_mixed_or_unclassified_technology
+60085,AVS Lancaster 1,3.7,1,383.882,True,True,
+60086,US-TOPCO (Soccer Center),3.0,1,280.307,True,True,
+60091,"Kingbird B Solar, LLC",20.0,1,2945.824,True,False,tracking_mixed_or_unclassified_technology
+60092,"Blythe Solar II, LLC",131.2,4,14303.785,True,False,tracking_mixed_or_unclassified_technology
+60093,"Blythe Solar 110, LLC",109.8,3,15229.049,True,False,tracking_mixed_or_unclassified_technology
+60094,"Blythe Solar III, LLC Hybrid",,0,,False,False,monthly_unit_set_changed_or_absent
+60095,"Blythe Solar IV, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+60142,Lemoore 1,1.5,1,61.041,True,False,tracking_mixed_or_unclassified_technology
+60151,Building F,1.3,1,126.517,True,True,
+60153,Building G,1.2,1,114.093,True,True,
+60154,Buidling L,1.0,1,82.077,True,True,
+60182,Dulles,2.0,1,163.379,True,True,
+60183,Freeway Springs,2.0,1,154.615,True,True,
+60185,Solverde 1,85.0,1,11817.0,True,False,tracking_mixed_or_unclassified_technology
+60186,Antelope DSR 1,50.0,1,7056.0,True,False,tracking_mixed_or_unclassified_technology
+60187,Antelope DSR 2,5.0,1,711.98,True,False,tracking_mixed_or_unclassified_technology
+60193,Whitethorn Solar LLC,3.3,1,304.177,True,True,
+60219,Strata Roof 1,1.0,1,75.685,True,True,
+60226,"Rancho Seco Solar, LLC",10.8,1,1180.775,True,False,tracking_mixed_or_unclassified_technology
+60231,Genentech-Oceanside Hybrid,4.5,1,340.677,True,False,tracking_mixed_or_unclassified_technology
+60233,RE Garland,185.0,1,25164.186,False,False,annual_AC_capacity_differs
+60237,Midway Solar Farm II,30.0,1,4231.0,True,False,tracking_mixed_or_unclassified_technology
+60242,"Algonquin SKIC 10 Solar, LLC",10.0,1,932.74,True,False,tracking_mixed_or_unclassified_technology
+60255,Weymouth Solar Plant,3.0,2,258.031,True,False,tracking_mixed_or_unclassified_technology
+60275,Westside Solar Power PV1,2.0,1,244.321,True,False,tracking_mixed_or_unclassified_technology
+60277,Castor Solar,1.5,1,158.48,True,True,
+60279,Antelope Big Sky Ranch,20.0,1,2686.243,True,False,tracking_mixed_or_unclassified_technology
+60280,Summer Solar LLC,20.0,1,2798.58,True,False,tracking_mixed_or_unclassified_technology
+60281,Central Antelope Dry Ranch B LLC,3.0,1,406.876,True,False,tracking_mixed_or_unclassified_technology
+60310,"Portal Ridge Solar B, LLC",20.0,1,2515.85,True,False,tracking_mixed_or_unclassified_technology
+60311,"Portal Ridge Solar C, LLC",11.4,1,1486.239,True,False,tracking_mixed_or_unclassified_technology
+60315,Midway Solar Farm III,20.0,1,2271.633,True,False,tracking_mixed_or_unclassified_technology
+60324,"Willow Spring Solar, LLC",107.9,1,15647.0,False,False,monthly_status_capacity_or_service_changed
+60336,Midway Solar Farm 1,50.0,1,8205.0,True,False,tracking_mixed_or_unclassified_technology
+60386,RE Garland A,20.0,1,2723.104,False,False,annual_AC_capacity_differs
+60389,RE Barren Ridge 1,60.0,1,8692.91,True,False,tracking_mixed_or_unclassified_technology
+60412,Munro Valley Solar,4.0,1,537.927,True,True,
+60426,RCWD PV Project,5.0,1,494.416,False,False,annual_AC_capacity_differs
+60428,CA Dept of Public Health at Richmond,2.2,1,177.506,True,True,
+60446,E&B Resources,1.0,1,0.0,True,False,tracking_mixed_or_unclassified_technology
+60450,Corcoran,1.1,1,99.296,True,True,
+60474,"Bayshore Solar B, LLC",20.0,1,2559.313,True,False,tracking_mixed_or_unclassified_technology
+60475,"Bayshore Solar C, LLC",20.0,1,2555.86,True,False,tracking_mixed_or_unclassified_technology
+60481,"Bayshore Solar A, LLC",20.0,1,2686.963,True,False,tracking_mixed_or_unclassified_technology
+60485,"Longboat Solar, LLC",20.0,1,2701.349,True,False,tracking_mixed_or_unclassified_technology
+60490,Redwood 4 Solar Farm,20.0,1,2551.889,True,False,tracking_mixed_or_unclassified_technology
+60491,Springbok 3 Solar Farm,90.0,1,13676.0,True,False,tracking_mixed_or_unclassified_technology
+60509,Valley Center,3.0,1,300.722,True,False,tracking_mixed_or_unclassified_technology
+60516,Granger,3.0,1,374.034,True,False,tracking_mixed_or_unclassified_technology
+60558,Solar Blythe 2,20.0,1,2553.023,True,False,tracking_mixed_or_unclassified_technology
+60590,"Golden Fields Solar I, LLC",54.0,1,8632.0,True,False,tracking_mixed_or_unclassified_technology
+60591,"Solar Star California, XLI, LLC",54.0,1,9172.0,True,False,tracking_mixed_or_unclassified_technology
+60678,San Joaquin Solar,21.3,2,2117.018,True,False,tracking_mixed_or_unclassified_technology
+60744,SEPV Imperial Dixieland West,3.0,1,466.369,True,False,tracking_mixed_or_unclassified_technology
+60745,SEPV Imperial Dixieland East,2.0,1,291.186,True,False,tracking_mixed_or_unclassified_technology
+60777,"American Kings Solar, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+60790,"PVN Milliken, LLC",3.0,1,236.227,True,True,
+60791,SunAnza,2.0,1,260.15,False,False,annual_unit_population_differs
+60813,Cloverdale Solar Center,1.0,1,120.588,True,False,tracking_mixed_or_unclassified_technology
+60824,Valley Sanitary District WTP Solar,1.0,1,80.943,True,True,
+60825,Colgreen North Shore Solar Farm,74.8,1,5842.0,True,False,tracking_mixed_or_unclassified_technology
+60844,Genentech Vacaville Meter #1,6.1,2,412.907,True,True,
+60846,US GSA - Sacramento,1.1,1,112.08,True,True,
+60861,Dept of General Services -FTB,2.7,1,264.067,True,True,
+60869,"Solar Star California, XLIV, LLC",9.5,1,997.957,True,False,tracking_mixed_or_unclassified_technology
+60914,Westmont 300B,3.0,1,295.101,True,True,
+60947,Jacumba Solar Farm,20.0,1,1998.133,True,True,
+60953,Owens Valley Solar Project 11,1.0,1,156.882,True,True,
+60975,Whitney Point Solar,20.0,1,2598.187,True,False,tracking_mixed_or_unclassified_technology
+60978,CSUF State College,1.0,1,84.501,True,True,
+60979,CSUF Nutwood Solar,1.9,1,163.636,True,True,
+60981,NextEra Westside PV,20.0,1,2593.493,True,False,tracking_mixed_or_unclassified_technology
+60984,Lindberg Field Solar 2,1.9,1,250.3,True,True,
+60995,Ramona Solar Energy,4.3,1,316.702,True,True,
+61006,SCDA Solar 1,7.0,1,741.881,True,False,tracking_mixed_or_unclassified_technology
+61013,Marin Clean Energy Solar One,10.5,1,1054.773,True,False,tracking_mixed_or_unclassified_technology
+61115,Manteca Land PV,1.0,1,96.564,True,True,
+61116,Delano Land 1,1.0,1,89.498,True,False,tracking_mixed_or_unclassified_technology
+61117,Bakersfield PV 1,5.3,1,490.032,True,False,tracking_mixed_or_unclassified_technology
+61118,Bakersfield Industrial PV 1,1.0,1,115.793,True,True,
+61152,Intel Folsom Phase 3,5.2,1,266.902,True,False,tracking_mixed_or_unclassified_technology
+61202,Mount Signal Solar Farm V,252.3,1,25546.0,True,False,tracking_mixed_or_unclassified_technology
+61209,Sacramento Regional County Sanitation PV,3.5,1,393.213,True,False,tracking_mixed_or_unclassified_technology
+61215,Green Beanworks C PV,3.0,1,389.037,True,False,tracking_mixed_or_unclassified_technology
+61216,Green Beanworks D PV,3.0,1,375.89,True,False,tracking_mixed_or_unclassified_technology
+61249,Westmont 300A,2.9,1,295.101,True,True,
+61250,USPS PV,10.7,1,589.02,False,False,annual_AC_capacity_differs
+61264,Antelope Expansion 2,105.0,1,16085.0,True,False,tracking_mixed_or_unclassified_technology
+61265,Antelope DSR 3,20.0,1,2941.853,True,False,tracking_mixed_or_unclassified_technology
+61319,Port of LA Solar FiT Project,1.1,1,93.623,True,True,
+61339,Green Beanworks B PV,3.0,1,361.868,True,False,tracking_mixed_or_unclassified_technology
+61348,Westmont 400A,2.3,1,179.619,True,True,
+61349,Westmont 400B,2.2,1,179.619,True,True,
+61353,Mount Signal Solar Farm II,153.5,1,26327.0,False,False,monthly_unit_set_changed_or_absent
+61377,Amazon - Patterson PV,2.5,1,232.771,True,True,
+61418,Valencia 1 Solar CA,3.0,1,372.282,True,True,
+61419,One Ten Partners PV,2.0,1,304.693,True,False,tracking_mixed_or_unclassified_technology
+61420,Merced 1 PV,3.0,1,345.524,True,False,tracking_mixed_or_unclassified_technology
+61421,Madera 1 PV,1.5,1,142.447,True,False,tracking_mixed_or_unclassified_technology
+61445,Gaskell West 1 Solar Facility,20.0,1,2751.098,True,False,tracking_mixed_or_unclassified_technology
+61463,Vandenberg Solar Project,22.5,1,2160.945,False,False,annual_AC_capacity_differs
+61593,Westmont 301,1.8,1,162.296,True,True,
+61594,Westmont 401,2.9,1,256.385,True,True,
+61607,Stenner Creek Solar,4.5,1,520.244,True,False,tracking_mixed_or_unclassified_technology
+61619,CDCR (CA) - Solano State Prison,1.1,1,99.348,True,False,tracking_mixed_or_unclassified_technology
+61620,CDCR (CA) - Corcoran State Prison,5.0,1,447.81,True,False,tracking_mixed_or_unclassified_technology
+61621,CDCR (CA) - Wasco State Prison,1.5,1,153.893,True,False,tracking_mixed_or_unclassified_technology
+61628,Kilroy Solar,1.1,1,349.238,True,True,
+61682,USG 1,1.0,1,155.388,True,False,tracking_mixed_or_unclassified_technology
+61683,USG 2,1.0,1,89.912,True,True,
+61692,IVC Solar,3.0,1,171.887,True,False,tracking_mixed_or_unclassified_technology
+61698,Folsom SP and CSP Sacramento,1.3,1,132.239,True,True,
+61718,Aerolease,1.5,1,98.419,True,True,
+61750,Wistaria Ranch Solar,106.7,1,18265.0,True,False,tracking_mixed_or_unclassified_technology
+61791,Stage Gulch Solar,1.0,1,84.602,True,True,
+61792,Lavio Solar,1.0,1,105.894,True,True,
+61824,Target Shafter,3.0,1,163.894,True,False,tracking_mixed_or_unclassified_technology
+61834,Soboba Community Solar Project,1.0,1,194.26,False,False,annual_unit_population_differs
+61843,SeaWorld Aquatica,1.0,1,99.966,True,True,
+61894,National Raisin,2.9,4,167.555,True,False,tracking_mixed_or_unclassified_technology
+61989,Pacific Ethanol Madera Solar Array,4.3,1,156.986,True,False,tracking_mixed_or_unclassified_technology
+61993,Gavilan District College Solar Project,1.4,1,,False,False,missing_January_PV_generation
+61995,UC Merced Solar Hybrid,4.5,1,420.332,True,True,
+62004,San Pablo Raceway,100.0,1,15386.0,True,False,tracking_mixed_or_unclassified_technology
+62015,Mustang Two,,0,,False,False,monthly_unit_set_changed_or_absent
+62016,UC Riverside Lots 30 & 32,4.0,1,330.264,True,True,
+62020,Stanford Campus Solar,3.4,1,319.489,True,True,
+62028,CSU Long Beach Lots 7 & 14,4.5,1,380.066,True,True,
+62039,Santa Rosa Junior College Petaluma Solar,1.2,1,100.378,True,True,
+62052,Citizens Imperial Solar,30.0,1,4904.0,True,False,tracking_mixed_or_unclassified_technology
+62056,Lancaster,3.0,1,350.99,True,False,tracking_mixed_or_unclassified_technology
+62077,Blue Shld Of Cal- El Dorado Hlls Mtr B,2.1,1,67.074,False,False,annual_AC_capacity_differs
+62114,Roseville Solar,1.0,1,91.2,True,False,tracking_mixed_or_unclassified_technology
+62150,Chaffey College Rancho Cucamonga Campus,4.0,1,362.588,True,True,
+62177,"Desert Harvest, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+62178,"Maverick Solar, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+62242,County of San Diego SBRC,1.3,1,122.289,True,False,tracking_mixed_or_unclassified_technology
+62246,Target Woodland Solar Project,2.3,1,206.065,True,True,
+62274,Liberty HS Solar Project,1.5,1,133.477,True,False,tracking_mixed_or_unclassified_technology
+62275,Frontier HS Solar Project,1.4,1,131.518,True,False,tracking_mixed_or_unclassified_technology
+62286,Xebec 1,1.9,1,214.676,True,True,
+62287,Francisco St. Solar,1.2,1,119.557,True,True,
+62288,"Valentine Solar, LLC",111.2,1,12042.0,True,False,tracking_mixed_or_unclassified_technology
+62378,CFW Solar X LLC - Vaughn,1.6,1,173.382,True,True,
+62463,Little Bear 3,,0,,False,False,monthly_unit_set_changed_or_absent
+62464,Little Bear 4,,0,,False,False,monthly_unit_set_changed_or_absent
+62465,Little Bear 5,,0,,False,False,monthly_unit_set_changed_or_absent
+62545,Renew Solar ABC Sacramento LLC,,0,,False,False,monthly_unit_set_changed_or_absent
+62578,Preferred Freezer San Leandro,2.0,1,169.308,True,True,
+62611,PFMG Solar Grossmont Helix LLC,1.2,1,117.495,True,True,
+62649,SFDK Solar,6.3,1,557.107,True,True,
+62655,HL Solar,7.6,1,581.956,True,False,tracking_mixed_or_unclassified_technology
+62687,American Canyon Solar,3.0,3,343.101,True,False,tracking_mixed_or_unclassified_technology
+62688,Malech Solar Farm,3.1,1,291.598,True,True,
+62689,Hellyer Solar Farm,2.2,1,192.61,True,True,
+62690,Guadalupe Solar Farm,1.7,1,105.535,True,True,
+62732,"Solar Star Palo Alto I, LLC",1.3,1,112.544,True,True,
+62806,Shelter Creek Condominiums Solar,,0,,False,False,monthly_unit_set_changed_or_absent
+62902,Windsor Floating Solar,,0,,False,False,monthly_unit_set_changed_or_absent
+62987,Grossmont HS Solar Project,1.4,1,116.979,True,True,
+62988,Wildflower Solar 1,,0,,False,False,monthly_unit_set_changed_or_absent
+63021,SCCCD - Clovis Community College,1.3,1,103.215,True,True,
+63054,CalCity Solar 1,3.0,1,418.528,True,False,tracking_mixed_or_unclassified_technology
+63068,SCCCD - Fresno Community College,2.2,1,187.868,False,False,monthly_status_capacity_or_service_changed
+63074,Reedley Community College Solar,2.6,1,194.569,True,True,
+63078,Eagle Creek,3.0,1,418.063,True,False,tracking_mixed_or_unclassified_technology
+63204,CID Solar (CA),2.0,1,217.513,True,False,tracking_mixed_or_unclassified_technology
+63303,Alticor Inc - Solar Project,1.2,1,96.15,True,True,
+63361,Medline Ind. Phase 2 Tracy,1.0,1,109.608,True,True,
+63363,Niagara Bottling Stockton,1.0,1,83.469,True,True,
+63376,Phelan Pinon Hills CSD Solar,1.2,1,137.034,True,False,tracking_mixed_or_unclassified_technology
+63385,Castaic Lake Phase II,3.5,1,331.554,True,False,tracking_mixed_or_unclassified_technology
+63414,IOS II-LAX9,,0,,False,False,monthly_unit_set_changed_or_absent
+63416,Sierra Pacific Industries (2042-RD),,0,,False,False,monthly_unit_set_changed_or_absent
+63418,DGS Wasco State Prison,,0,,False,False,monthly_unit_set_changed_or_absent
+63419,DGS Central California Womens Facility,,0,,False,False,monthly_unit_set_changed_or_absent
+63420,Fresno Bullard High School Hybrid,,0,,False,False,monthly_unit_set_changed_or_absent
+63421,Fresno Hoover High School Hybrid,,0,,False,False,monthly_unit_set_changed_or_absent
+63422,Fresno Sunnyside High School Hybrid,,0,,False,False,monthly_unit_set_changed_or_absent
+63455,RE-VFO LLC,1.0,2,92.903,False,False,monthly_unit_set_changed_or_absent
+63486,D'Arrigo Brothers - Phase 4,1.7,1,210.809,False,False,monthly_unit_set_changed_or_absent
+63493,PSREC/SIAD Solar,2.5,1,312.22,False,False,monthly_unit_set_changed_or_absent
+63510,Walnut Unified School District Walnut HS Hybrid,,0,,False,False,monthly_unit_set_changed_or_absent
+63514,Moonlight Packing - Phase 2,1.4,1,142.91,False,False,monthly_unit_set_changed_or_absent
+63516,California City,1.9,1,276.44,False,False,monthly_unit_set_changed_or_absent
+63527,Lafayette 2 - Internal Services Dept,,0,,False,False,monthly_unit_set_changed_or_absent
+63545,Chevron - Lost Hills Hybrid,,0,,False,False,monthly_unit_set_changed_or_absent
+63623,Lafayette 2 - MLK Jr. Hospital (MLK),,0,,False,False,monthly_unit_set_changed_or_absent
+63630,Pleasanton - Amador Valley High School,,0,41.451,False,False,monthly_unit_set_changed_or_absent
+63651,North Kern State Prison Phase II,,0,400.327,False,False,monthly_unit_set_changed_or_absent
+63758,Kroger La Habra,,0,,False,False,monthly_unit_set_changed_or_absent
+63761,Soscol Ferry Solar,,0,,False,False,monthly_unit_set_changed_or_absent
+63762,Silveira Ranch Road Solar,,0,0.0,False,False,monthly_unit_set_changed_or_absent
+63859,"Golden Field Solar III, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+63928,Vacaville Hospital,,0,132.86,False,False,monthly_unit_set_changed_or_absent
+63932,Titan Solar 1 (CA),,0,,False,False,monthly_unit_set_changed_or_absent
+63993,FTF-PackingShed,,0,24.024,False,False,monthly_unit_set_changed_or_absent
+63994,Firebaugh-CCS-PV-1,,0,81.354,False,False,monthly_unit_set_changed_or_absent
+64055,Wonderful Orchards - New Columbia,,0,,False,False,monthly_unit_set_changed_or_absent
+64103,Desert Harvest II LLC,,0,,False,False,monthly_unit_set_changed_or_absent
+64104,"Maverick Solar 4, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+64221,Wonderful Orchards - Belridge,,0,,False,False,monthly_unit_set_changed_or_absent
+64264,Las Virgenes,,0,,False,False,monthly_unit_set_changed_or_absent
+64267,Valencia 2,,0,,False,False,monthly_unit_set_changed_or_absent
+64308,"Dissigno Healdsburg FPV, LLC",,0,,False,False,monthly_unit_set_changed_or_absent
+64376,Tranquillity ID,,0,156.728,False,False,monthly_unit_set_changed_or_absent
+64391,Firestone Walker Brewery - Phase 1,,0,,False,False,monthly_unit_set_changed_or_absent
+64418,Big Bear,,0,,False,False,monthly_unit_set_changed_or_absent
+64517,Department of Justice,,0,,False,False,monthly_unit_set_changed_or_absent
+64518,CA Institute for Women,,0,,False,False,monthly_unit_set_changed_or_absent
+64519,Centinela State Prison,,0,825.969,False,False,monthly_unit_set_changed_or_absent
+64521,Calipatria State Prison,,0,680.529,False,False,monthly_unit_set_changed_or_absent
+64523,Atascadero State Hospital,,0,,False,False,monthly_unit_set_changed_or_absent
+64579,Broadway 2 - UC Riverside,,0,262.725,False,False,monthly_unit_set_changed_or_absent

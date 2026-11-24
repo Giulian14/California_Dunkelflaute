@@ -36,7 +36,7 @@
     "Saved PV figure visually inspected."
   ],
   "code_sha256": {
-    ".github/workflows/scientific-checks.yml": "11c38950fd7a97fdcca0c4e6a3958198f97b21dd0774b14e922dcf350b5bbd80",
+    ".github/workflows/scientific-checks.yml": "9a9b8c956b64c176ade1239ce6a4b0e12f245bda3b7cb49179d0372152984230",
     "scripts/19_validate_fixed_tilt_pv.py": "e4699ded73c09d596eaf7412c2c23cb33b38d7d89b57649d5954ed36386ad39b",
     "scripts/20_rehearse_public_weather.py": "55c1950355d5d807cb2ea4cfb92770839c13a87b51acdd536bf4df646f0db6a7",
     "scripts/21_prepare_archive_plan.py": "49b9312702a17164a89d54d99a4facd8bc783379b4888f34f9f48e0dc0d2af9f",
@@ -162,7 +162,12 @@
     }
   ],
   "cds_configuration": "No CDSAPI_KEY/default .cdsapirc present; presence-only check, no secret values read.",
-  "github_ci": "Workflow added; remote execution status must be checked separately after push.",
+  "github_ci": {
+    "first_run": "https://github.com/Giulian14/California_Dunkelflaute/actions/runs/45484953091",
+    "first_result": "Setup failed before tests: Ubuntu 26.04 lacks exact Python 3.11.11 build.",
+    "fix": "Pinned verified Ubuntu 24.04 interpreter platform.",
+    "rerun_status": "Check subsequent GitHub workflow run; local suite remains 102 passing."
+  },
   "limits": [
     "Full-grid source-consistent adjoining/held-out observed-generation validation remains open.",
     "Wind underprediction/PV subset overprediction not causally resolved; no correction fitted.",

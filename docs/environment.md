@@ -80,3 +80,7 @@ The turbine audit and nearest/bilinear diagnostics reuse the existing wind envir
 ## Terrain decoding and current complete suite
 
 A separate Python 3.11.11 Linux environment installed `requirements-terrain.txt`, adding **numcodecs 0.16.6** to the existing wind dependency set. [Resolved versions](validated_terrain_linux_packages.txt) are saved. `uv pip check` verified all 34 installed packages are compatible; this uv-created environment does not seed the pip module. All **72 tests** passed (63 earlier + six terrain and three curve-candidate tests). No changes were made to earlier environments or the author's Mac. The current full-suite command needs `requirements-terrain.txt`; PV-only verification can still use its original requirements and `-p 'test_pv_model.py'`. The public-data replay helper verified all 110 cached source files in offline mode without downloading again.
+
+## Continuity verification
+
+The November 24 weather-file/event continuity experiment reused the existing clean Python 3.11.11 terrain environment with no new packages. All **85 tests** pass (72 earlier + 13 continuity tests). `18_verify_chunk_continuity.py` accepts the original raw file paths and mask as optional arguments, writes/reopens temporary NetCDF partitions, and removes them afterward. It makes no network request. The reusable helper reads one weather pair plus its preceding bracket and joins compact resource means before global event analysis. Real adjacent-month acquisition and a resumable production runner remain separate work.

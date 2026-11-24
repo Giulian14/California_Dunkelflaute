@@ -1,6 +1,6 @@
 # Readiness for the 2005–2024 study
 
-Status as of November 23, 2026. This is a scientific and processing worklist, not an approval requirement. Keep it consistent with the [research log](research_log.md). Only January 2020 weather has been numerically modeled so far; a 20-year climatology has not been calculated.
+Status as of November 24, 2026. This is a scientific and processing worklist, not an approval requirement. Keep it consistent with the [research log](research_log.md). Only January 2020 weather has been numerically modeled so far; a 20-year climatology has not been calculated.
 
 ## Priority before adopting the long-term model
 
@@ -18,7 +18,7 @@ The existing evidence does not justify choosing a model simply because its outpu
 
 1. **Fix study meaning and geography.** Decide whether the primary result describes a fixed reference renewable deployment exposed to 20 years of weather, or the changing historical fleet. A changing fleet can confound weather trends with deployment changes. Document wind/solar rated-capacity shares and regional/statewide footprints. Use year-specific matched fleets for validation where needed without silently changing the climate-study reference.
 2. **Define the study calendar and input support.** A proposed UTC core interval is `[2005-01-01 00:00, 2025-01-01 00:00)`, totaling **175,320 hours**, including five leap days. Its hourly interval-end labels run from January 1, 2005 at 01:00 to January 1, 2025 at 00:00 UTC. Obtain bracketing instantaneous samples and accumulated radiation at the required end labels, including the final boundary timestamp. Include explicit window/event context outside the core and retain any remaining censoring flags. Pacific-month validation is a separate support convention, not a silent shift of the climate record.
-3. **Prove chunk continuity.** Compare processing a continuous multi-month input with processing monthly chunks while carrying the needed wind/temperature bracket, 48-hour rolling context and unfinished event state. Require identical aligned values and event unions, including runs spanning month/year boundaries and leap days. Never drop one valid hour at every monthly join. January-only observation importers deliberately reject other months; generalized local-day imports need explicit DST tests.
+3. **Prove chunk continuity.** The [November 24 verification](chunk_continuity.md) now passes real January partitions (two/six files), all 18 tested window cases and synthetic New Year/leap/nonleap boundaries. The chosen architecture carries one weather bracket and joins compact hourly means before global rolling/event calculations, preserving context without per-file resets. Real contiguous multi-month data, source-version changes and resumable production still need a rehearsal. January-only observation importers remain restricted; aware DST resource-label conversion was tested, but ambiguous naive local labels are rejected.
 4. **Audit every input batch.** Check expected variables/units, product-specific accumulation meaning, grid/coordinate agreement, duplicates/gaps, missing values and ERA5 version metadata. Preserve download requests, checksums and retrieval/source versions. Treat unavailable data as missing, rather than low generation. Reuse existing raw files and keep them outside Git.
 5. **Predefine event analysis.** Specify absolute versus seasonally normalized thresholds, capacity mix, minimum duration and hourly-versus-window support. Preserve the union-of-qualifying-windows interpretation and incomplete-boundary context. Assess sensitivity to reasonable thresholds and model uncertainty; January's zero baseline event count is a conditional scenario result, not validation of a definition.
 6. **Define temperature comparisons.** Choose heat/cold reference climatology, seasonal percentiles or anomalies, spatial support and local-day timing before interpreting coincidences. Energy-weighted sites and a statewide administrative temperature average answer different questions.
@@ -33,6 +33,7 @@ No additional access or user-side environment change was needed for the latest d
 - [Observed temporal shapes](observed_generation_comparison.md), with unmatched-population limits.
 - [Initial January inventory and missing-hour bounds](january_wind_match.md), now qualified by the annual-capacity audit.
 - [Site/capacity diagnostics](wind_site_diagnostics.md) and [verification](wind_site_verification.json).
-- [Latest terrain/curve-provenance audit](wind_terrain_and_curve_audit.md) and [verification](terrain_curve_verification.json).
+- [Terrain/curve-provenance audit](wind_terrain_and_curve_audit.md) and [verification](terrain_curve_verification.json).
+- [Latest file/calendar continuity check](chunk_continuity.md) and [verification](continuity_verification.json).
 
-The current suite has **72 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.
+The current suite has **85 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.

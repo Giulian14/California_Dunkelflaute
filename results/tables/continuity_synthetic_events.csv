@@ -1,0 +1,7 @@
+start_utc,end_utc,duration_hours,qualifying_window_count,touches_data_start,touches_data_end,boundary_context_incomplete,meets_minimum_duration,case,definition,data_kind
+2019-12-31 00:00:00+00:00,2020-01-03 00:00:00+00:00,72,72,False,False,False,True,synthetic_new_year,hourly simultaneous,synthetic
+2019-12-30 20:00:00+00:00,2020-01-03 04:00:00+00:00,80,33,False,False,False,,synthetic_new_year,48h window support union,synthetic
+2020-02-29 00:00:00+00:00,2020-03-03 00:00:00+00:00,72,72,False,False,False,True,synthetic_leap_day,hourly simultaneous,synthetic
+2020-02-28 20:00:00+00:00,2020-03-03 04:00:00+00:00,80,33,False,False,False,,synthetic_leap_day,48h window support union,synthetic
+2019-02-28 00:00:00+00:00,2019-03-03 00:00:00+00:00,72,72,False,False,False,True,synthetic_nonleap_february,hourly simultaneous,synthetic
+2019-02-27 20:00:00+00:00,2019-03-03 04:00:00+00:00,80,33,False,False,False,,synthetic_nonleap_february,48h window support union,synthetic

@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "session_date": "2026-11-24",
+  "python": "3.11.11",
+  "runtime": "Existing clean terrain environment; no new dependencies or downloads",
+  "unit_tests": {
+    "total": 85,
+    "new_continuity_tests": 13,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_checks": {
+    "status": "passed",
+    "real_intervals_per_case": 743,
+    "selected_cells": 695,
+    "weather_file_partition_cases": 2,
+    "independent_wind_and_archived_PV_regression": "passed",
+    "independent_rolling_cases": 18,
+    "prior_catalogue_time_duration_edge_context_checks": "passed",
+    "independent_synthetic_calendar_cases": 3,
+    "naive_join_failure_controls": "passed",
+    "core_2005_2024_hours": 175320,
+    "leap_day_hours_in_core": 120,
+    "artifact_hashes": "passed"
+  },
+  "independent_method": "Handwritten original cubic and weighted wind snapshots, archived PV regression, direct-slice 48h means, explicit support union and run extraction; verify all 18 cases against prior catalogue timestamps/durations/window counts/censoring flags; independently reconstruct naive per-file controls and synthetic calendar fixtures. Project continuity/event helpers are not imported.",
+  "independent_catalogue_reference": {
+    "path": "results/tables/wind_pv_48h_events_2020_01.csv",
+    "sha256": "118750a6659f6edc7fa92186b336ab93eee5a2c92227b9e6af964e94614f27e3"
+  },
+  "code_sha256": {
+    "scripts/continuous_resources.py": "cb1ba9e2ea31a649295a15dc3f4fa260810e8b0ba1454a9a8f4fed465d77b7b6",
+    "scripts/18_verify_chunk_continuity.py": "5463e9048e2232facb61cdddca783484af66f86c16f369f733854ad9df91cb5b",
+    "tests/test_continuous_resources.py": "e57fd2c6b3d0e6dddba5ed7cc740f604fe180acc4bb61b88922877074137438a"
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/continuity_irregular_files_resources_2020_01.csv",
+      "bytes": 42322,
+      "sha256": "b199600280bfbf8d5a50626b2d2cb1dcb053cf1906620a4199be8781b9d54d74"
+    },
+    {
+      "path": "data/processed/continuity_reference_resources_2020_01.csv",
+      "bytes": 42321,
+      "sha256": "f10797f5037c017d504dc55b3dd67f20fb57039245267bc7b3fe8af8d0730e36"
+    },
+    {
+      "path": "data/processed/continuity_two_files_resources_2020_01.csv",
+      "bytes": 42320,
+      "sha256": "42078560f1f5c7f174f53f846e30255cb88eaf00c9fdd21f1f993f5ae1f77fe6"
+    },
+    {
+      "path": "results/tables/continuity_event_checks_2020_01.csv",
+      "bytes": 724,
+      "sha256": "6b9f024776b0e4f47d058de911a09ffdbcb507e92163f936ae0bdea00444cb6f"
+    },
+    {
+      "path": "results/tables/continuity_hourly_reference_checks_2020_01.csv",
+      "bytes": 123,
+      "sha256": "8c8e8c262bedbb8298dd4a4bc72fd26ab1bfd2838f5d86858cba9d969505ef3b"
+    },
+    {
+      "path": "results/tables/continuity_metadata_2020_01.json",
+      "bytes": 3442,
+      "sha256": "1c44a95b486f9bc43692c8d76475f72b627321f8f1d9c36628f893706ff6d0ea"
+    },
+    {
+      "path": "results/tables/continuity_synthetic_calendar_checks.csv",
+      "bytes": 406,
+      "sha256": "b382023a95436ab6ee8ddcb115d617d2e6edd5cbe8b3da1e66305629b8d6eb45"
+    },
+    {
+      "path": "results/tables/continuity_synthetic_events.csv",
+      "bytes": 969,
+      "sha256": "5da2b598d3f03c66e2ba06f9a440d0e12b23de46839be40ea1910ada69878a35"
+    },
+    {
+      "path": "results/tables/continuity_weather_checks_2020_01.csv",
+      "bytes": 541,
+      "sha256": "70cf8f57c20539139482795acdeb16957be5239f61117a11fe3889fc9d6fa3e9"
+    }
+  ],
+  "limits": [
+    "Only existing January ERA5 inputs were repartitioned; no real adjacent-month data added.",
+    "Synthetic year/leap/nonleap/DST checks are algorithm fixtures, not observations.",
+    "Raw weather processed blockwise; compact resources joined globally before rolling/event detection. No full production/checkpoint scheduler implemented.",
+    "Physical wind bias, asset lineage, PV amplitude and held-out validation remain open.",
+    "175320-hour study count is calendar arithmetic, not a processed climatology.",
+    "No earlier scientific outputs changed."
+  ]
+}

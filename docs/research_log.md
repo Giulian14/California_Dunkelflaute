@@ -206,6 +206,40 @@ Saved [method and limits](wind_terrain_and_curve_audit.md), [site table](../resu
 
 The [readiness record](expansion_readiness.md) now distinguishes acquired terrain context from still-open independent wind, turbine provenance, PV-amplitude, held-out-period and temporal-continuity checks. No 2005–2024 climatology or calibrated wind-model claim was produced.
 
+## November 24 weather-file and event continuity verification
+
+### Objective and processing design
+
+Verify that file boundaries do not become weather-interval or event boundaries before extending the archive. Added a reusable iterator that reads consecutive, nonoverlapping weather pairs, carries one preceding instantaneous/accumulated record, and models complete hours without dropping an hour at every join. Only the globally initial unbracketed record is unavailable. Reject gaps, overlaps, changed grids/units/dtypes, missing required values and invalid resource inputs. Time-aware local resource labels are canonicalized to UTC; ambiguous naive local labels are rejected. Numeric CSV-style values are returned as numeric resources rather than strings.
+
+The architecture joins the small, spatially aggregated hourly resource series before applying the existing rolling/event helpers globally. A 175,320-hour two-resource float64 table contains about **2.8 MB** of values, excluding index/processing overhead; gridded weather is processed one block at a time. This avoids introducing an incremental event-state algorithm that could split events or lose future window support at arbitrary file edges. A resumable production/checkpoint scheduler is not implemented by this helper.
+
+### Real-data experiment
+
+Reused the original January 2020 instant/accum/mask files, the existing wind/PV archived outputs, and the clean Python 3.11.11 terrain environment. No download, new package, credential or Mac-environment change was needed. Modeled all **695 selected cells** with unchanged cubic/uniform wind and fixed-tilt 35° PV. The continuous reference matches archived wind within **1.67e-16** and archived PV exactly.
+
+Wrote/reopened temporary NetCDF pairs with identical decoded values, then removed them. Tested snapshot partitions **[0,500,744]** and **[0,1,25,169,481,743,744]**, the latter including one-record initial/final files. Both preserve **743 complete intervals**, with zero selected-cell GHI and temperature differences, zero PV differences, and maximum wind differences **4.34e-19** and **2.78e-17**. Numerical comparison tolerance was 1e-12. No physical model, threshold, mask or deployment assumption was changed.
+
+Compared the strict hourly catalogue and nine 48-hour capacity-mix/threshold cases per partition: **18 rolling checks**. All diagnostics, timestamps, durations, qualifying-window counts and outer-boundary flags match the continuous baseline. Both retain 502 strict low hours, 31 periods and zero ≥24-hour periods under the existing PV reference definition.
+
+### Failure controls and synthetic calendars
+
+For the existing 75%-wind/0.06 scenario, global processing preserves **one 199-hour window-support union**. Deliberately detecting independently in each file creates **two event records** in both partition cases. The irregular case also counts only **186** union hours, losing **13 hours** of support. Therefore concatenating independent catalogues is not equivalent to detecting events from joined resource means.
+
+Created explicitly synthetic 216-hour sequences with a 72-hour internal block at CF 0.01 surrounded by CF 0.5. New Year, leap-February and nonleap-February cases each preserve a 72-hour strict period and an 80-hour 48h-window support union with 33 qualifying windows. Naive independent monthly detection counts only **53 union hours** in each. These are algorithm fixtures, not observed generation events. Unit tests also preserve all 24 UTC hours of February 29 and correctly convert aware spring/fall Pacific DST labels without inventing UTC gaps/duplicates; the January-only CAISO importer was not generalized.
+
+### Verification and records
+
+Added [continuity helper](../scripts/continuous_resources.py), [reproduction driver](../scripts/18_verify_chunk_continuity.py), [13 continuity tests](../tests/test_continuous_resources.py) and the [method report](chunk_continuity.md). All **85 tests** passed. Independent handwritten wind calculations/archived PV regression and direct-slice window/union/run extraction verified all 18 real-data cases; all event times/durations/counts/censoring flags agree with the preserved prior baseline catalogue. Independent calculations reproduced the synthetic fixtures and naive failure controls. Source/output/code hashes and [verification](continuity_verification.json) are retained. All earlier scientific artifacts remain unchanged.
+
+Saved three separate compact resource series, [weather comparisons](../results/tables/continuity_weather_checks_2020_01.csv), [window checks](../results/tables/continuity_event_checks_2020_01.csv), [hourly checks](../results/tables/continuity_hourly_reference_checks_2020_01.csv), [synthetic cases](../results/tables/continuity_synthetic_calendar_checks.csv), [synthetic event times](../results/tables/continuity_synthetic_events.csv), and [metadata](../results/tables/continuity_metadata_2020_01.json).
+
+### Scope and next requirements
+
+The proposed UTC 2005–2024 core has **175,320 complete hours**, including **120 hours on five leap days**, with end labels 2005-01-01 01:00 through 2025-01-01 00:00 UTC. It needs appropriate endpoint weather and outside-core window/event context; cropping also needs an explicit event-inclusion rule. This count is a calendar check, not processed climate data.
+
+Actual contiguous multi-month data, source-convention/version changes, acquisition resumption and full-scale performance still need a rehearsal. Physical wind bias, asset lineage, PV amplitude, held-out-period validation and final event/temperature choices remain open in the updated [readiness record](expansion_readiness.md). The computational checks do not imply that the full historical study is validated or complete.
+
 ## How to use this record for the paper
 
 Use the linked source and algorithm records to write a reproducible methods narrative. Summarize the original proxy as a pilot, then explain the selected final physical models and event definitions. Keep alternative scenarios in a sensitivity subsection. Put environment troubleshooting and detailed execution history in a reproducibility appendix rather than presenting each interactive-console action as a scientific method.

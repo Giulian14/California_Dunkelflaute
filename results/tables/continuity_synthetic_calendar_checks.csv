@@ -1,0 +1,4 @@
+case,data_kind,intervals,calendar_files,strict_low_period_hours,joined_window_union_hours,joined_qualifying_windows,naive_independent_window_union_hours,naive_strict_periods,joined_strict_periods,join_matches_continuous_reference
+synthetic_new_year,synthetic,216,2,72,80,33,53,2,1,True
+synthetic_leap_day,synthetic,216,2,72,80,33,53,2,1,True
+synthetic_nonleap_february,synthetic,216,2,72,80,33,53,2,1,True

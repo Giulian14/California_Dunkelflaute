@@ -148,7 +148,15 @@ python -m pip install -r requirements-terrain.txt
 python -m unittest discover -s tests -v
 ```
 
-Terrain outputs contain modified Copernicus Climate Change Service information (2026). Neither the European Commission nor ECMWF is responsible for any use of the Copernicus information or data. USGS 3DEP/EPQS supplies the DEM point reference; source licenses and attribution are retained.
+ERA5-derived outputs contain modified Copernicus Climate Change Service information (2026). Neither the European Commission nor ECMWF is responsible for any use of the Copernicus information or data. USGS 3DEP/EPQS supplies the DEM point reference; source licenses and attribution are retained.
+
+## Continuous-file processing verification
+
+The [November 24 continuity check](docs/chunk_continuity.md) carries one weather bracket across files and joins compact resource means before global event detection. Repartitioning January into **two and six NetCDF file pairs** preserves all **743 complete hours**, all 695-cell forcings and the existing wind/PV results to numerical precision. All **18** rolling-window comparisons match, including event timestamps, durations and boundary flags.
+
+A deliberately incorrect per-file control splits the existing **199-hour** union into two records; irregular files also lose **13 covered hours**. Synthetic New Year/leap/nonleap controls preserve 72-hour strict periods and 80-hour window unions, while naive independent monthly processing counts only 53 union hours. These fixtures are algorithm checks, not observed events. All **85 tests** passed; [run metadata](results/tables/continuity_metadata_2020_01.json), [comparisons](results/tables/continuity_weather_checks_2020_01.csv), [independent verification](docs/continuity_verification.json) and the [research log](docs/research_log.md) record the evidence.
+
+Real adjacent-month inputs, production acquisition/resumption and physical-model validation remain necessary. This stage does not establish a 20-year climatology.
 
 ## Local workflow
 

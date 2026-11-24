@@ -1,0 +1,3 @@
+case,data_kind,file_pairs,input_snapshots,output_intervals,global_initial_unbracketed_records,maximum_ghi_difference_w_m2,maximum_air_temperature_difference_c,maximum_wind_cf_difference,maximum_pv_cf_difference,joined_75pct_006_union_events,naive_per_file_75pct_006_events,joined_75pct_006_covered_hours,naive_per_file_75pct_006_union_hour_sum
+two_files,real_January_repartitioned,2,744,743,1,0.0,0.0,4.336808689942018e-19,0.0,1,2,199,199
+irregular_files,real_January_repartitioned,6,744,743,1,0.0,0.0,2.7755575615628914e-17,0.0,1,2,199,186

@@ -1,0 +1,59 @@
+{
+  "session_date": "2026-11-24",
+  "python": "3.11.11",
+  "status": "Computational continuity verification; not a new climate or physical-model validation",
+  "real_data_scope": "Existing January 2020 fields repartitioned into new temporary files, not actual adjacent-month observations",
+  "physical_models": "Unchanged cubic/uniform wind and 35-degree fixed-tilt PV; every selected cell modeled before averaging",
+  "selected_cells": 695,
+  "input_snapshots": 744,
+  "complete_intervals": 743,
+  "weather_partition_cases": {
+    "two_files": [
+      0,
+      500,
+      744
+    ],
+    "irregular_files": [
+      0,
+      1,
+      25,
+      169,
+      481,
+      743,
+      744
+    ]
+  },
+  "rolling_event_cases": 18,
+  "synthetic_calendar_cases": 3,
+  "wind_regression_max_abs_difference": 1.6653345369377348e-16,
+  "pv_regression_max_abs_difference": 0.0,
+  "core_2005_2024_hours": 175320,
+  "core_interval_end_first": "2005-01-01 01:00:00+00:00",
+  "core_interval_end_last": "2025-01-01 00:00:00+00:00",
+  "architecture": "Read one weather pair plus its preceding snapshot; join compact resource means before global rolling/event calculations",
+  "strict_data_handling": "Reject gaps, overlaps, missing values, changed units/dtypes/grids; no zero fill, sorting repair, or per-file event reset",
+  "limits": [
+    "Real multi-month data, full-scale acquisition and performance not tested.",
+    "Synthetic new-year/leap/nonleap calendar cases are algorithm checks, not observed events.",
+    "Existing wind energy bias, asset lineage, PV amplitude and held-out physical validation remain open.",
+    "Hourly ERA5 accumulation semantics assumed established; no forecast or ERA5-Land deaccumulation inferred.",
+    "Calendar core needs endpoint samples and external context; remaining outer event censoring must be retained."
+  ],
+  "input_sha256": {
+    "instant_NetCDF": "46a11b7d3b79ea208304c80f43c656bed2b2ddedf9a09658e7c199673c70a115",
+    "accum_NetCDF": "66caa64f69ee42244863dac85cceade3f5db7819b983f482081360afd6eb4822",
+    "mask_NetCDF": "c129c6b24b4df4a55a66d86c17f5e8ba1aa43b71bca457ab30329e96199339f7",
+    "data/processed/wind_assessment_2020_01.csv": "e5f6dff716caa55a94fc55b445c66bfe773145dc9fab0f444d0c91391cdb1016",
+    "data/processed/pv_ac_capacity_factor_2020_01.csv": "8f19bbf9038b4d2fda9f1e66dd6ddc3a34684b5e674f1c5da36476aa1e1fe047"
+  },
+  "artifacts_sha256": {
+    "data/processed/continuity_reference_resources_2020_01.csv": "f10797f5037c017d504dc55b3dd67f20fb57039245267bc7b3fe8af8d0730e36",
+    "data/processed/continuity_two_files_resources_2020_01.csv": "42078560f1f5c7f174f53f846e30255cb88eaf00c9fdd21f1f993f5ae1f77fe6",
+    "data/processed/continuity_irregular_files_resources_2020_01.csv": "b199600280bfbf8d5a50626b2d2cb1dcb053cf1906620a4199be8781b9d54d74",
+    "results/tables/continuity_weather_checks_2020_01.csv": "70cf8f57c20539139482795acdeb16957be5239f61117a11fe3889fc9d6fa3e9",
+    "results/tables/continuity_event_checks_2020_01.csv": "6b9f024776b0e4f47d058de911a09ffdbcb507e92163f936ae0bdea00444cb6f",
+    "results/tables/continuity_hourly_reference_checks_2020_01.csv": "8c8e8c262bedbb8298dd4a4bc72fd26ab1bfd2838f5d86858cba9d969505ef3b",
+    "results/tables/continuity_synthetic_calendar_checks.csv": "b382023a95436ab6ee8ddcb115d617d2e6edd5cbe8b3da1e66305629b8d6eb45",
+    "results/tables/continuity_synthetic_events.csv": "5da2b598d3f03c66e2ba06f9a440d0e12b23de46839be40ea1910ada69878a35"
+  }
+}

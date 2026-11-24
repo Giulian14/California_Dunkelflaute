@@ -64,3 +64,7 @@ The first **47 rolling means are intentionally missing** because there is not ye
 ## Wind-site sampling sensitivity
 
 `wind_site_sampling_2020_01.csv` contains 735 known hourly CFs for eight curve/sampling cases on the capacity-consistent 103-plant subset. Nearest-center sampling preserves file-order ties; bilinear sampling interpolates vector components before speed and nonlinear power conversion. Missing end-of-month hours remain absent and are bounded in the results. This subset supersedes the earlier 106-plant cohort for conservative interpretation; historical series remain unchanged.
+
+## Continuity experiment
+
+`continuity_reference_resources_2020_01.csv`, `continuity_two_files_resources_2020_01.csv` and `continuity_irregular_files_resources_2020_01.csv` each contain 743 UTC-end-labeled hours of unchanged cubic/uniform wind and 35° fixed-tilt PV. The latter two are recomputed from temporary NetCDF partitions of the same January inputs. They are processing checks, not new observations or a new validated fleet scenario. See [method](../../docs/chunk_continuity.md).

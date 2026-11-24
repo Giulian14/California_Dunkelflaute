@@ -1,0 +1,3 @@
+case,low_hours,low_periods,qualifying_at_least_24h,catalogue_matches
+two_files,502,31,0,True
+irregular_files,502,31,0,True

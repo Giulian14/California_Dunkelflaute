@@ -1,0 +1,104 @@
+{
+  "reviewed_on": "2026-11-25",
+  "papers": [
+    {
+      "citation": "Mockert et al. (2023)",
+      "doi": "10.1002/met.2141",
+      "uploaded_filename": "Meteorological Applications - 2023 - Mockert - Meteorological conditions during periods of low wind speed and insolation in.pdf",
+      "bytes": 6742530,
+      "sha256": "f6166f5bb07aca74a21c6485fbde427a6ee970ab32c915bec921615dacd79242",
+      "pages": 14,
+      "reviewed_on": "2026-11-25"
+    },
+    {
+      "citation": "Li et al. (2021)",
+      "doi": "10.3390/en14206508",
+      "uploaded_filename": "energies-14-06508.pdf",
+      "bytes": 1312748,
+      "sha256": "f0b01526e5a7cd3270354779014a0d725fcffc1e5f21d49dde22f14762d308a0",
+      "pages": 14,
+      "reviewed_on": "2026-11-25"
+    }
+  ],
+  "external_source_files": [
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/build_capacity_factors.py",
+      "git_blob_sha1": "45b6683818314adb4711d2902cbc9140d8425880",
+      "sha256": "d30e3e461245dd28afd9d7b9364a91d36cade40b86512edee0ff8623b44dde70"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/combine_capacity_factors.py",
+      "git_blob_sha1": "32c047e880900f4d7b38e89eda5adc1a9f91985d",
+      "sha256": "f63c624aa3f82834d3e48cfb4c974c9c351db2564c5506f9edb78d4fc980ffd1"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/make_linear_regression.py",
+      "git_blob_sha1": "6df06d2c8bd466ab761854f207c444ec317205f7",
+      "sha256": "0e4824c45dce5cccc560b760f276fafa835dd90ce548f24b7e4ca5aac34cfa1c"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/build_dunkelflauten.py",
+      "git_blob_sha1": "84eb8e7d7a8b008d57d11e9b93c80db24ec98f50",
+      "sha256": "45306ebff19e5c7b450dfb524297802f7db93b5f51ca1b8a1c0bcdfc00ada5f1"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/config.yaml",
+      "git_blob_sha1": "c975953e0d228cfd557e3d0dfb7593910052a27c",
+      "sha256": "a8907a62df096cc5adc270fdd5782360361d4b7a0d6b9b141c1ac875bf8539b0"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/build_cutout.py",
+      "git_blob_sha1": "ec492398362de4f7c97f70246545dd3e1a502523",
+      "sha256": "75ebf9bee4aff4a06a7ad5009978ce94540856b8493fe3055522cb18403e98f4"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/build_bootstrap_subsamplingLC.py",
+      "git_blob_sha1": "f90be2dab4e129065140b1265ab63ca6b12c69ca",
+      "sha256": "8bdb313053f9801c006b11bd5ec8135f8ce0b3b8f0434da1fc9ba6aa691030c8"
+    },
+    {
+      "repository": "fmockert/dunkelflauten_DE",
+      "commit": "8f8f5563c4ea40fedbeb85aed8180a0be21ddf40",
+      "path": "scripts/snakemake/Snakefile",
+      "git_blob_sha1": "ae438c45bbeb2d8ba89a7be17412e945b39ee555",
+      "sha256": "cc946247ee00233a608a525dc170e1e8c01a42c70dd8c86bdd583440387c4dd0"
+    },
+    {
+      "repository": "PyPSA/atlite",
+      "commit": "936ef2823d48181df9b3e194e58c61a8dd45d207",
+      "path": "atlite/datasets/era5.py",
+      "git_blob_sha1": "ffdbbef317e930929e8adca4c8c331f95b3a4698",
+      "sha256": "d36ec806ffede4694aff59e6ba31328ae1d056ea4250819b557bf594af801911",
+      "note": "Modern inspected input contract, not a verified 2023 package pin."
+    }
+  ],
+  "supplementary_figures": [
+    {
+      "url": "https://raw.githubusercontent.com/fmockert/dunkelflauten_DE/8f8f5563c4ea40fedbeb85aed8180a0be21ddf40/plots_paper/figure_S1.pdf",
+      "sha256": "d912c36f191019f6222604653646a2c24f8c7ec7b10d08ad054363aa384b4558",
+      "git_blob_sha1": "431815d48e025e3bdc84be8f6f00b43105673060",
+      "bytes": 4104827
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fmockert/dunkelflauten_DE/8f8f5563c4ea40fedbeb85aed8180a0be21ddf40/plots_paper/figure_S2.pdf",
+      "sha256": "8b7044e5bbae82019f447a98d4d8712d28b1cf17eceb0e2073c80810dd685988",
+      "git_blob_sha1": "04b8127950be9ee3841bd574566797decf125919",
+      "bytes": 4104826
+    }
+  ],
+  "scope": "Method/source review and mathematical fixtures only; external code not executed, live CDS retrieval not performed. PDFs and source copies outside Git."
+}

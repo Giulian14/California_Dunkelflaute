@@ -1,0 +1,780 @@
+{
+  "status": "PLAN_ONLY_NOT_SUBMITTED",
+  "prepared_on": "2026-11-25",
+  "purpose": "Limited source-consistent resource-model and matched-generation validation before archive expansion.",
+  "first_stage": "discovery_winter",
+  "batches": [
+    {
+      "batch_id": "winter_2020_01_extra",
+      "stage": "discovery_winter",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2020"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "0085ee392c02e6d5e50ce17df25a5bfc2f04a543a6fbc71906fd72bf70c1e4b9",
+      "expected_snapshot_hours": 744,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": true
+    },
+    {
+      "batch_id": "winter_2020_02",
+      "stage": "discovery_winter",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2020"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "61e0a5cad84f2418c9a6876853c7d6cc21d1efc465724e138d19e87282c31389",
+      "expected_snapshot_hours": 696,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "winter_2020_end",
+      "stage": "discovery_winter",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2020"
+        ],
+        "month": [
+          "03"
+        ],
+        "day": [
+          "01"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "3af08f83a665f7450e155e48c66fa6e3ea2b9ab1b03f71b093ee67894b92402e",
+      "expected_snapshot_hours": 9,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "summer_2020_07",
+      "stage": "training_summer",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2020"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "7a42d1bcb053fa075426d9e9314588067c581f4a50202480281e07467f238313",
+      "expected_snapshot_hours": 744,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "summer_2020_end",
+      "stage": "training_summer",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2020"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "11f92339fbfec54c689024c9760bd041d352c0eb5e6197a1a402261a9c4906f6",
+      "expected_snapshot_hours": 9,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "holdout_2021_01",
+      "stage": "validation_winter",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2021"
+        ],
+        "month": [
+          "01"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "94b40b0eb91b25a53be408776de278a20701a62edc7cb6dcf1344af858e33e6e",
+      "expected_snapshot_hours": 744,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "holdout_2021_winter_end",
+      "stage": "validation_winter",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2021"
+        ],
+        "month": [
+          "02"
+        ],
+        "day": [
+          "01"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "4d600c28866f9b666843ac20123765dffd1392592c3bc49aa60b31ab7591deb2",
+      "expected_snapshot_hours": 9,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "holdout_2021_07",
+      "stage": "validation_summer",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2021"
+        ],
+        "month": [
+          "07"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00",
+          "09:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "9958155fe5e9b8d472aa5612d89264be57f35bac2190a3febb5fd5c05252718f",
+      "expected_snapshot_hours": 744,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    },
+    {
+      "batch_id": "holdout_2021_summer_end",
+      "stage": "validation_summer",
+      "dataset": "reanalysis-era5-single-levels",
+      "request": {
+        "product_type": [
+          "reanalysis"
+        ],
+        "year": [
+          "2021"
+        ],
+        "month": [
+          "08"
+        ],
+        "day": [
+          "01"
+        ],
+        "time": [
+          "00:00",
+          "01:00",
+          "02:00",
+          "03:00",
+          "04:00",
+          "05:00",
+          "06:00",
+          "07:00",
+          "08:00"
+        ],
+        "data_format": "netcdf",
+        "download_format": "zip",
+        "grid": [
+          0.25,
+          0.25
+        ],
+        "area": [
+          42,
+          -125,
+          32,
+          -114
+        ],
+        "variable": [
+          "100m_u_component_of_wind",
+          "100m_v_component_of_wind",
+          "2m_temperature",
+          "surface_solar_radiation_downwards",
+          "10m_u_component_of_wind",
+          "10m_v_component_of_wind",
+          "forecast_surface_roughness",
+          "surface_net_solar_radiation",
+          "toa_incident_solar_radiation",
+          "total_sky_direct_solar_radiation_at_surface"
+        ]
+      },
+      "request_sha256": "0c1dcbc4bc8abfbebfe2edb7c9537879fc50a5fcf148e956c9b15d96694a9a34",
+      "expected_snapshot_hours": 9,
+      "expected_spatial_shape": [
+        41,
+        45
+      ],
+      "requires_existing_January_baseline": false
+    }
+  ],
+  "reuse": "January 2020 u100/v100/t2m/ssrd remain the preserved existing files; merge supplemental fields only after exact grid/time/version QC.",
+  "physics": "fdir is direct radiation on a horizontal surface, not DNI; diffuse=ssrd\u2212fdir and albedo=(ssrd\u2212ssr)/ssrd need documented guards and interval treatment.",
+  "calibration": "German regression coefficients and fallback factors are not transferable. Fit only with compatible observed CF populations; freeze parameters before 2021 energy validation.",
+  "scope": "No direct-CDS request has been tested or submitted by plan generation; no full-period download supported."
+}

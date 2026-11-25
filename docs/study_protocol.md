@@ -2,9 +2,13 @@
 
 Recorded November 24, 2026. This separates the confirmed research design from model choices that still need evidence. It does not describe an executed 2005–2024 analysis.
 
+November 25 follow-up: the [full-paper and pinned-code review](paper_method_comparison.md) confirms Li's fixed-2016-fleet precedent and documents the California adaptations below. No prior scientific outputs were changed. A [limited validation request plan](limited_validation_download.md) is prepared but unsubmitted.
+
 ## Confirmed study meaning: a fixed reference system
 
 The author selected **a fixed reference wind/solar layout**, with year-specific fleets for validation, on November 24. The question is how different years of weather affect the **same renewable system**. Keeping locations, rated capacities and technology assumptions constant prevents deployment growth, relocation and equipment changes from being mistaken for weather trends. The result is a counterfactual weather-driven resource assessment, not reconstructed historical generation or historical grid reliability.
+
+Li et al. (2021), §2.1, p. 4, explicitly apply 1985–2016 weather to a fixed 2016 fleet. This is published support for the design principle. Their energy forcing is MERRA-2 via Renewables.ninja; our ERA5/2020-EIA implementation remains a California adaptation, not a replication of their energy dataset.
 
 Weather trends can still reflect reanalysis uncertainty and observational-system changes. A fixed layout removes the fleet-change confounder; it does not remove every source of uncertainty. Comparisons with observed generation must use each observation period's matched assets and capacities, rather than treating the reference fleet as that year's actual fleet.
 
@@ -25,6 +29,8 @@ Weather trends can still reflect reanalysis uncertainty and observational-system
 
 Retain both existing families, separately named. Do not pick the family, threshold or physical model because it produces a preferred number of January events.
 
+The November 25 review recommends the simultaneous-hourly family as the primary reference and combined 48-hour family as complementary. The pilot's `>=24h` duration criterion remains preserved; add a separately labeled `>24h` (minimum 25 hourly intervals) compatibility comparison when following Li's prolonged-event figures exactly. Mockert's German 0.06 threshold was selected partly to resemble earlier German event counts; it is not an event-frequency target for California. The current author code differs at boundaries/extraction from our full-window support unions; see the review before claiming exact reproduction.
+
 | Analysis | Definition | Interpretation |
 | --- | --- | --- |
 | Simultaneous hourly lows | Both wind and PV AC CF strictly below 0.20 for at least 24 consecutive hours | An absolute resource criterion including night; not a climatological rarity percentile |
@@ -38,6 +44,8 @@ Report annual onset counts, exposure hours, observed duration distributions and 
 ## Temperature and coincidence
 
 The implemented working method uses the **UTC daily mean of the statewide administrative-area temperature series**, with cosine-latitude spatial weights. Average the 24 complete end-labeled hourly interval means belonging to the day. Midnight interval ends belong to the preceding day. Incomplete edge days are flagged and excluded; interior gaps fail. This temperature describes statewide background conditions. It is not local maximum temperature, population exposure, demand or a regional heatwave index.
+
+The 5/95% thresholds and three-day run below are a project-specific extension, **not prescribed by either uploaded paper**. Mockert uses temperature anomaly composites relative to a 30-day running-mean climatology and a separate modeled demand series; Li does not supply our heat/cold index. Keep percentile extremes, climatological anomalies and demand distinct.
 
 Use the 2005–2024 **study-sample baseline**, not a purported standard 30-year climatological normal. For each target year, exclude that entire year when estimating the seasonally varying 5th/95th percentiles. Pool the other years' daily means in a circular ±15-calendar-day window on a 365-day reference calendar. Require at least 18 complete other years; use NumPy's linear quantile estimator. Exclude February 29 from the fitting pool and interpolate its thresholds from February 28/March 1. Days strictly above/below the respective percentiles are hot/cold; a sustained episode needs at least three consecutive days. Keep boundary-censored runs distinct. These settings are fixed before inspecting long-term extreme counts.
 

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "date": "2026-11-25",
+  "method": "Independent mathematical fixtures, not execution of upstream paper code. Centered window i covers i\u221224 through i+23; trailing endpoint i+23 uses the same full 48 observations.",
+  "fixtures": [
+    {
+      "fixture": "internal_72h",
+      "complete_trailing_qualifying_windows": 33,
+      "complete_centered_qualifying_windows": 33,
+      "partial_centered_qualifying_windows": 33,
+      "complete_union_hours": 80,
+      "complete_supports_equal": true
+    },
+    {
+      "fixture": "left_edge_24h",
+      "complete_trailing_qualifying_windows": 0,
+      "complete_centered_qualifying_windows": 0,
+      "partial_centered_qualifying_windows": 3,
+      "complete_union_hours": 0,
+      "complete_supports_equal": true
+    },
+    {
+      "fixture": "internal_exactly_24_low_hours",
+      "project_minimum_24h_events": 1,
+      "strictly_longer_than_24h_events": 0,
+      "note": "Integer-hour criterion >24 corresponds to minimum 25; this is a definition difference, not an observed event."
+    }
+  ],
+  "inputs": {
+    "series_hours": 216,
+    "background_cf": 0.5,
+    "low_cf": 0.01,
+    "window_hours": 48,
+    "threshold": 0.06,
+    "internal_low_indices_half_open": [
+      72,
+      144
+    ],
+    "edge_low_indices_half_open": [
+      0,
+      24
+    ]
+  }
+}

@@ -2,11 +2,15 @@
 
 Status: this design has now been implemented as a separately labeled January scenario comparison, reviewed November 16, 2026. See [implementation, results, and limits](event_comparison.md). Original pilot results are preserved; this is not a finalized multi-year climatological definition.
 
+November 25: checked both uploaded full texts and pinned Mockert author code; see [detailed method comparison](paper_method_comparison.md). Our implementation is an explicitly documented adaptation, not a byte-for-byte recreation of the external workflow.
+
 ## Reference: simultaneous low generation
 
 Retain the pilot's strict hourly condition: wind CF < 0.20 AND solar CF < 0.20. For the reference prolonged-event catalogue, require at least 24 consecutive complete hourly intervals; also report minimum-duration sensitivity.
 
 Li et al. (2021) use simultaneous hourly 20% thresholds and explicitly include calm nighttime conditions. Our 24-hour minimum is a project duration criterion; their paper also examines longer events.
+
+Their prolonged-event figures explicitly use **longer than one day**, while the pilot uses **at least** 24 hours. Exactly 24 hours pass only the latter. Retain the pilot and report a separately named minimum-25-hour compatibility comparison when needed; do not silently relabel `>=24h` as `>24h`. Their generation inputs are MERRA-2/Renewables.ninja, with ERA5 used separately for meteorological diagnostics.
 
 Source: [Li et al., A Brief Climatology of Dunkelflaute Events](https://doi.org/10.3390/en14206508).
 
@@ -15,6 +19,8 @@ The original pilot uses a solar irradiance proxy rather than modeled PV CF. Its 
 ## Complementary comparison: low combined energy over 48 hours
 
 Mockert et al. (2023), Sections 2.3–2.4, combine technology CFs using installed-capacity weights, then identify low 48-hour running means. Their 0.06 threshold is specific to their German study; it is not established for California. They include all hours contributing to qualifying windows.
+
+Their mix is 50% onshore wind, 6% offshore wind, 44% PV, with observed-CF regression correction. They choose 0.06 partly to match the frequency of earlier German studies. Our two-technology mix, uncalibrated physical scenarios and California threshold interpretation are distinct. The pinned current author implementation uses centered/partial windows and additional skip/rounding operations; our complete-window union follows the published support concept with explicit boundary handling, not exact source-code catalogue behavior. Complete centered and trailing windows cover the same observations when labels are mapped correctly; partial windows do not.
 
 Source: [Mockert et al., Meteorological conditions during periods of low wind speed and insolation in Germany](https://doi.org/10.1002/met.2141).
 

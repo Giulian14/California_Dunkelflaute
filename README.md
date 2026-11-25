@@ -164,7 +164,13 @@ The [fixed-tilt PV comparison](docs/pre_expansion_checks.md) matches 219 complet
 
 Five preselected cells using separately attributed Open-Meteo-processed ERA5 pass exact monthly-file/resource/event continuity for January–February 2020, July 2020 and January 2021, including offline cached replay. This is a limited processing rehearsal, not statewide or held-out generation validation. [Metadata and overlap differences](results/tables/public_weather_rehearsal_metadata.json) distinguish that source from the original CDS inputs.
 
-A [242-request archive plan](results/tables/era5_2005_2024_request_plan.json), input QC/receipt checks and tested temperature-baseline helpers are prepared. **No 2005–2024 requests have been submitted.** All **102 tests** pass. The [readiness record](docs/expansion_readiness.md) identifies the remaining physical/source-validation gates, and the [research log](docs/research_log.md) records the work for later methods writing.
+A [242-request archive plan](results/tables/era5_2005_2024_request_plan.json), input QC/receipt checks and tested temperature-baseline helpers were prepared November 24. **No 2005–2024 requests have been submitted.** At that stage all **102 tests** passed. The [readiness record](docs/expansion_readiness.md) identifies the remaining physical/source-validation gates, and the [research log](docs/research_log.md) records the work for later methods writing.
+
+## Full-paper review and limited validation inputs
+
+The [November 25 review](docs/paper_method_comparison.md) checks both uploaded papers, supplementary figures and pinned author code. Li's fixed 2016 fleet supports our fixed-reference design, but its generation forcing is MERRA-2/Renewables.ninja. Mockert uses ERA5/atlite, observational regression correction and a German 50% onshore/6% offshore/44% PV mix; its 6% threshold is not a California frequency target. Our `>=24h` criterion differs from Li's `>24h` prolonged-event filter, and the temperature-percentile method is our own extension. Existing outputs remain preserved.
+
+A [limited validation plan and local download instructions](docs/limited_validation_download.md) reuse January's four original fields and add the missing wind/solar inputs, adjoining February and month-end support. Later development/2021 observed-energy holdout stages are separate. The helper defaults to **plan only**, supports downloading just one explicitly selected batch, and never performs a full-period retrieval. No CDS request was submitted in preparing it. All **106 tests** pass locally; [verification](docs/paper_review_verification.json) records the scope. The old full-archive plan remains a draft pending model/input selection.
 
 ## Local workflow
 

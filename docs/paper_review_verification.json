@@ -1,0 +1,73 @@
+{
+  "status": "REVIEW_AND_OFFLINE_CHECKS_PASS_LIVE_CDS_UNTESTED",
+  "execution_date": "2026-11-25",
+  "parent_commit": "d082f765070924e4b6aa81ca7004c322d3045e07",
+  "python": "3.11.11",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "xarray": "2026.9.0",
+    "netCDF4": "1.7.4",
+    "cdsapi": "0.7.7"
+  },
+  "reviewed": "Two uploaded 14-page papers; eight pinned author workflow files; two byte-verified visually inspected supplementary figures; one pinned modern atlite input/timing source.",
+  "unit_tests": {
+    "passed": 106,
+    "new": 4,
+    "failures": 0,
+    "command": "python -m unittest discover -s tests -v",
+    "log_sha256": "a975505b0caf168a69cc717aa891dbfb99a9fc808c315f24cbf126a43f718eff"
+  },
+  "preserved_preexisting_scientific_code_data_tests_and_verification_files": 199,
+  "code_sha256": {
+    "scripts/23_download_validation_batch.py": "560dbb904a80bb1d3636925041e9e6252405b82b4ee28b381abc6acef14b7a3a",
+    "scripts/validation_download.py": "feba898a5a13a8970d66fbbc9675164aeafc432988c52da5859f2d910ad079e9",
+    "tests/test_validation_download.py": "ff2a4624cb919cb8e62c46f6c7498d84d45345fe6ce878cff0059a6189065388"
+  },
+  "artifacts": [
+    {
+      "path": "results/tables/limited_validation_download_plan.json",
+      "sha256": "b4d3e8cc4f44aea5009d6ca099e7bce32c27a9191d48cf9295a9d09c25ab9820",
+      "bytes": 17615
+    },
+    {
+      "path": "results/tables/paper_method_support_checks.json",
+      "sha256": "7df6c8b7720847fd3a3b8ea003e279871d814212ae5601a4f98e2e9d69962875",
+      "bytes": 1330
+    },
+    {
+      "path": "docs/paper_review_sources.json",
+      "sha256": "537e3618521ee3051dcef18d6a5fb0325543e4c32929c6befe0ebc568f6f3064",
+      "bytes": 4663
+    },
+    {
+      "path": "docs/references.bib",
+      "sha256": "cf16680ae05566d492bc703164ef0f2ac05373d5bbd41b7f5887429c2b0aecbe",
+      "bytes": 742
+    }
+  ],
+  "checks": [
+    "Nine retrieved UTF-8 source contents verified against Git blob SHA1s.",
+    "Two supplemental PDF byte hashes and Git blobs verified; both rendered and visually inspected.",
+    "Full centered/trailing 48-hour support equivalence verified on an internal synthetic event.",
+    "Synthetic initial 24-hour low block: zero complete low windows versus three partial-centered windows.",
+    "Exactly-24-hour >= versus > criterion distinguished with a measured synthetic run.",
+    "Nine bounded request hashes/calendars verified; 1449 winter-stage snapshot records with January baseline reuse.",
+    "Default planning and missing-batch rejection tested without authentication or raw-output creation.",
+    "All 106 tests pass; scripts/tests compile without importing original download script."
+  ],
+  "cds_credential_presence_only": {
+    "CDSAPI_KEY_present": false,
+    "default_cdsapirc_present": false,
+    "CDSAPI_RC_present": false
+  },
+  "github_ci": "Remote run will be verified after push; local test success does not establish live CDS retrieval.",
+  "limitations": [
+    "No CDS request authenticated or submitted; live request schema/archive path untested.",
+    "No new weather model, calibration, observed-generation validation or climatology executed.",
+    "Existing physical-model discrepancies remain unresolved; additional fields are a diagnostic hypothesis.",
+    "Pinned current author source is not a verified 2023 execution environment; no external workflow executed or source code copied.",
+    "Temperature percentile index is a project extension; no real baseline estimated.",
+    "Existing full-period request plan remains unchanged and unsubmitted pending revised model/input selection."
+  ]
+}

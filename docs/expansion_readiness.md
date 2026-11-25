@@ -1,6 +1,6 @@
 # Readiness for the 2005–2024 study
 
-Status as of November 24, 2026. This is a scientific and processing worklist, not an approval requirement. Keep it consistent with the [research log](research_log.md). Original full-grid modeling remains restricted to January 2020. A separate five-cell secondary-source weather rehearsal now covers January–February/July 2020 and January 2021; a 20-year climatology has not been calculated. See the [latest checks](pre_expansion_checks.md) and [study protocol](study_protocol.md).
+Status as of November 25, 2026. This is a scientific and processing worklist, not an approval requirement. Keep it consistent with the [research log](research_log.md). Original full-grid modeling remains restricted to January 2020. A separate five-cell secondary-source weather rehearsal covers January–February/July 2020 and January 2021; a 20-year climatology has not been calculated. See the [latest data checks](pre_expansion_checks.md), [full-paper review](paper_method_comparison.md), [limited validation download](limited_validation_download.md) and [study protocol](study_protocol.md).
 
 ## Priority before adopting the long-term model
 
@@ -14,6 +14,10 @@ Status as of November 24, 2026. This is a scientific and processing worklist, no
 
 The existing evidence does not justify choosing a model simply because its output is higher. Nor would adding wake/availability losses by itself explain modeled energy already below observed net production. Keep possible terrain, turbine and reporting explanations separate until data establish their contributions.
 
+The uploaded papers supply a concrete next comparison: Mockert uses roughness-aware wind conversion, explicit solar radiation components/albedo and observed-CF regression correction. A [nine-batch limited plan](../results/tables/limited_validation_download_plan.json) starts with missing January fields, adjoining February and March 1 endpoints; later summer/development and 2021 observed-energy holdouts are separately staged. Only one explicitly selected batch can be downloaded by the new helper. Planning has not authenticated or fetched weather. This creates a way to test the hypotheses, not a demonstrated solution to either amplitude discrepancy.
+
+Calibration is acceptable with defensible, aligned targets and independent validation; applying German coefficients or fitting incompatible BA/plant populations is not. The papers do not eliminate the data/population gates. Li's fixed-2016-system design directly supports the confirmed fixed-layout choice. Neither paper prescribes our percentile-based temperature index.
+
 ## Processing checks before the full production run
 
 1. **Fix study meaning and geography.** **Fixed reference layout confirmed by the author November 24**, with historical matched fleets for validation. This isolates weather effects from deployment change; the result is a reference-system resource assessment, not historical production. The [protocol](study_protocol.md) explains the rationale. Proposed reference year is 2020; final wind/PV technology choices, complete PV weights and inventory hashes still need to be frozen after physical validation. Rated-capacity shares and scope remain explicit scenarios.
@@ -26,6 +30,8 @@ The existing evidence does not justify choosing a model simply because its outpu
 
 No additional access was needed for the fixed-tilt comparison or public-weather rehearsal. A configured direct-CDS client and independent wind/turbine reference information are still needed for the remaining direct-source and physical-validation gates. Scope retrieval to the selected validation periods first. Copernicus credentials belong in the configured private client environment, never in chat or Git. Do not expand simply to mask unresolved amplitude errors with a longer record.
 
+The previous 242-request/four-variable archive plan is a preserved draft, **not ready for submission** under a revised physical model. Update production input requirements only after the limited comparison selects and validates the conversion; keep the full-period acquisition unsubmitted meanwhile.
+
 ## Evidence completed
 
 - [Original workflow reproduction](full_workflow_verification.md).
@@ -36,5 +42,6 @@ No additional access was needed for the fixed-tilt comparison or public-weather 
 - [Terrain/curve-provenance audit](wind_terrain_and_curve_audit.md) and [verification](terrain_curve_verification.json).
 - [Latest file/calendar continuity check](chunk_continuity.md) and [verification](continuity_verification.json).
 - [PV match, real-weather rehearsal and archive preparation](pre_expansion_checks.md), [protocol](study_protocol.md) and [verification](pre_expansion_verification.json).
+- [Uploaded-paper/source-code comparison](paper_method_comparison.md), [source hashes](paper_review_sources.json), [limited validation instructions](limited_validation_download.md) and [review verification](paper_review_verification.json).
 
-The current suite has **102 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.
+The current suite has **106 passing tests**. Tests establish the checked calculations and data handling; they do not close the open physical-validation questions above.

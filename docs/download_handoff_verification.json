@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "bundle": "/workspace/artifacts/california_validation_downloader.zip",
+  "bytes": 7625,
+  "sha256": "e5e5dbc748d56402b9bed2559d36f3aa9abf1e5d31172d511d0f3a47f90e7951",
+  "source_commit": "5f0c0ea1c0fd4cbe9ecbc2565b2b091ac43ce37d",
+  "isolated_preview": "PASS: unchanged bundled scripts list 744 snapshots / 6 variables; no authentication or raw-output directory created.",
+  "live_CDS_download": "NOT_RUN",
+  "execution_date": "2026-11-25",
+  "purpose": "Portable source-only downloader for the author's requested step-by-step local handoff.",
+  "additional_cached_EIA860M_sources": [
+    {
+      "url": "https://www.eia.gov/electricity/data/eia860m/archive/xls/february_generator2020.xlsx",
+      "sha256": "81e20a6adfbbfe7cfd47cd6187259422fd7d6916a0d5dd5ef14aeb081231b0c0",
+      "bytes": 8127971,
+      "retrieved_at_utc": "2026-11-25T17:53:46.575678+00:00"
+    },
+    {
+      "url": "https://www.eia.gov/electricity/data/eia860m/archive/xls/june_generator2020.xlsx",
+      "sha256": "97e24d96bef14b9139bbd9d05ac556a5d49418efe51ef8fe536224d8296663a1",
+      "bytes": 8236417,
+      "retrieved_at_utc": "2026-11-25T17:53:46.284625+00:00"
+    },
+    {
+      "url": "https://www.eia.gov/electricity/data/eia860m/archive/xls/july_generator2020.xlsx",
+      "sha256": "f6f1876a7cdf2aef5535d2a49aa9a4b6eab4d084cb2149d0da9b56839186e6d5",
+      "bytes": 8249365,
+      "retrieved_at_utc": "2026-11-25T17:53:46.533766+00:00"
+    }
+  ],
+  "EIA_target_matching": "PENDING: workbook titles/schema inspected; no new generation targets or calibration calculated.",
+  "heldout_2021_observed_energy": "NOT_OPENED",
+  "next_user_action": "Extract validation_downloader into the existing Mac project, then run the explicit first-batch command in Terminal.",
+  "archive_distribution": "Delivered as a chat artifact outside Git; no downloaded raw weather or EIA archive is bundled."
+}

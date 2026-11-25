@@ -61,7 +61,14 @@
     "default_cdsapirc_present": false,
     "CDSAPI_RC_present": false
   },
-  "github_ci": "Remote run will be verified after push; local test success does not establish live CDS retrieval.",
+  "github_ci": {
+    "status": "SUCCESS",
+    "run": "https://github.com/Giulian14/California_Dunkelflaute/actions/runs/45667449738",
+    "tested_code_commit": "5454cfea775fc5e67d4ec1207b76689012f411cb",
+    "tests": 106,
+    "log_sha256": "5bbdfd26b76d65e5b55c327a14be75a0f61b7402e2d65deb55ff40398756d9c9",
+    "note": "Verified install, syntax and unit checks; no live CDS retrieval."
+  },
   "limitations": [
     "No CDS request authenticated or submitted; live request schema/archive path untested.",
     "No new weather model, calibration, observed-generation validation or climatology executed.",
@@ -69,5 +76,6 @@
     "Pinned current author source is not a verified 2023 execution environment; no external workflow executed or source code copied.",
     "Temperature percentile index is a project extension; no real baseline estimated.",
     "Existing full-period request plan remains unchanged and unsubmitted pending revised model/input selection."
-  ]
+  ],
+  "remote_blob_verification": "15 changed blobs on main and all recorded code/output SHA256s verified."
 }
